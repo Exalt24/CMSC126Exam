@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reddit</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!-- ======== TOP HEADER BAR ======== -->
-  <header class="site-header">
-    <!-- FIRST BAR (Logo) -->
-    <section class="header-bar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reddit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ======== TOP HEADER BAR ======== -->
+    <header class="site-header">
+      <!-- FIRST BAR (Logo) -->
+      <section class="header-bar">
         <nav class="site-logo">
-            <a href="#" aria-label="Home">
-                <img src="src/logo.png" alt="Reddit Logo" />
-            </a>
+          <a href="#" aria-label="Home">
+            <img src="src/logo.png" alt="Reddit Logo" />
+          </a>
         </nav>
         <nav class="logged-in-user">
-            <a href="#">7hundredand77,</a> you're back! <a href="#">preferences</a> | <a href="#">logout?</a> : (
+          <a href="#">7hundredand77,</a> you're back!
+          <a href="#">preferences</a> | <a href="#">logout?</a> : (
         </nav>
-    </section>
-  
-  </header>
-  
+      </section>
+    </header>
 
-  <!-- ======== MAIN CONTENT WRAPPER ======== -->
-  <main class="content-wrapper">
-
-    <section class="subreddits-nav">
+    <!-- ======== MAIN CONTENT WRAPPER ======== -->
+    <main class="content-wrapper">
+      <section class="subreddits-nav">
         <!-- Left: user nav -->
         <nav class="user-nav">
           <ul>
@@ -38,1041 +36,955 @@
             <li><a href="#">saved</a></li>
           </ul>
         </nav>
-      
+
         <!-- Middle: search form -->
         <nav class="search-form" role="search" aria-label="Site Search">
           <label for="search-input" class="visually-hidden">Search</label>
-          <input 
-            id="search-input" 
-            type="search" 
-          />
+          <input id="search-input" type="search" />
         </nav>
-      
+
         <!-- Right: notifications -->
         <nav class="notifications">
           <ul>
-            <li><a href="#"><img src="src/email.png" alt="Envelope Icon" /><strong>1</strong> New Msg</a></li>
-            <li><a href="#"><strong>53,211</strong> Link</a></li>
-            <li><a href="#"><strong>4,887</strong> Comment</a></li>
+            <li>
+              <a href="#"
+                ><img src="src/email.png" alt="Envelope Icon" /><strong
+                  >1</strong
+                >
+                New Msg</a
+              >
+            </li>
+            <li>
+              <a href="#"><strong>53,211</strong> Link</a>
+            </li>
+            <li>
+              <a href="#"><strong>4,887</strong> Comment</a>
+            </li>
           </ul>
         </nav>
       </section>
-    <!-- LEFT SIDEBAR -->
-<aside class="left-sidebar" aria-label="Sidebar with subreddits">
-    <ul>
-        <li>
+      <!-- LEFT SIDEBAR -->
+      <aside class="left-sidebar" aria-label="Sidebar with subreddits">
+        <ul>
+          <li>
             <a href="#" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               FRONT PAGE
               <span class="double-chevron">«</span>
             </a>
           </li>
-          
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          PICS
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          SCIENCE
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          WTF
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          TECHNOLOGY
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          ASK REDDIT
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          FUNNY
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          WTF
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          IAMA
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          WORLD NEWS
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          TODAYILEARNED
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          WORLDNEWS
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          WEBDESIGN
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          ATHEIST
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="src/reddit.svg" alt="" class="sidebar-icon" />
-          FFFUUUUUUUUUU
-        </a>
-      </li>
-    </ul>
-  
-    <!-- (MORE) link, using a <section> instead of <div> -->
-    <section class="sidebar-item">
-      <a href="#" class="sidebar-action-link">(MORE)</a>
-    </section>
-  
-    <section class="sidebar-action">
-      <a href="#" class="sidebar-action-link">Submit a link</a>
-      <p class="sidebar-action-text">
-        to anything interesting: news article, blog entry, video, picture...
-      </p>
-    </section>
-  
-    <section class="sidebar-action">
-      <a href="#" class="sidebar-action-link">Create Community</a>
-      <p class="sidebar-action-text">
-        for your LARPing community... because nothing in life is sacred (except reddits!) here on the side.
-      </p>
-    </section>
 
-    <figure class="sidebar-ad">
-        <img src="src/little.jpg" alt="Little Big Planet" />
-        <figcaption>tiniest ad in the world</figcaption>
-      </figure>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              PICS
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              SCIENCE
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              WTF
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              TECHNOLOGY
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              ASK REDDIT
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              FUNNY
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              WTF
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              IAMA
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              WORLD NEWS
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              TODAYILEARNED
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              WORLDNEWS
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              WEBDESIGN
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              ATHEIST
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="src/reddit.svg" alt="" class="sidebar-icon" />
+              FFFUUUUUUUUUU
+            </a>
+          </li>
+        </ul>
 
-  </aside>
-  
+        <!-- (MORE) link, using a <section> instead of <div> -->
+        <section class="sidebar-item">
+          <a href="#" class="sidebar-action-link">(MORE)</a>
+        </section>
 
-  <section class="posts-column" aria-label="List of posts">
+        <section class="sidebar-action">
+          <a href="#" class="sidebar-action-link">Submit a link</a>
+          <p class="sidebar-action-text">
+            to anything interesting: news article, blog entry, video, picture...
+          </p>
+        </section>
 
-    <!-- Example Post -->
-    <article class="post">
-      <!-- Post Rank -->
-      <section class="post-rank">4</section>
-  
-      <!-- Vote Controls -->
-      <section class="vote-controls">
-        <button aria-label="Upvote">▲</button>
-        <span class="vote-count">215</span>
-        <button aria-label="Downvote">▼</button>
+        <section class="sidebar-action">
+          <a href="#" class="sidebar-action-link">Create Community</a>
+          <p class="sidebar-action-text">
+            for your LARPing community... because nothing in life is sacred
+            (except reddits!) here on the side.
+          </p>
+        </section>
+
+        <figure class="sidebar-ad">
+          <img src="src/little.jpg" alt="Little Big Planet" />
+          <figcaption>tiniest ad in the world</figcaption>
+        </figure>
+      </aside>
+
+      <section class="posts-column" aria-label="List of posts">
+        <!-- Example Post -->
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+        <article class="post">
+          <!-- Post Rank -->
+          <section class="post-rank">4</section>
+
+          <!-- Vote Controls -->
+          <section class="vote-controls">
+            <button aria-label="Upvote">▲</button>
+            <span class="vote-count">215</span>
+            <button aria-label="Downvote">▼</button>
+          </section>
+
+          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+          <!-- Mini Image + Title + Domain + Meta + Details -->
+          <section class="post-content">
+            <!-- Title line: mini image + link + domain -->
+            <p class="post-title">
+              <a href="#" class="post-link"
+                >Thanks, Sally. That blowjob was... SFW.</a
+              >
+              <span class="domain">(i.imgur.com)</span>
+            </p>
+
+            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <p class="post-meta">
+              submitted 2 hours ago by <a href="#">u/Maiko</a> to
+              <a href="#">r/gaming</a>
+            </p>
+
+            <!-- Details: "232 comments | share | save | hide | report" -->
+            <p class="post-details">
+              <a href="#">232 comments</a> | <a href="#">share</a> |
+              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">report</a>
+            </p>
+          </section>
+        </article>
+
+        <!-- Repeat more posts (1,2,3,5,6,14, etc.) similarly... -->
+
+        <!-- Bottom Nav: "NEWER" / "OLDER" -->
+        <section class="post-navigation">
+          <a href="#" class="nav-button nav-newer">NEWER</a>
+          <a href="#" class="nav-button nav-older">OLDER</a>
+        </section>
       </section>
-      
-      <img 
-            src="src/preview.png" 
-            alt="Preview" 
-            class="post-thumbnail"
-          />
-      <!-- Mini Image + Title + Domain + Meta + Details -->
-      <section class="post-content">
-  
-        <!-- Title line: mini image + link + domain -->
-        <p class="post-title">
-          <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-          <span class="domain">(i.imgur.com)</span>
-        </p>
-  
-        <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-        <p class="post-meta">
-          submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-        </p>
-  
-        <!-- Details: "232 comments | share | save | hide | report" -->
-        <p class="post-details">
-          <a href="#">232 comments</a> | 
-          <a href="#">share</a> | 
-          <a href="#">save</a> | 
-          <a href="#">hide</a> | 
-          <a href="#">report</a>
-        </p>
-      </section>
-    </article>
 
-    <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
+      <aside class="right-sidebar" aria-label="Post Details">
+        <section class="post-detail">
+          <!-- Title + Domain -->
+          <h2 class="post-title">
+            I AM the guy who created this design AMA
             <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
+          </h2>
 
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
+          <!-- Image link from the screenshot -->
+          <p class="post-image-link">
+            http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg
           </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-      <article class="post">
-        <!-- Post Rank -->
-        <section class="post-rank">4</section>
-    
-        <!-- Vote Controls -->
-        <section class="vote-controls">
-          <button aria-label="Upvote">▲</button>
-          <span class="vote-count">215</span>
-          <button aria-label="Downvote">▼</button>
-        </section>
-        
-        <img 
-              src="src/preview.png" 
-              alt="Preview" 
-              class="post-thumbnail"
-            />
-        <!-- Mini Image + Title + Domain + Meta + Details -->
-        <section class="post-content">
-    
-          <!-- Title line: mini image + link + domain -->
-          <p class="post-title">
-            <a href="#" class="post-link">Thanks, Sally. That blowjob was... SFW.</a>
-            <span class="domain">(i.imgur.com)</span>
-          </p>
-    
-          <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-          <p class="post-meta">
-            submitted 2 hours ago by <a href="#">u/Maiko</a> to <a href="#">r/gaming</a>
-          </p>
-    
-          <!-- Details: "232 comments | share | save | hide | report" -->
-          <p class="post-details">
-            <a href="#">232 comments</a> | 
-            <a href="#">share</a> | 
-            <a href="#">save</a> | 
-            <a href="#">hide</a> | 
-            <a href="#">report</a>
-          </p>
-        </section>
-      </article>
-  
-    <!-- Repeat more posts (1,2,3,5,6,14, etc.) similarly... -->
-  
-    <!-- Bottom Nav: "NEWER" / "OLDER" -->
-    <section class="post-navigation">
-        <a href="#" class="nav-button nav-newer">NEWER</a>
-        <a href="#" class="nav-button nav-older">OLDER</a>
-      </section>
-      
-  </section>
-  
-  
-      
-      
-  
-  <aside class="right-sidebar" aria-label="Post Details">
-    <section class="post-detail">
-  
-      <!-- Title + Domain -->
-      <h2 class="post-title">
-        I AM the guy who created this design AMA 
-        <span class="domain">(i.imgur.com)</span>
-      </h2>
-  
-      <!-- Image link from the screenshot -->
-      <p class="post-image-link">
-          http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg
-      </p>
-  
-      
-      <section class="post-detail-meta">
-        <div class="four-col-row">
-      
-          <!-- Column 1: 232 points (71% like it) -->
-          <div class="points-col">
-            <strong>232 points</strong> (71% like it)
+
+          <section class="post-detail-meta">
+            <div class="four-col-row">
+              <!-- Column 1: 232 points (71% like it) -->
+              <div class="points-col">
+                <strong>232 points</strong> (71% like it)
+              </div>
+
+              <!-- Column 2: up/down votes -->
+              <div class="votes-col">
+                <span class="up-votes">398 up votes</span><br />
+                <span class="down-votes">158 down votes</span>
+              </div>
+
+              <!-- Column 3: empty space -->
+              <div class="empty-col"></div>
+
+              <!-- Column 4: date, then "200 comments sort by" -->
+              <div class="comments-sort-col">
+                submitted on 01 Feb 2011<br />
+                <strong>200 comments &nbsp; sort by</strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- Single-line comment box + "save" button -->
+          <section class="comment-input-line">
+            <input type="text" class="comment-input" />
+            <button class="comment-save">save</button>
+          </section>
+
+          <span class="formatting-help">
+            <a href="#">formatting help</a>
+          </span>
+
+          <!-- Comments Section -->
+          <div class="comments">
+            <div class="comment">
+              <div class="comment-row">
+                <div class="comment-votes">
+                  <button class="comment-vote-button">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#999"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 19V5M5 12l7-7 7 7" />
+                    </svg>
+                  </button>
+                  <button class="comment-vote-button">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#999"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <a href="#" class="comment-author">UserNumber42</a>
+                    <span>47 points 21 hours ago [+]</span>
+                  </div>
+                  <div class="comment-content">
+                    Wow, the first reddit redesign I've seen that doesn't suck,
+                    and I've been on this site for 4 years now (different
+                    accounts). Very functional. With wide screen monitors this
+                    is very cool.
+                  </div>
+                  <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment comment-nested">
+              <div class="comment-row">
+                <div class="comment-votes">
+                  <button class="comment-vote-button">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#999"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 19V5M5 12l7-7 7 7" />
+                    </svg>
+                  </button>
+                  <button class="comment-vote-button">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#999"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <a href="#" class="comment-author op">7hundredand77</a>
+                    <span>14 points 20 hours ago [+]</span>
+                  </div>
+                  <div class="comment-content">
+                    Hi, yeah, since I know many people use widescreen monitors
+                    these days, this could make use of space a lot more
+                    effectively. A sweet spot with columns needs to be found
+                    where there is enough space to view everything perfectly.
+                    Since I just quickly put this one together, I didn't really
+                    spend much time finding that right balance.
+                  </div>
+                  <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">edit</a>
+                    <a href="#">delete</a>
+                    <a href="#">reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="comment-row">
+                <div class="comment-votes">
+                  <button class="comment-vote-button">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#999"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 19V5M5 12l7-7 7 7" />
+                    </svg>
+                  </button>
+                  <button class="comment-vote-button">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#999"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <a href="#" class="comment-author">Chewbacca</a>
+                    <span>7 points 15 hours ago [+]</span>
+                  </div>
+                  <div class="comment-content">
+                    This looks like an email client. Brilliant!
+                  </div>
+                  <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">report</a>
+                    <a href="#">reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-      
-          <!-- Column 2: up/down votes -->
-          <div class="votes-col">
-            <span class="up-votes">398 up votes</span><br />
-            <span class="down-votes">158 down votes</span>
-          </div>
-      
-          <!-- Column 3: empty space -->
-          <div class="empty-col"></div>
-      
-          <!-- Column 4: date, then "200 comments sort by" -->
-          <div class="comments-sort-col">
-            submitted on 01 Feb 2011<br />
-            <strong>200 comments &nbsp; sort by</strong> 
-          </div>
-      
-        </div>
-      </section>
-      
-      
-      
-  
-
-
-            <!-- Single-line comment box + "save" button -->
-            <section class="comment-input-line">
-                <input type="text" class="comment-input" />
-                <button class="comment-save">save</button>
-              </section>
-              
-              <span class="formatting-help">
-                <a href="#">formatting help</a>
-              </span>
-              
-              
-<!-- Comments Section -->
-<div class="comments">
-    <div class="comment">
-      <div class="comment-row">
-        <div class="comment-votes">
-          <button class="comment-vote-button">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#999"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 19V5M5 12l7-7 7 7" />
-            </svg>
-          </button>
-          <button class="comment-vote-button">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#999"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </button>
-        </div>
-        <div class="comment-body">
-          <div class="comment-meta">
-            <a href="#" class="comment-author">UserNumber42</a>
-            <span>47 points 21 hours ago [+]</span>
-          </div>
-          <div class="comment-content">
-            Wow, the first reddit redesign I've seen that doesn't suck,
-            and I've been on this site for 4 years now (different
-            accounts). Very functional. With wide screen monitors this is
-            very cool.
-          </div>
-          <div class="comment-actions">
-            <a href="#">permalink</a>
-            <a href="#">parent</a>
-            <a href="#">reply</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="comment comment-nested">
-      <div class="comment-row">
-        <div class="comment-votes">
-          <button class="comment-vote-button">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#999"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 19V5M5 12l7-7 7 7" />
-            </svg>
-          </button>
-          <button class="comment-vote-button">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#999"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </button>
-        </div>
-        <div class="comment-body">
-          <div class="comment-meta">
-            <a href="#" class="comment-author op">7hundredand77</a>
-            <span>14 points 20 hours ago [+]</span>
-          </div>
-          <div class="comment-content">
-            Hi, yeah, since I know many people use widescreen monitors
-            these days, this could make use of space a lot more
-            effectively. A sweet spot with columns needs to be found where
-            there is enough space to view everything perfectly. Since I
-            just quickly put this one together, I didn't really spend much
-            time finding that right balance.
-          </div>
-          <div class="comment-actions">
-            <a href="#">permalink</a>
-            <a href="#">parent</a>
-            <a href="#">edit</a>
-            <a href="#">delete</a>
-            <a href="#">reply</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="comment">
-      <div class="comment-row">
-        <div class="comment-votes">
-          <button class="comment-vote-button">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#999"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 19V5M5 12l7-7 7 7" />
-            </svg>
-          </button>
-          <button class="comment-vote-button">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#999"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </button>
-        </div>
-        <div class="comment-body">
-          <div class="comment-meta">
-            <a href="#" class="comment-author">Chewbacca</a>
-            <span>7 points 15 hours ago [+]</span>
-          </div>
-          <div class="comment-content">
-            This looks like an email client. Brilliant!
-          </div>
-          <div class="comment-actions">
-            <a href="#">permalink</a>
-            <a href="#">parent</a>
-            <a href="#">report</a>
-            <a href="#">reply</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  
-
-
-
-  
-
-  
-
-      
-    </section>
-  </aside>
-  
-      
+        </section>
+      </aside>
     </main>
   </body>
-  </html>
+</html>
