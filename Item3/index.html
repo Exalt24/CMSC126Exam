@@ -9,16 +9,16 @@
   <body>
     <header>
       <div class="logo-title">
-        <img src="./src/logo.png" alt="Logo">
+        <img src="./src/logo.png" alt="Logo" />
         <div>
           <h1>Simple Pancake Recipe</h1>
           <p>Follow these steps to make delicious pancakes.</p>
+        </div>
       </div>
-    </header>  
+    </header>
 
     <main class="carousel">
       <div class="carousel-container">
-
         <!-- Cover Page -->
         <section id="cover" class="step" tabindex="0" aria-hidden="false">
           <h2>Welcome to the Interactive Cooking Guide</h2>
@@ -74,5 +74,12 @@
         </section>
       </div>
     </main>
+
+    <!-- JavaScript to set default hash to #cover if none is present -->
+    <script>
+      if (!location.hash) {
+        location.hash = "#cover";
+      }
+    </script>
   </body>
 </html>
