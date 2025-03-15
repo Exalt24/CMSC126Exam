@@ -1,108 +1,144 @@
-/* General styling */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background: #f8f9fa;
     margin: 0;
     padding: 0;
     text-align: center;
-  }
+}
 
-  /* Header Styling */
-  header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #f8eece, #fafbef, #f8eece);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    justify-items: center;
-  }
+}
 
-  .logo-title {
+.logo-title {
     display: flex;
     align-items: center;
     gap: 15px;
-  }
+    flex-direction: column;
+    filter: sepia(1) saturate(10) hue-rotate(-10deg);
+}
 
-  .logo-title img {
-    width: 250px;
+.logo-title img {
+    width: 100px;
     height: auto;
-  }
+}
 
-  header h1 {
+header h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #fff;
+    color: #D43F3F;
     font-weight: bold;
-  }
+}
 
-  header p {
+header p {
     font-size: 1.2em;
-    color: #f8f9fa;
-  }
+    color: #D43F3F;
+}
 
-  /* Carousel container */
-  .carousel {
+/* Carousel Container */
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     position: relative;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
-  }
+    margin-bottom: 50px;
+}
 
-  .carousel-container {
+.box-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-  }
+}
 
-  /* Step sections */
-  .step {
+/* Step Sections (Shared Format for Step 1, 2, 3, 4) */
+.step {
     display: none;
-    width: 100%;
-    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
     text-align: center;
+    background: linear-gradient(to right, #f8eece, #fafbef);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
+}
 
-  .step:target {
+.step:target {
     display: block;
     opacity: 1;
     transform: scale(1);
-  }
+}
 
-  /* Cover Section */
-  #cover {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    color: #fff;
-    padding: 50px 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
+/* Step Headings */
+.step h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #FF6B17;
+}
 
-  #cover img {
+.list {
+    text-align: justify;
+    display: inline-block;
+}
+
+.list li {
+    font-size: 1em;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Step Images */
+.step img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
+    max-width: 600px;
+    border-radius: 10px;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  /* Buttons */
-  .button {
+/* Additional Text Sections */
+.step p, h3 {
+    font-size: 1em;
+    margin: 10px auto;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.step h4 {
+    font-weight: normal;
+}
+
+
+/* Step Navigation Buttons */
+.step nav {
+    margin-top: 20px;
+}
+
+/* Buttons */
+.button {
     display: inline-block;
     padding: 12px 20px;
     margin: 10px;
-    background: #ff6b6b;
+    background: #FF6B17;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -110,27 +146,11 @@ body {
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .button:hover,
-  .button:focus {
-    background: #d43f3f;
+.button:hover,
+.button:focus {
+    background: #e85a07;
     outline: none;
     transform: scale(1.05);
-  }
-
-  /* Step Images */
-  .step img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-  }
-
-  /* Navigation button styling */
-  nav {
-    margin-top: 15px;
-  }
+}

@@ -17,62 +17,227 @@
       </div>
     </header>
 
-    <main class="carousel">
-      <div class="carousel-container">
-        <!-- Cover Page -->
-        <section id="cover" class="step" tabindex="0" aria-hidden="false">
-          <h2>Welcome to the Interactive Cooking Guide</h2>
-          <img src="./src/cover.jpg" alt="Delicious pancakes on a plate" />
-          <p>Learn how to make fluffy pancakes step by step.</p>
-          <nav>
-            <a href="#step1" class="button next">Start Cooking →</a>
-          </nav>
-        </section>
+    <main class="box-container">
+      <!-- Cover Page -->
+      <section id="cover" class="step" tabindex="0" aria-hidden="true">
+        <h2>Welcome to the Interactive Cooking Guide</h2>
+        <img src="./src/cover.jpg" alt="Delicious pancakes on a plate" />
+        <h4>Learn how to make fluffy pancakes step by step.</h4>
+        <nav>
+          <a href="#step1" class="button next">Start Cooking →</a>
+        </nav>
+      </section>
 
-        <!-- Step 1 -->
-        <section id="step1" class="step" tabindex="-1" aria-hidden="true">
-          <h2>Step 1: Gather Ingredients</h2>
-          <img src="./src/step1.jpg" alt="Ingredients for pancakes" />
-          <p>You'll need flour, milk, eggs, sugar, and baking powder.</p>
-          <nav>
-            <a href="#cover" class="button prev">← Cover</a>
-            <a href="#step2" class="button next">Next →</a>
-          </nav>
-        </section>
+      <!-- Step 1 -->
+      <section id="step1" class="step" tabindex="-1" aria-hidden="true">
+        <h2>Step 1: Gather Ingredients</h2>
+        <img src="./src/step1.jpg" alt="Ingredients for pancakes" />
 
-        <!-- Step 2 -->
-        <section id="step2" class="step" tabindex="-1" aria-hidden="true">
-          <h2>Step 2: Mix Ingredients</h2>
-          <img src="./src/step2.jpg" alt="Mixing ingredients in a bowl" />
-          <p>Whisk together flour, sugar, baking powder, milk, and eggs in a bowl.</p>
-          <nav>
-            <a href="#step1" class="button prev">← Previous</a>
-            <a href="#step3" class="button next">Next →</a>
-          </nav>
-        </section>
+        <p>
+          Before starting, make sure you have all the necessary ingredients
+          ready. Proper measurement ensures the best results!
+        </p>
 
-        <!-- Step 3 -->
-        <section id="step3" class="step" tabindex="-1" aria-hidden="true">
-          <h2>Step 3: Cook the Pancakes</h2>
-          <img src="./src/step3.jpg" alt="Cooking pancakes on a pan" />
-          <p>Pour batter onto a hot pan and cook until golden brown on both sides.</p>
-          <nav>
-            <a href="#step2" class="button prev">← Previous</a>
-            <a href="#step4" class="button next">Next →</a>
-          </nav>
-        </section>
+        <h3>Ingredients You'll Need:</h3>
+        <ul class="list">
+          <li>
+            <strong>1 cup (120g) all-purpose flour</strong> – The base of the
+            pancakes, providing structure.
+          </li>
+          <li>
+            <strong>1 cup (240ml) milk</strong> – Adds moisture and makes the
+            batter smooth.
+          </li>
+          <li>
+            <strong>1 large egg</strong> – Helps bind the ingredients together
+            and adds fluffiness.
+          </li>
+          <li>
+            <strong>2 tablespoons (25g) sugar</strong> – Adds slight sweetness
+            and enhances browning.
+          </li>
+          <li>
+            <strong>1 tablespoon (15g) baking powder</strong> – The key to
+            fluffy pancakes! It helps the batter rise.
+          </li>
+          <li><strong>1/4 teaspoon salt</strong> – Balances the flavors.</li>
+          <li>
+            <strong
+              >2 tablespoons (30g) melted butter (or vegetable oil)</strong
+            >
+            – Adds richness and prevents dryness.
+          </li>
+          <li>
+            <strong>1 teaspoon vanilla extract (optional)</strong> – Adds a
+            delicious aroma and extra flavor.
+          </li>
+        </ul>
 
-        <!-- Step 4 -->
-        <section id="step4" class="step" tabindex="-1" aria-hidden="true">
-          <h2>Step 4: Serve and Enjoy!</h2>
-          <img src="./src/step4.jpg" alt="Pancakes served with syrup" />
-          <p>Top with syrup or your favorite toppings and enjoy!</p>
-          <nav>
-            <a href="#step3" class="button prev">← Previous</a>
-            <a href="#cover" class="button restart">Restart ↻</a>
-          </nav>
-        </section>
-      </div>
+        <h3>Additional Tips:</h3>
+        <p>
+          For extra soft and fluffy pancakes, sift the flour before using it. If
+          you want dairy-free pancakes, substitute milk with almond milk or oat
+          milk.
+        </p>
+
+        <nav>
+          <a href="#cover" class="button prev">← Cover</a>
+          <a href="#step2" class="button next">Next →</a>
+        </nav>
+      </section>
+
+      <!-- Step 2 -->
+      <section id="step2" class="step" tabindex="-1" aria-hidden="true">
+        <h2>Step 2: Mix Ingredients</h2>
+        <img src="./src/step2.jpg" alt="Mixing ingredients in a bowl" />
+
+        <p>
+          Now that you have gathered all your ingredients, it's time to mix them
+          properly for a smooth batter.
+        </p>
+
+        <h3>Mixing Instructions:</h3>
+        <ol class="list">
+          <li>
+            <strong>Step 1:</strong> In a large mixing bowl, sift together
+            <strong>flour, sugar, baking powder, and salt</strong>. This removes
+            lumps and ensures even distribution.
+          </li>
+          <li>
+            <strong>Step 2:</strong> In a separate bowl, whisk together
+            <strong>milk, eggs, melted butter, and vanilla extract</strong>
+            until well combined.
+          </li>
+          <li>
+            <strong>Step 3:</strong> Gradually pour the wet ingredients into the
+            dry ingredients while whisking gently.
+          </li>
+          <li>
+            <strong>Step 4:</strong> Mix just until combined. The batter should
+            be slightly lumpy—overmixing will make the pancakes dense!
+          </li>
+        </ol>
+
+        <h3>Mixing Tips:</h3>
+        <p class="mixing-tips">
+          Use a **whisk** instead of an electric mixer to avoid overmixing. If
+          the batter looks too thick, add a little more milk (1 tablespoon at a
+          time). For extra fluffiness, let the batter rest for **5-10 minutes**
+          before cooking.
+        </p>
+
+        <nav>
+          <a href="#step1" class="button prev">← Previous</a>
+          <a href="#step3" class="button next">Next →</a>
+        </nav>
+      </section>
+
+      <!-- Step 3 -->
+      <section id="step3" class="step" tabindex="-1" aria-hidden="true">
+        <h2>Step 3: Cook the Pancakes</h2>
+        <img src="./src/step3.jpg" alt="Cooking pancakes on a pan" />
+
+        <p>
+          Now it's time to cook your pancakes to perfection! Follow these steps:
+        </p>
+
+        <h3>Cooking Instructions:</h3>
+        <ol class="list">
+          <li>
+            <strong>Step 1:</strong> Preheat a **non-stick pan** or griddle over
+            **medium-low heat**.
+          </li>
+          <li>
+            <strong>Step 2:</strong> Lightly grease the pan with **butter or
+            cooking spray** to prevent sticking.
+          </li>
+          <li>
+            <strong>Step 3:</strong> Pour **¼ cup of batter** onto the pan for
+            each pancake, spacing them apart.
+          </li>
+          <li>
+            <strong>Step 4:</strong> Cook for about **2-3 minutes**, until
+            bubbles form on the surface and the edges look set.
+          </li>
+          <li>
+            <strong>Step 5:</strong> Flip the pancake gently using a spatula,
+            then cook for another **1-2 minutes** until golden brown.
+          </li>
+          <li>
+            <strong>Step 6:</strong> Remove from the pan and keep warm by
+            placing them on a plate covered with a clean kitchen towel.
+          </li>
+        </ol>
+
+        <h3>Cooking Tips:</h3>
+        <ul class="list">
+          <li>
+            To test if your pan is ready, sprinkle a few drops of water—if they
+            sizzle and evaporate, it's good to go!
+          </li>
+          <li>
+            Do not press down on the pancakes while cooking; this will make them
+            dense instead of fluffy.
+          </li>
+          <li>
+            If making multiple pancakes, keep them warm in a **200°F (93°C)
+            oven** while finishing the batch.
+          </li>
+        </ul>
+
+        <nav>
+          <a href="#step2" class="button prev">← Previous</a>
+          <a href="#step4" class="button next">Next →</a>
+        </nav>
+      </section>
+
+      <!-- Step 4 -->
+      <section id="step4" class="step" tabindex="-1" aria-hidden="true">
+        <h2>Step 4: Serve and Enjoy!</h2>
+        <img src="./src/step4.jpg" alt="Pancakes served with syrup" />
+
+        <p>
+          You're almost done! Now, it’s time to serve and enjoy your delicious
+          pancakes.
+        </p>
+
+        <h3>Serving Suggestions:</h3>
+        <ul class="list">
+          <li>
+            <strong>Classic:</strong> Drizzle with **maple syrup** and add a pat
+            of butter.
+          </li>
+          <li>
+            <strong>Fresh & Fruity:</strong> Top with **fresh berries** like
+            strawberries, blueberries, or bananas.
+          </li>
+          <li>
+            <strong>Sweet Treat:</strong> Add **chocolate chips**, whipped
+            cream, or a dusting of powdered sugar.
+          </li>
+          <li>
+            <strong>Nutty & Crunchy:</strong> Sprinkle **chopped nuts**
+            (almonds, walnuts) for extra texture.
+          </li>
+          <li>
+            <strong>Healthy Option:</strong> Serve with **Greek yogurt and
+            honey** for a protein-packed twist.
+          </li>
+        </ul>
+
+        <h3>Final Tips:</h3>
+        <p class="final-tips">
+          For the best experience, serve pancakes immediately while they’re warm
+          and fluffy! You can also store leftovers in an **airtight container**
+          in the fridge for up to 3 days. Reheat in a toaster or microwave for a
+          quick and tasty breakfast!
+        </p>
+
+        <nav>
+          <a href="#step3" class="button prev">← Previous</a>
+          <a href="#cover" class="button restart">Restart ↻</a>
+        </nav>
+      </section>
     </main>
 
     <!-- JavaScript to set default hash to #cover if none is present -->
