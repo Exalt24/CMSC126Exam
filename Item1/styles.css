@@ -1,0 +1,157 @@
+/* Import Google Fonts: Montserrat for headings and Merriweather for body text */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7; /* Soft gray background */
+  font-family: 'Merriweather', serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background-color: #0d3b66; /* Deep navy-blue */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+/* Main Container */
+.news-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+/* Newsfeed Section */
+.newsfeed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* News Card Styling */
+.news-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-content {
+  padding: 1rem;
+}
+
+.news-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+
+.news-content p {
+  margin-bottom: 1rem;
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0d3b66;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more-btn:hover,
+.read-more-btn:focus {
+  color: #207cd2;
+}
+
+/* Hidden Content */
+.hidden-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+/* Revealed Content */
+.hidden-content.open {
+  display: block;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Prevent it from growing beyond 400px */
+  min-width: 250px; /* Prevent it from shrinking below 250px */
+}
+
+.sidebar h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #0d3b66;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  color: #207cd2;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+}
