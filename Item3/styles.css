@@ -1,0 +1,135 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    justify-items: center;
+  }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-title img {
+    width: 250px;
+    height: auto;
+  }
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #f8f9fa;
+}
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Step sections */
+.step {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.step:target {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Cover Section */
+#cover {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#cover img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover, .button:focus {
+    background: #d43f3f;
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Step Images */
+.step img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Navigation button styling */
+nav {
+    margin-top: 15px;
+}
