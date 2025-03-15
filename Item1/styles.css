@@ -1,11 +1,11 @@
 /* Import Google Fonts: Montserrat for headings and Merriweather for body text */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
 
-/* Base Styles */
 body {
   margin: 0;
   padding: 0;
@@ -27,9 +27,10 @@ header h1 {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
+  font-weight: 700;
 }
 
-/* Main Container */
+/* Main Container Layout */
 .news-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -65,6 +66,7 @@ header h1 {
   display: block;
 }
 
+/* News Content Styling */
 .news-content {
   padding: 1rem;
 }
@@ -73,11 +75,12 @@ header h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   margin: 0 0 0.5rem;
+  font-weight: 700; /* Bold headlines */
 }
 
 .date {
   font-size: 0.9rem;
-  color: #777;
+  color: #777; /* Muted color for dates */
   margin-bottom: 0.75rem;
 }
 
@@ -85,8 +88,8 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-/* Read More Button */
-.read-more-btn {
+/* Read More Link Styling */
+.news-content a {
   display: inline-block;
   margin-top: 0.5rem;
   color: #0d3b66;
@@ -95,20 +98,9 @@ header h1 {
   transition: color 0.3s ease;
 }
 
-.read-more-btn:hover,
-.read-more-btn:focus {
-  color: #207cd2;
-}
-
-/* Hidden Content */
-.hidden-content {
-  display: none;
-  margin-top: 1rem;
-}
-
-/* Revealed Content */
-.hidden-content.open {
-  display: block;
+.news-content a:hover,
+.news-content a:focus {
+  color: #ffdd00; /* Accent color on hover */
 }
 
 /* Sidebar Styling */
@@ -117,14 +109,13 @@ header h1 {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px; /* Prevent it from growing beyond 400px */
-  min-width: 250px; /* Prevent it from shrinking below 250px */
 }
 
 .sidebar h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   margin-top: 0;
+  font-weight: 700;
 }
 
 .sidebar ul {
@@ -146,7 +137,7 @@ header h1 {
 
 .sidebar a:hover,
 .sidebar a:focus {
-  color: #207cd2;
+  color: #ffdd00;
 }
 
 /* Responsive Layout */

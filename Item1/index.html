@@ -1,118 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsfeed</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Latest News</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Newsfeed</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Latest News</h1>
+        </header>
 
-    <main class="news-container">
-      <section class="newsfeed">
-        <!-- FIRST ARTICLE -->
-        <article class="news-card">
-          <img src="news1.jpg" alt="News headline image" />
-          <div class="news-content">
-            <h2>
-              Kim Soo-hyun dated late actress Kim Sae-ron when she was no longer a minor – agency
-            </h2>
-            <p class="date">March 14, 2025</p>
-            <!-- Visible Paragraph -->
-            <p>
-              MANILA, Philippines – The agency of Korean star Kim Soo-hyun admitted that the actor dated late actress Kim Sae-ron but refuted claims that their relationship started when she was a minor.
-            </p>
-            <!-- Hidden Content -->
-            <div class="hidden-content" id="article1">
-              <p>
-                Entertainment company Gold Medalist on Friday, March 14, confirmed the relationship — a contradiction to its earlier statement that the two were never together — as it tried to clear up issues connecting Soo-hyun to Sae-ron and her recent death. “Kim Soo-hyun and Kim Sae-ron were in a relationship from the summer of 2019, after Kim Sae-ron became a legal adult, until the fall of 2020. It is not true that Kim Soo-hyun dated Kim Sae-ron when she was a minor,” Gold Medalist wrote in a lengthy statement, as reported by Soompi.
-              </p>
-            </div>
-            <!-- Toggle Link -->
-            <a href="#" class="read-more-btn" data-target="article1">Read more</a>
-          </div>
-        </article>
+        <main class="news-container">
+            <section class="newsfeed">
+                <article class="news-card">
+                    <img src="news1.jpg" alt="News headline image" />
+                    <div class="news-content">
+                        <h2>Kim Soo-hyun dated late actress Kim Sae-ron when she was no longer a minor – agency</h2>
+                        <p class="date">March 14, 2025</p>
+                        <p>
+                            MANILA, Philippines – The agency of Korean star Kim Soo-hyun admitted that the actor dated late actress Kim Sae-ron but refuted claims that their relationship started when she was a minor.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
-        <!-- SECOND ARTICLE -->
-        <article class="news-card">
-          <img src="news2.jpg" alt="News headline image" />
-          <div class="news-content">
-            <h2>
-              Steph Curry becomes 1st player in NBA history to hit 4,000 career three-pointers
-            </h2>
-            <p class="date">March 13, 2025</p>
-            <!-- Visible Paragraphs -->
-            <p>
-              The greatest shooter in NBA history, Stephen Curry, has etched his name atop another list, becoming the first player in the league’s history to hit 4,000 career three-pointers.
-            </p>
-            <p>
-              Curry entered the Golden State Warriors’ Thursday night matchup against the Sacramento Kings needing two more triples to reach the historic mark.
-            </p>
-            <!-- Hidden Content -->
-            <div class="hidden-content" id="article2">
-              <p>
-                His first came midway through the first quarter when Jonathan Kuminga found him wide open, and Curry calmly drained the shot, bringing him to career three No. 3,999 as the Warriors jumped out to a 14-6 lead.
-              </p>
-              <p>
-                Less than a minute later, he launched another attempt but missed the mark.
-              </p>
-              <p>
-                With the Chase Center crowd buzzed with anticipation, Curry didn’t get another opportunity from beyond the arc until late in the second quarter, when his shot missed short, with less than four minutes remaining.
-              </p>
-              <p>
-                Expand article logo Continue reading
-              </p>
-              <p>
-                Prior to the game, the Warriors superstar was seen in discomfort with what the TNT broadcast described as tightness in his back. Cameras caught him on the bench during the game, with the area wrapped and a heat pad applied.
-              </p>
-              <p>
-                Although it didn’t come until the third quarter, Curry finally reached the historic milestone with just over eight minutes left, as the shifty guard side-stepped away from his defender before burying the deep triple, leading to loud “MVP” chants and a stand.
-              </p>
-            </div>
-            <!-- Toggle Link -->
-            <a href="#" class="read-more-btn" data-target="article2">Read more</a>
-          </div>
-        </article>
-      </section>
+                <article class="news-card">
+                    <img src="news2.jpg" alt="News headline image" />
+                    <div class="news-content">
+                        <h2>Steph Curry becomes 1st player in NBA history to hit 4,000 career three-pointers</h2>
+                        <p class="date">March 13, 2025</p>
+                        <p>
+                          The greatest shooter in NBA history, Stephen Curry, has etched his name atop another list, becoming the first player in the league’s history to hit 4,000 career three-pointers.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+            </section>
 
-      <aside class="sidebar">
-        <h2>Trending Topics</h2>
-        <ul>
-          <li><a href="#">Global Politics</a></li>
-          <li><a href="#">AI Developments</a></li>
-          <li><a href="#">Sports Highlights</a></li>
-          <li><a href="#">Market Trends</a></li>
-        </ul>
-      </aside>
-    </main>
-
-    <!-- JavaScript for Toggling Content -->
-    <script>
-      // Select all "Read more" buttons
-      const readMoreButtons = document.querySelectorAll('.read-more-btn');
-
-      readMoreButtons.forEach(button => {
-        button.addEventListener('click', event => {
-          event.preventDefault(); // Prevent default link behavior
-
-          // Get target ID from data attribute
-          const targetId = button.getAttribute('data-target');
-          const hiddenContent = document.getElementById(targetId);
-
-          // Toggle visibility class
-          hiddenContent.classList.toggle('open');
-
-          // Change button text accordingly
-          if (hiddenContent.classList.contains('open')) {
-            button.textContent = 'Show less';
-          } else {
-            button.textContent = 'Read more';
-          }
-        });
-      });
-    </script>
-  </body>
+            <aside class="sidebar">
+                <h2>Trending Topics</h2>
+                <ul>
+                    <li><a href="#">Global Politics</a></li>
+                    <li><a href="#">AI Developments</a></li>
+                    <li><a href="#">Sports Highlights</a></li>
+                    <li><a href="#">Market Trends</a></li>
+                </ul>
+            </aside>
+        </main>
+    </body>
 </html>
