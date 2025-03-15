@@ -889,84 +889,186 @@
 
             <!-- Single-line comment box + "save" button -->
             <section class="comment-input-line">
-                <input 
-                  type="text" 
-                  class="comment-input" 
-                  placeholder="Type your comment here..."
-                />
-                
+                <input type="text" class="comment-input" />
                 <button class="comment-save">save</button>
-                
               </section>
+              
               <span class="formatting-help">
                 <a href="#">formatting help</a>
               </span>
-      <!-- Top Comments -->
-      <ul class="comments-list">
+              
+              
+<!-- Comments Section -->
+<div class="comments">
+    <div class="comment">
+      <div class="comment-row">
+        <div class="comment-votes">
+          <button class="comment-vote-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </button>
+          <button class="comment-vote-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </button>
+        </div>
+        <div class="comment-body">
+          <div class="comment-meta">
+            <a href="#" class="comment-author">UserNumber42</a>
+            <span>47 points 21 hours ago [+]</span>
+          </div>
+          <div class="comment-content">
+            Wow, the first reddit redesign I've seen that doesn't suck,
+            and I've been on this site for 4 years now (different
+            accounts). Very functional. With wide screen monitors this is
+            very cool.
+          </div>
+          <div class="comment-actions">
+            <a href="#">permalink</a>
+            <a href="#">parent</a>
+            <a href="#">reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        
-        <!-- 1) UserNumber432 -->
-        <li>
-          <p>
-            <strong>UserNumber432 42 points 2 hours ago</strong><br />
-            Wow, the first Reddit redesign I've seen that doesn't suck, and I've been on 
-            this site for 4 years now (different accounts). Very functional. With wide screen 
-            monitors this could be very cool.
-          </p>
-        </li>
+    <div class="comment comment-nested">
+      <div class="comment-row">
+        <div class="comment-votes">
+          <button class="comment-vote-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </button>
+          <button class="comment-vote-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </button>
+        </div>
+        <div class="comment-body">
+          <div class="comment-meta">
+            <a href="#" class="comment-author op">7hundredand77</a>
+            <span>14 points 20 hours ago [+]</span>
+          </div>
+          <div class="comment-content">
+            Hi, yeah, since I know many people use widescreen monitors
+            these days, this could make use of space a lot more
+            effectively. A sweet spot with columns needs to be found where
+            there is enough space to view everything perfectly. Since I
+            just quickly put this one together, I didn't really spend much
+            time finding that right balance.
+          </div>
+          <div class="comment-actions">
+            <a href="#">permalink</a>
+            <a href="#">parent</a>
+            <a href="#">edit</a>
+            <a href="#">delete</a>
+            <a href="#">reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment">
+      <div class="comment-row">
+        <div class="comment-votes">
+          <button class="comment-vote-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </button>
+          <button class="comment-vote-button">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </button>
+        </div>
+        <div class="comment-body">
+          <div class="comment-meta">
+            <a href="#" class="comment-author">Chewbacca</a>
+            <span>7 points 15 hours ago [+]</span>
+          </div>
+          <div class="comment-content">
+            This looks like an email client. Brilliant!
+          </div>
+          <div class="comment-actions">
+            <a href="#">permalink</a>
+            <a href="#">parent</a>
+            <a href="#">report</a>
+            <a href="#">reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   
-        <!-- 2) 7hundredand77 -->
-        <li>
-          <p>
-            <strong>7hundredand77 23 points 1 hour ago</strong><br />
-            • Haha, yeah, since I know I'm not alone with wide screen monitors these days, 
-              this could be a large enough space to vary content plus new things might stand out.  
-              Right now there's a single column, so there's more room for the content.<br />
-            • But the top bar is interesting. I'd love to see a design feature that also 
-              includes more quick links. Possibly we can push the entire content to a bigger 
-              main column so the text stands out more.<br />
-            • (FWD: FWD: you gotta fix that)
-          </p>
-        </li>
+
+
+
   
-        <!-- 3) SoreButt -->
-        <li>
-          <p>
-            <strong>SoreButt 7 points 1 hour ago</strong><br />
-            Because it looks more SFW. I'd love to see how the rest of the design 
-            looks with new features.
-          </p>
-        </li>
+
   
-        <!-- 4) gadhatesus -->
-        <li>
-          <p>
-            <strong>gadhatesus 1 point 30 minutes ago</strong><br />
-            The top bar is interesting. I'd love to see a design feature that 
-            also includes more quick links.
-          </p>
-        </li>
-  
-        <!-- 5) maikoz -->
-        <li>
-          <p>
-            <strong>maikoz 2 points 14 minutes ago</strong><br />
-            A bigger main column. I'd love to see a direct color theme.
-          </p>
-        </li>
-  
-        <!-- 6) 7hundredand77 again -->
-        <li>
-          <p>
-            <strong>7hundredand77 2 points just now</strong><br />
-            I have read a lot of responses and feedback on the new design:<br />
-            • Orange icons for new messages<br />
-            • A bigger Reddit style color theme<br />
-            Let me know more ideas.
-          </p>
-        </li>
-      </ul>
-  
+
+      
     </section>
   </aside>
   

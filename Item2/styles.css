@@ -36,7 +36,7 @@
       }
       
       .site-logo img {
-        display: block;
+        display: inline-block;
         width: clamp(80px, 7%, 160px);
         height: clamp(80px, 7%, 160px);
       }
@@ -573,7 +573,7 @@
   
   /* Column 2: up/down votes in color */
   .votes-col {
-    
+    margin-right: 3rem; /* space between this and the next column */
   }
 
   .up-votes {
@@ -602,21 +602,31 @@
   }
   
 
+  .formatting-help {
+    /* Make this a block container so text-align works */
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-top: 0.3rem; /* small spacing above if needed */
+
+  }
+  
   .formatting-help a {
     font-size: 0.8rem;
     color: #336699;
-    text-decoration: none;;
+    text-decoration: none;
+    margin-right: 3.7rem;
   }
   .formatting-help a:hover {
     text-decoration: underline;
   }
+  
   
   /* Single-line comment box + "save" button */
   .comment-input-line {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
     
   }
   .comment-input {
@@ -625,6 +635,7 @@
     font-size: 0.85rem;
     border: 1px solid #ccc;
     border-radius: 3px;
+    min-height: 3rem;
   }
   .comment-save {
     font-size: 0.85rem;
@@ -632,6 +643,7 @@
     background: #f6f7f8;
     border: 1px solid #ccc;
     border-radius: 3px;
+    align-self: flex-end;
     cursor: pointer;
   }
   .comment-save:hover {
@@ -664,3 +676,75 @@
         overflow: hidden;
         clip: rect(1px,1px,1px,1px);
       }
+
+      /* Comments Section */
+  .comments {
+    margin-top: 24px;
+  }
+  
+  .comment {
+    margin-bottom: 16px;
+  }
+  
+  .comment-nested {
+    margin-left: 24px;
+  }
+  
+  .comment-row {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .comment-votes {
+    margin-right: 4px;
+  }
+  
+  .comment-vote-button {
+    width: 16px;
+    height: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .comment-body {
+    flex: 1;
+  }
+  
+  .comment-meta {
+    font-size: 10px;
+    color: #888;
+  }
+  
+  .comment-author {
+    color: var(--reddit-blue);
+  }
+  
+  .comment-author.op {
+    color: var(--reddit-upvote);
+  }
+  
+  .comment-content {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+  
+  .comment-actions {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  
+  .comment-actions a {
+    color: #888;
+    margin-right: 4px;
+    text-decoration: none;
+  }
+  
+  .comment-actions a:hover {
+    text-decoration: underline;
+  }
+  
