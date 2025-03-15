@@ -511,9 +511,7 @@ body {
   grid-row: 2 / 3;
   grid-column: 3 / 4;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 1rem;
+  border: 1px solid black;
   font-size: 0.9rem;
 }
 
@@ -522,6 +520,7 @@ body {
   font-size: 1rem;
   margin-bottom: 0.25rem;
   color: #336699;
+  padding: 1rem 1rem 0rem 1rem;
 }
 .domain {
   font-size: 0.85rem;
@@ -534,7 +533,49 @@ body {
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
   color: #666;
+  padding: 0rem 0rem 0rem 1rem;
 }
+
+
+/* Bubble Container (around .post-detail-meta) */
+.bubble-shape {
+  /* Fill the width of its container or adapt as you need. */
+  width: 100%;
+  
+  /* Basic styling for the bubble itself */
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Position relative so the arrow can be placed absolutely */
+  position: relative;
+  
+  /* Optional margin to separate it from other content */
+}
+
+/* Bottom Arrow */
+.bubble-shape::after {
+  content: "";
+  position: absolute;
+  /* Place the arrow so it “sticks out” from the bottom edge */
+  bottom: -10px;
+
+  /* Adjust left/right to move arrow horizontally.
+     e.g., 'left: 20px;' if you want it near the left, or center it with calc(), etc. */
+  right: 20px;
+  
+  /* The “triangle” is 0x0, with only one colored border side */
+  width: 0;
+  height: 0;
+  
+  /* We’re using border-top to create an upside-down triangle. 
+     The color matches the bubble’s border (#ccc). */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ccc;
+}
+
+
 
 .post-detail-meta {
   /* overall font, color, etc. */
@@ -542,6 +583,7 @@ body {
   color: #777;
   line-height: 1.4;
   margin-bottom: 0.5rem;
+  padding: 0rem 1rem;
 }
 
 .four-col-row {
@@ -600,7 +642,7 @@ body {
   font-size: 0.8rem;
   color: #336699;
   text-decoration: none;
-  margin-right: 3.7rem;
+  margin-right: 4.7rem;
 }
 .formatting-help a:hover {
   text-decoration: underline;
@@ -610,15 +652,18 @@ body {
 .comment-input-line {
   display: flex;
   align-items: center;
+  border-top: 1px solid black;
   gap: 0.5rem;
+  padding: 0.5rem 1rem 0rem 1rem;
 }
 .comment-input {
   flex: 1;
   padding: 0.3rem;
   font-size: 0.85rem;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 3px;
   min-height: 3rem;
+  
 }
 .comment-save {
   font-size: 0.85rem;
@@ -642,17 +687,15 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Comments Section */
+/* Container for all comments */
 .comments {
-  margin-top: 24px;
+  margin: 6px;
+  font-family: sans-serif;
 }
 
+/* Each comment container */
 .comment {
   margin-bottom: 16px;
-}
-
-.comment-nested {
-  margin-left: 24px;
 }
 
 .comment-row {
@@ -660,55 +703,86 @@ body {
   align-items: flex-start;
 }
 
+/* Voting buttons to the left */
 .comment-votes {
-  margin-right: 4px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
 }
 
+/* Very simple up/down arrow style */
 .comment-vote-button {
-  width: 16px;
-  height: 16px;
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 1px 0;
 }
 
+/* The main body of the comment: author, text, etc. */
 .comment-body {
   flex: 1;
 }
 
+/* e.g., smaller text, grey color, etc. */
 .comment-meta {
-  font-size: 10px;
-  color: #888;
+  font-size: 12px;
+  color: #666;
 }
 
 .comment-author {
-  color: var(--reddit-blue);
+  color: #0079d3; /* or reddit-blue, etc. */
+  margin-right: 4px;
 }
 
 .comment-author.op {
-  color: var(--reddit-upvote);
+  color: #0079d3; /* "reddit upvote" style for the OP */
 }
 
 .comment-content {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 14px;
   margin-top: 4px;
 }
 
 .comment-actions {
-  font-size: 10px;
-  margin-top: 2px;
+  margin-top: 4px;
+  font-size: 12px;
 }
-
 .comment-actions a {
+  margin-right: 8px;
   color: #888;
-  margin-right: 4px;
   text-decoration: none;
 }
 
-.comment-actions a:hover {
-  text-decoration: underline;
+/* 
+   Each parent's children are grouped in .comment-children.
+   This draws a continuous vertical line (the "spine") 
+   from top to bottom for all child comments. 
+*/
+.comment-children {
+  margin-left: 30px;        /* overall indentation for the child block */
+  border-left: 1px solid #ccc;
+  position: relative;
 }
+
+/* 
+   Each child comment is still considered "nested." 
+   We add a small horizontal line to connect it to the parent's spine.
+*/
+.comment-nested {
+  position: relative;
+  margin-left: 20px;        /* push the box to the right, away from the spine */
+  padding-top: 8px;         /* space between siblings so lines don't overlap */
+}
+
+/* 
+   This pseudo-element draws the "branch" from the vertical spine 
+   to the child's comment box. 
+*/
+.comment-nested::before {
+  content: "";
+  position: absolute;
+  width: 20px;              /* same as .comment-nested margin-left */
+  left: -20px;              /* align with the vertical spine */
+  top: 16px;                /* vertical offset so it hits near the author's row */
+}
+

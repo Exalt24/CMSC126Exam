@@ -777,7 +777,8 @@
       </section>
 
       <aside class="right-sidebar" aria-label="Post Details">
-        <section class="post-detail">
+        <section class="bubble-shape">
+        <section class="post-detail-meta">
           <!-- Title + Domain -->
           <h2 class="post-title">
             I AM the guy who created this design AMA
@@ -813,6 +814,9 @@
             </div>
           </section>
 
+        </section>
+        </section>  
+
           <!-- Single-line comment box + "save" button -->
           <section class="comment-input-line">
             <input type="text" class="comment-input" />
@@ -823,36 +827,24 @@
             <a href="#">formatting help</a>
           </span>
 
-          <!-- Comments Section -->
           <div class="comments">
+            <!-- 1) UserNumber42 (TOP LEVEL) -->
             <div class="comment">
               <div class="comment-row">
                 <div class="comment-votes">
+                  <!-- Upvote -->
                   <button class="comment-vote-button">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#999"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
+                    <svg width="12" height="12" viewBox="0 0 24 24"
+                         fill="none" stroke="#999" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
                       <path d="M12 19V5M5 12l7-7 7 7" />
                     </svg>
                   </button>
+                  <!-- Downvote -->
                   <button class="comment-vote-button">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#999"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
+                    <svg width="12" height="12" viewBox="0 0 24 24"
+                         fill="none" stroke="#999" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
                       <path d="M12 5v14M5 12l7 7 7-7" />
                     </svg>
                   </button>
@@ -863,115 +855,13 @@
                     <span>47 points 21 hours ago [+]</span>
                   </div>
                   <div class="comment-content">
-                    Wow, the first reddit redesign I've seen that doesn't suck,
-                    and I've been on this site for 4 years now (different
-                    accounts). Very functional. With wide screen monitors this
-                    is very cool.
-                  </div>
-                  <div class="comment-actions">
-                    <a href="#">permalink</a>
-                    <a href="#">parent</a>
-                    <a href="#">reply</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="comment comment-nested">
-              <div class="comment-row">
-                <div class="comment-votes">
-                  <button class="comment-vote-button">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#999"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M12 19V5M5 12l7-7 7 7" />
-                    </svg>
-                  </button>
-                  <button class="comment-vote-button">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#999"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M12 5v14M5 12l7 7 7-7" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="comment-body">
-                  <div class="comment-meta">
-                    <a href="#" class="comment-author op">7hundredand77</a>
-                    <span>14 points 20 hours ago [+]</span>
-                  </div>
-                  <div class="comment-content">
-                    Hi, yeah, since I know many people use widescreen monitors
-                    these days, this could make use of space a lot more
-                    effectively. A sweet spot with columns needs to be found
-                    where there is enough space to view everything perfectly.
-                    Since I just quickly put this one together, I didn't really
-                    spend much time finding that right balance.
-                  </div>
-                  <div class="comment-actions">
-                    <a href="#">permalink</a>
-                    <a href="#">parent</a>
-                    <a href="#">edit</a>
-                    <a href="#">delete</a>
-                    <a href="#">reply</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="comment">
-              <div class="comment-row">
-                <div class="comment-votes">
-                  <button class="comment-vote-button">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#999"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M12 19V5M5 12l7-7 7 7" />
-                    </svg>
-                  </button>
-                  <button class="comment-vote-button">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#999"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M12 5v14M5 12l7 7 7-7" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="comment-body">
-                  <div class="comment-meta">
-                    <a href="#" class="comment-author">Chewbacca</a>
-                    <span>7 points 15 hours ago [+]</span>
-                  </div>
-                  <div class="comment-content">
-                    This looks like an email client. Brilliant!
+                    Wow, the first Reddit redesign I've seen that doesn't suck, and
+                    I've been on this site for 4 years now (different accounts).
+                    Very functional. With wide screen monitors this could be very cool.
+                    <br><br>
+                    Only suggestion is to lower the width of the scores column for
+                    each post and the subreddit side bar so there is more room
+                    for the content.
                   </div>
                   <div class="comment-actions">
                     <a href="#">permalink</a>
@@ -981,8 +871,317 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+          
+              <!-- Child comments of UserNumber42 go inside .comment-children -->
+              <div class="comment-children">
+                <!-- 1.1) 7hundredand77 (NESTED under UserNumber42) -->
+                <div class="comment comment-nested">
+                  <div class="comment-row">
+                    <div class="comment-votes">
+                      <button class="comment-vote-button">
+                        <svg width="12" height="12" viewBox="0 0 24 24"
+                             fill="none" stroke="#999" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 19V5M5 12l7-7 7 7" />
+                        </svg>
+                      </button>
+                      <button class="comment-vote-button">
+                        <svg width="12" height="12" viewBox="0 0 24 24"
+                             fill="none" stroke="#999" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="comment-body">
+                      <div class="comment-meta">
+                        <a href="#" class="comment-author op">7hundredand77</a>
+                        <span>14 points 20 hours ago [+]</span>
+                      </div>
+                      <div class="comment-content">
+                        Ha, yeah, since I know many people use widescreen monitors these
+                        days, this could make use of space a lot more effectively.
+                        A sweet spot with columns needs to be found where there is enough
+                        space to view everything perfectly. Since I just quickly put
+                        this one together, I didn't really spend much time finding
+                        that right balance.
+                      </div>
+                      <div class="comment-actions">
+                        <a href="#">permalink</a>
+                        <a href="#">parent</a>
+                        <a href="#">edit</a>
+                        <a href="#">delete</a>
+                        <a href="#">reply</a>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Child comments of 7hundredand77 -->
+                  <div class="comment-children">
+                    <!-- 1.1.1) aliasforspam (NESTED under 7hundredand77) -->
+                    <div class="comment comment-nested">
+                      <div class="comment-row">
+                        <div class="comment-votes">
+                          <button class="comment-vote-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24"
+                                 fill="none" stroke="#999" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                          </button>
+                          <button class="comment-vote-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24"
+                                 fill="none" stroke="#999" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 5v14M5 12l7 7 7-7" />
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="comment-body">
+                          <div class="comment-meta">
+                            <a href="#" class="comment-author">aliasforspam</a>
+                            <span>7 points 15 hours ago [+]</span>
+                          </div>
+                          <div class="comment-content">
+                            This looks like an email client. Brilliant!
+                            <br><br>
+                            …I never realized how much Reddit is like reading email
+                            until now. I guess we could view things in brackets much like
+                            forwards from the uncle you otherwise don’t communicate
+                            with. DAE blah blah = FWD: FWD: Fwd: You gotta read this!
+                          </div>
+                          <div class="comment-actions">
+                            <a href="#">permalink</a>
+                            <a href="#">parent</a>
+                            <a href="#">report</a>
+                            <a href="#">reply</a>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <!-- Child comments of aliasforspam -->
+                      <div class="comment-children">
+                        <!-- 1.1.1.1) Deterministic (NESTED under aliasforspam) -->
+                        <div class="comment comment-nested">
+                          <div class="comment-row">
+                            <div class="comment-votes">
+                              <button class="comment-vote-button">
+                                <svg width="12" height="12" viewBox="0 0 24 24"
+                                     fill="none" stroke="#999" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M12 19V5M5 12l7-7 7 7" />
+                                </svg>
+                              </button>
+                              <button class="comment-vote-button">
+                                <svg width="12" height="12" viewBox="0 0 24 24"
+                                     fill="none" stroke="#999" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M12 5v14M5 12l7 7 7-7" />
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="comment-body">
+                              <div class="comment-meta">
+                                <a href="#" class="comment-author">Deterministic</a>
+                                <span>4 points 11 hours ago [+]</span>
+                              </div>
+                              <div class="comment-content">
+                                It's funny you mention email, because it looks
+                                ever-so-vaguely like Google Wave, except that instead of
+                                Menu|Inboxes|Emails, it's Subreddits|Topics|Comments.
+                                <br><br>
+                                Nevertheless, it’s an interesting concept for a
+                                redesign—a bit shinier, but still maintaining the
+                                minimalistic design.
+                              </div>
+                              <div class="comment-actions">
+                                <a href="#">permalink</a>
+                                <a href="#">parent</a>
+                                <a href="#">report</a>
+                                <a href="#">reply</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div> <!-- End Deterministic -->
+                      </div> <!-- End .comment-children of aliasforspam -->
+                    </div> <!-- End aliasforspam -->
+          
+                    <!-- 1.1.2) volve (NESTED under 7hundredand77) -->
+                    <div class="comment comment-nested">
+                      <div class="comment-row">
+                        <div class="comment-votes">
+                          <button class="comment-vote-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24"
+                                 fill="none" stroke="#999" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                          </button>
+                          <button class="comment-vote-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24"
+                                 fill="none" stroke="#999" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 5v14M5 12l7 7 7-7" />
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="comment-body">
+                          <div class="comment-meta">
+                            <a href="#" class="comment-author">volve</a>
+                            <span>3 points 10 hours ago [+]</span>
+                          </div>
+                          <div class="comment-content">
+                            Except, let’s be honest; I only rarely maximize windows on
+                            my 24" monitors, almost never for something like passive
+                            entertainment such as Reddit. I generally hate a lot of
+                            these “wide‐screen optimized” designs, since the point is
+                            that they aren’t likely the sole activity on said
+                            widescreen…
+                            <br><br>
+                            (But it’s a very nice design!)
+                          </div>
+                          <div class="comment-actions">
+                            <a href="#">permalink</a>
+                            <a href="#">parent</a>
+                            <a href="#">report</a>
+                            <a href="#">reply</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- End volve -->
+          
+                    <!-- 1.1.3) freshwire (NESTED under 7hundredand77) -->
+                    <div class="comment comment-nested">
+                      <div class="comment-row">
+                        <div class="comment-votes">
+                          <button class="comment-vote-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24"
+                                 fill="none" stroke="#999" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                          </button>
+                          <button class="comment-vote-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24"
+                                 fill="none" stroke="#999" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 5v14M5 12l7 7 7-7" />
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="comment-body">
+                          <div class="comment-meta">
+                            <a href="#" class="comment-author">freshwire</a>
+                            <span>2 points 9 hours ago [+]</span>
+                          </div>
+                          <div class="comment-content">
+                            You could have it so the column width can be changed
+                            (by just dragging around).
+                          </div>
+                          <div class="comment-actions">
+                            <a href="#">permalink</a>
+                            <a href="#">parent</a>
+                            <a href="#">report</a>
+                            <a href="#">reply</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- End freshwire -->
+                  </div> <!-- End .comment-children of 7hundredand77 -->
+                </div> <!-- End 7hundredand77 -->
+          
+                <!-- 1.2) gusthebus (NESTED under UserNumber42) -->
+                <div class="comment comment-nested">
+                  <div class="comment-row">
+                    <div class="comment-votes">
+                      <button class="comment-vote-button">
+                        <svg width="12" height="12" viewBox="0 0 24 24"
+                             fill="none" stroke="#999" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 19V5M5 12l7-7 7 7" />
+                        </svg>
+                      </button>
+                      <button class="comment-vote-button">
+                        <svg width="12" height="12" viewBox="0 0 24 24"
+                             fill="none" stroke="#999" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="comment-body">
+                      <div class="comment-meta">
+                        <a href="#" class="comment-author">gusthebus</a>
+                        <span>1 point 5 hours ago [+]</span>
+                      </div>
+                      <div class="comment-content">
+                        I agree. Additionally, it wouldn't be difficult to provide
+                        a button to toggle from the current layout to the OP's design.
+                        That would be a simple JavaScript to change out the page CSS.
+                        The dev team could take it one step further and cache the user's
+                        UI choice.
+                      </div>
+                      <div class="comment-actions">
+                        <a href="#">permalink</a>
+                        <a href="#">parent</a>
+                        <a href="#">report</a>
+                        <a href="#">reply</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- End gusthebus -->
+              </div> <!-- End .comment-children of UserNumber42 -->
+            </div> <!-- End UserNumber42 -->
+          
+            <!-- 2) 7hundredand77 (TOP LEVEL again) -->
+            <div class="comment">
+              <div class="comment-row">
+                <div class="comment-votes">
+                  <button class="comment-vote-button">
+                    <svg width="12" height="12" viewBox="0 0 24 24"
+                         fill="none" stroke="#999" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 19V5M5 12l7-7 7 7" />
+                    </svg>
+                  </button>
+                  <button class="comment-vote-button">
+                    <svg width="12" height="12" viewBox="0 0 24 24"
+                         fill="none" stroke="#999" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <a href="#" class="comment-author op">7hundredand77</a>
+                    <span>9 points 14 hours ago [+]</span>
+                  </div>
+                  <div class="comment-content">
+                    I am going to update this design tonight. There have been
+                    a lot of responses and feedback on what needs to be done:
+                    <ul>
+                      <li>Orange icon for new messages</li>
+                      <li>A more Reddit‐styled colour theme rather than the white/grey</li>
+                      <li>Update column widths</li>
+                      <li>Improve link styling</li>
+                    </ul>
+                  </div>
+                  <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">report</a>
+                    <a href="#">reply</a>
+                  </div>
+                </div>
+              </div>
+              <!-- No .comment-children here, because 7hundredand77 has no children at this top level -->
+            </div> <!-- End second 7hundredand77 -->
+          </div><!-- / .comments -->
+          
+            
+          
+          
         </section>
       </aside>
     </main>
