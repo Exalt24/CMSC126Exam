@@ -9,9 +9,7 @@
 </head>
 
 <body>
-  <!-- ======== TOP HEADER BAR ======== -->
   <header class="site-header">
-    <!-- FIRST ROW: Logo + User Info -->
     <section class="header-bar">
       <nav class="site-logo">
         <a href="#" aria-label="Home">
@@ -20,19 +18,16 @@
       </nav>
       <nav class="logged-in-user">
         <a href="#">7hundredand77,</a> you're back!
-        <a href="#">preferences</a> | <a href="#">logout?</a> : (
+        <a href="#">preferences</a> | <a href="#">logout?</a> :(
       </nav>
     </section>
-    <!-- SECOND ROW: Subreddits Nav -->
     <section class="subreddits-nav">
     </section>
   </header>
 
-  <!-- ======== MAIN CONTENT WRAPPER ======== -->
   <input type="checkbox" id="sidebar-collapse" hidden>
   <main class="content-wrapper">
     <aside class="left-sidebar" aria-label="Sidebar with subreddits">
-      <!-- Toggle Control for collapsing/expanding -->
       <label for="sidebar-collapse" class="collapse-toggle">
         <span class="double-chevron">«</span>
       </label>
@@ -145,7 +140,6 @@
           </li>
         </ul>
 
-        <!-- (MORE) link and actions remain unchanged -->
         <section class="sidebar-item">
           <a href="#" class="sidebar-action-link">(MORE)</a>
         </section>
@@ -470,9 +464,6 @@
           </p>
         </section>
       </article>
-
-
-      <!-- Bottom Nav: "NEWER" / "OLDER" -->
       <section class="post-navigation">
         <a href="#" class="nav-button nav-newer">NEWER</a>
         <a href="#" class="nav-button nav-older">OLDER</a>
@@ -480,7 +471,6 @@
     </section>
 
     <aside class="right-sidebar" aria-label="Post Details">
-      <!-- Right: notifications -->
       <nav class="notifications">
         <ul>
           <li>
@@ -499,84 +489,57 @@
       </nav>
       <section class="bubble-shape">
         <section class="post-detail-meta">
-          <!-- Title + Domain -->
           <h2 class="post-title">
             IAM the guy who created this design AMA
             <span class="domain">(i.imgur.com)</span>
           </h2>
-
-          <!-- Image link from the screenshot -->
           <p class="post-image-link">
             http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg
           </p>
 
           <section class="post-detail-meta">
             <div class="four-col-row">
-              <!-- Column 1: 232 points (71% like it) -->
               <div class="points-col">
                 <strong>232 points</strong> (71% like it)
               </div>
-
-              <!-- Column 2: up/down votes -->
               <div class="votes-col">
                 <span class="up-votes">390 up votes</span><br />
                 <span class="down-votes">158 down votes</span>
               </div>
-
-              <!-- Column 3: empty space -->
               <div class="empty-col"></div>
-
-              <!-- Column 4: date, then "200 comments sort by" -->
               <div class="comments-sort-col">
                 submitted on 01 Feb 2011<br />
                 <strong>200 comments &nbsp; sort by</strong>
               </div>
             </div>
           </section>
-
         </section>
       </section>
-
-      <!-- Single-line comment box + "save" button -->
       <section class="comment-input-line">
         <input type="text" class="comment-input" />
         <button class="comment-save">save</button>
       </section>
-
       <span class="formatting-help">
         <a href="#">formatting help</a>
       </span>
-
       <div class="comments">
-        <!-- 1) UserNumber42 (TOP LEVEL) -->
         <div class="comment">
           <div class="comment-row">
             <div class="comment-vote-controls">
-              <!-- Radio inputs for comment vote states -->
               <input type="radio" id="comment-novote-1" name="comment-vote-1" hidden checked>
               <input type="radio" id="comment-upvote-1" name="comment-vote-1" hidden>
               <input type="radio" id="comment-downvote-1" name="comment-vote-1" hidden>
-
-              <!-- Container that stacks the vote buttons vertically -->
               <div class="comment-vote-stack">
-                <!-- Upvote container: two labels for upvote -->
                 <div class="comment-upvote-container">
-                  <!-- Shown when NOT upvoted -->
                   <label for="comment-upvote-1" class="arrow comment-upvote-btn default">➨</label>
-                  <!-- Shown when upvoted (clicking it reverts to no vote) -->
                   <label for="comment-novote-1" class="arrow comment-upvote-btn toggled">➨</label>
                 </div>
-
-                <!-- Downvote container: two labels for downvote -->
                 <div class="comment-downvote-container">
-                  <!-- Shown when NOT downvoted -->
                   <label for="comment-downvote-1" class="arrow comment-downvote-btn default">➨</label>
-                  <!-- Shown when downvoted (clicking it reverts to no vote) -->
                   <label for="comment-novote-1" class="arrow comment-downvote-btn toggled">➨</label>
                 </div>
               </div>
             </div>
-
             <div class="comment-body">
               <div class="comment-meta">
                 <a href="#" class="comment-author">UserNumber42</a>
@@ -599,33 +562,20 @@
               </div>
             </div>
           </div>
-
-          <!-- Child comments of UserNumber42 go inside .comment-children -->
           <div class="comment-children">
-            <!-- 1.1) 7hundredand77 (NESTED under UserNumber42) -->
             <div class="comment comment-nested">
               <div class="comment-row">
                 <div class="comment-vote-controls">
-                  <!-- Radio inputs for comment vote states -->
                   <input type="radio" id="comment-novote-2" name="comment-vote-2" hidden checked>
                   <input type="radio" id="comment-upvote-2" name="comment-vote-2" hidden>
                   <input type="radio" id="comment-downvote-2" name="comment-vote-2" hidden>
-
-                  <!-- Container that stacks the vote buttons vertically -->
                   <div class="comment-vote-stack">
-                    <!-- Upvote container: two labels for upvote -->
                     <div class="comment-upvote-container">
-                      <!-- Shown when NOT upvoted -->
                       <label for="comment-upvote-2" class="arrow comment-upvote-btn default">➨</label>
-                      <!-- Shown when upvoted (clicking it reverts to no vote) -->
                       <label for="comment-novote-2" class="arrow comment-upvote-btn toggled">➨</label>
                     </div>
-
-                    <!-- Downvote container: two labels for downvote -->
                     <div class="comment-downvote-container">
-                      <!-- Shown when NOT downvoted -->
                       <label for="comment-downvote-2" class="arrow comment-downvote-btn default">➨</label>
-                      <!-- Shown when downvoted (clicking it reverts to no vote) -->
                       <label for="comment-novote-2" class="arrow comment-downvote-btn toggled">➨</label>
                     </div>
                   </div>
@@ -652,33 +602,20 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Child comments of 7hundredand77 -->
               <div class="comment-children">
-                <!-- 1.1.1) aliasforspam (NESTED under 7hundredand77) -->
                 <div class="comment comment-nested">
                   <div class="comment-row">
                     <div class="comment-vote-controls">
-                      <!-- Radio inputs for comment vote states -->
                       <input type="radio" id="comment-novote-6" name="comment-vote-6" hidden checked>
                       <input type="radio" id="comment-upvote-6" name="comment-vote-6" hidden>
                       <input type="radio" id="comment-downvote-6" name="comment-vote-6" hidden>
-
-                      <!-- Container that stacks the vote buttons vertically -->
                       <div class="comment-vote-stack">
-                        <!-- Upvote container: two labels for upvote -->
                         <div class="comment-upvote-container">
-                          <!-- Shown when NOT upvoted -->
                           <label for="comment-upvote-6" class="arrow comment-upvote-btn default">➨</label>
-                          <!-- Shown when upvoted (clicking it reverts to no vote) -->
                           <label for="comment-novote-6" class="arrow comment-upvote-btn toggled">➨</label>
                         </div>
-
-                        <!-- Downvote container: two labels for downvote -->
                         <div class="comment-downvote-container">
-                          <!-- Shown when NOT downvoted -->
                           <label for="comment-downvote-6" class="arrow comment-downvote-btn default">➨</label>
-                          <!-- Shown when downvoted (clicking it reverts to no vote) -->
                           <label for="comment-novote-6" class="arrow comment-downvote-btn toggled">➨</label>
                         </div>
                       </div>
@@ -704,19 +641,13 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- Child comments of aliasforspam -->
                   <div class="comment-children">
-                    <!-- 1.1.1.1) Deterministic (NESTED under aliasforspam) -->
                     <div class="comment comment-nested">
                       <div class="comment-row">
                         <div class="comment-vote-controls">
-                          <!-- Radio inputs for comment vote states -->
                           <input type="radio" id="comment-novote-3" name="comment-vote-3" hidden checked>
                           <input type="radio" id="comment-upvote-3" name="comment-vote-3" hidden>
                           <input type="radio" id="comment-downvote-3" name="comment-vote-3" hidden>
-
-                          <!-- Container that stacks the vote buttons vertically -->
                           <div class="comment-vote-stack">
                             <!-- Upvote container: two labels for upvote -->
                             <div class="comment-upvote-container">
@@ -911,34 +842,22 @@
                   </div>
                 </div>
               </div>
-            </div> <!-- End gusthebus -->
-          </div> <!-- End .comment-children of UserNumber42 -->
-        </div> <!-- End UserNumber42 -->
-
-        <!-- 2) 7hundredand77 (TOP LEVEL again) -->
+            </div>
+          </div>
+        </div>
         <div class="comment">
           <div class="comment-row">
             <div class="comment-vote-controls">
-              <!-- Radio inputs for comment vote states -->
               <input type="radio" id="comment-novote" name="comment-vote" hidden checked>
               <input type="radio" id="comment-upvote" name="comment-vote" hidden>
               <input type="radio" id="comment-downvote" name="comment-vote" hidden>
-
-              <!-- Container that stacks the vote buttons vertically -->
               <div class="comment-vote-stack">
-                <!-- Upvote container: two labels for upvote -->
                 <div class="comment-upvote-container">
-                  <!-- Shown when NOT upvoted -->
                   <label for="comment-upvote" class="arrow comment-upvote-btn default">➨</label>
-                  <!-- Shown when upvoted (clicking it reverts to no vote) -->
                   <label for="comment-novote" class="arrow comment-upvote-btn toggled">➨</label>
                 </div>
-
-                <!-- Downvote container: two labels for downvote -->
                 <div class="comment-downvote-container">
-                  <!-- Shown when NOT downvoted -->
                   <label for="comment-downvote" class="arrow comment-downvote-btn default">➨</label>
-                  <!-- Shown when downvoted (clicking it reverts to no vote) -->
                   <label for="comment-novote" class="arrow comment-downvote-btn toggled">➨</label>
                 </div>
               </div>
@@ -966,9 +885,8 @@
               </div>
             </div>
           </div>
-          <!-- No .comment-children here, because 7hundredand77 has no children at this top level -->
-        </div> <!-- End second 7hundredand77 -->
-      </div><!-- / .comments -->
+        </div>
+      </div>
       </section>
     </aside>
   </main>
