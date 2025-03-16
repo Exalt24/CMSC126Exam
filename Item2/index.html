@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reddit</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- ======== TOP HEADER BAR ======== -->
-    <header class="site-header">
-      <!-- FIRST ROW: Logo + User Info -->
-      <section class="header-bar">
-        <nav class="site-logo">
-          <a href="#" aria-label="Home">
-            <img src="src/logo.png" alt="Reddit Logo" />
-          </a>
-        </nav>
-        <nav class="logged-in-user">
-          <a href="#">7hundredand77,</a> you're back!
-          <a href="#">preferences</a> | <a href="#">logout?</a> : (
-        </nav>
-      </section>
-    
-      <!-- SECOND ROW: Subreddits Nav -->
-      <section class="subreddits-nav">
 
-      </section>
-    </header>
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <!-- ======== MAIN CONTENT WRAPPER ======== -->
-   
-      
-      <input type="checkbox" id="sidebar-collapse" hidden>
-      <main class="content-wrapper">
-      <aside class="left-sidebar" aria-label="Sidebar with subreddits">
-        <!-- Toggle Control for collapsing/expanding -->
-        
-        <label for="sidebar-collapse" class="collapse-toggle">
-          <span class="double-chevron">«</span>
-        </label>
-        <div class="sidebar-content">
+<body>
+  <!-- ======== TOP HEADER BAR ======== -->
+  <header class="site-header">
+    <!-- FIRST ROW: Logo + User Info -->
+    <section class="header-bar">
+      <nav class="site-logo">
+        <a href="#" aria-label="Home">
+          <img src="src/logo.png" alt="Reddit Logo" />
+        </a>
+      </nav>
+      <nav class="logged-in-user">
+        <a href="#">7hundredand77,</a> you're back!
+        <a href="#">preferences</a> | <a href="#">logout?</a> : (
+      </nav>
+    </section>
+    <!-- SECOND ROW: Subreddits Nav -->
+    <section class="subreddits-nav">
+    </section>
+  </header>
+
+  <!-- ======== MAIN CONTENT WRAPPER ======== -->
+  <input type="checkbox" id="sidebar-collapse" hidden>
+  <main class="content-wrapper">
+    <aside class="left-sidebar" aria-label="Sidebar with subreddits">
+      <!-- Toggle Control for collapsing/expanding -->
+      <label for="sidebar-collapse" class="collapse-toggle">
+        <span class="double-chevron">«</span>
+      </label>
+      <div class="sidebar-content">
         <ul>
           <li>
             <input type="radio" id="sub-frontpage" name="sidebar-item" hidden>
@@ -148,362 +144,360 @@
             </label>
           </li>
         </ul>
-      
+
         <!-- (MORE) link and actions remain unchanged -->
         <section class="sidebar-item">
           <a href="#" class="sidebar-action-link">(MORE)</a>
         </section>
-      
+
         <section class="sidebar-action">
           <a href="#" class="sidebar-action-link">Submit a link</a>
           <p class="sidebar-action-text">
             to anything interesting: news article, blog entry, video, picture...
           </p>
         </section>
-      
+
         <section class="sidebar-action">
           <a href="#" class="sidebar-action-link">Create Community</a>
           <p class="sidebar-action-text">
             for your LARPing community... because nothing in life is sacred (except reddits!) here on the side.
           </p>
         </section>
-      
+
         <figure class="sidebar-ad">
           <img src="src/little.jpg" alt="Little Big Planet" />
           <figcaption>tiniest ad in the world</figcaption>
         </figure>
       </div>
-      </aside>
+    </aside>
 
-      
+    <section class="posts-column" aria-label="List of posts">
+      <nav class="user-nav">
+        <ul>
+          <!-- Tab 1: what's hot -->
+          <li>
+            <input type="radio" id="nav-hot" name="nav-tab" hidden checked>
+            <label for="nav-hot" class="nav-tab">what's hot</label>
+          </li>
 
-      <section class="posts-column" aria-label="List of posts">
-        <nav class="user-nav">
-          <ul>
-            <!-- Tab 1: what's hot -->
-            <li>
-              <input type="radio" id="nav-hot" name="nav-tab" hidden checked>
-              <label for="nav-hot" class="nav-tab">what's hot</label>
-            </li>
-        
-            <!-- Tab 2: new -->
-            <li>
-              <input type="radio" id="nav-new" name="nav-tab" hidden>
-              <label for="nav-new" class="nav-tab">new</label>
-            </li>
-        
-            <!-- Tab 3: controversial -->
-            <li>
-              <input type="radio" id="nav-controversial" name="nav-tab" hidden>
-              <label for="nav-controversial" class="nav-tab">controversial</label>
-            </li>
-        
-            <!-- Tab 4: top -->
-            <li>
-              <input type="radio" id="nav-top" name="nav-tab" hidden>
-              <label for="nav-top" class="nav-tab">top</label>
-            </li>
-        
-            <!-- Tab 5: saved -->
-            <li>
-              <input type="radio" id="nav-saved" name="nav-tab" hidden>
-              <label for="nav-saved" class="nav-tab">saved</label>
-            </li>
-            <!-- Middle: search form -->
-            <nav class="search-form search" role="search" aria-label="Site Search">
-              <label for="search-input" class="visually-hidden">Search</label>
-              <input id="search-input" type="search" />
-            </nav>
-          </ul>
-        </nav>
-        <!-- Post #1 -->
-        <article class="post">
-          <!-- Rank -->
-          <section class="post-rank">1</section>
-      
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <!-- Radio inputs (unique name/id per post) -->
-            <input type="radio" id="novote-1" name="vote-1" hidden checked>
-            <input type="radio" id="upvote-1" name="vote-1" hidden>
-            <input type="radio" id="downvote-1" name="vote-1" hidden>
-      
-            <!-- Stack arrows + count vertically -->
-            <div class="vote-stack">
-              <!-- Upvote container -->
-              <div class="upvote-container">
-                <label for="upvote-1" class="arrow upvote-btn default">➨</label>
-                <label for="novote-1" class="arrow upvote-btn toggled">➨</label>
-              </div>
-      
-              <!-- Vote Count -->
-              <span class="vote-count">215</span>
-      
-              <!-- Downvote container -->
-              <div class="downvote-container">
-                <label for="downvote-1" class="arrow downvote-btn default">➨</label>
-                <label for="novote-1" class="arrow downvote-btn toggled">➨</label>
-              </div>
-            </div>
-          </section>
-      
-          <!-- Optional thumbnail image -->
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-      
-          <!-- Post Content -->
-          <section class="post-content">
-            <!-- Title + Domain -->
-            <p class="main-post-title">
-              <a href="#" class="post-link">
-                What do you call guys watching the Super Bowl at home?
-              </a>
-              <span class="domain">(cnn.com)</span>
-            </p>
-            <!-- Meta info -->
-            <p class="post-meta">
-              submitted 19 hours ago by <a href="#">krispykracker</a>
-            </p>
-            <!-- Comments + share, etc. -->
-            <p class="post-details">
-              <a href="#">823 comments</a> 
-              <a href="#">share</a> 
-              <a href="#">save</a> 
-              <a href="#">hide</a> 
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-      
-        <!-- Post #2 -->
-        <article class="post post-selected">
-          <section class="post-rank">2</section>
-          <section class="vote-controls">
-            <input type="radio" id="novote-2" name="vote-2" hidden checked>
-            <input type="radio" id="upvote-2" name="vote-2" hidden>
-            <input type="radio" id="downvote-2" name="vote-2" hidden>
-            <div class="vote-stack">
-              <div class="upvote-container">
-                <label for="upvote-2" class="arrow upvote-btn default">➨</label>
-                <label for="novote-2" class="arrow upvote-btn toggled">➨</label>
-              </div>
-              <span class="vote-count">215</span>
-              <div class="downvote-container">
-                <label for="downvote-2" class="arrow downvote-btn default">➨</label>
-                <label for="novote-2" class="arrow downvote-btn toggled">➨</label>
-              </div>
-            </div>
-          </section>
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <section class="post-content">
-            <p class="main-post-title">
-              <a href="#" class="post-link">
-                IAM the guy who created this design AMA
-              </a>
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-            <p class="post-meta">
-              submitted 19 hours ago by <a href="#">7hundredand77</a>
-            </p>
-            <p class="post-details">
-              <a href="#">200 comments</a>
-              <a href="#">share</a>
-              <a href="#">save</a>
-              <a href="#">hide</a>
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-      
-        <!-- Post #3 -->
-        <article class="post">
-          <section class="post-rank">3</section>
-          <section class="vote-controls">
-            <input type="radio" id="novote-3" name="vote-3" hidden checked>
-            <input type="radio" id="upvote-3" name="vote-3" hidden>
-            <input type="radio" id="downvote-3" name="vote-3" hidden>
-            <div class="vote-stack">
-              <div class="upvote-container">
-                <label for="upvote-3" class="arrow upvote-btn default">➨</label>
-                <label for="novote-3" class="arrow upvote-btn toggled">➨</label>
-              </div>
-              <span class="vote-count">215</span>
-              <div class="downvote-container">
-                <label for="downvote-3" class="arrow downvote-btn default">➨</label>
-                <label for="novote-3" class="arrow downvote-btn toggled">➨</label>
-              </div>
-            </div>
-          </section>
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <section class="post-content">
-            <p class="main-post-title">
-              <a href="#" class="post-link">
-                Use this Chrome addon to block major third parties and search
-                engines from tracking the webpages you go to and searches...
-              </a>
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-            <p class="post-meta">
-              submitted 19 hours ago by <a href="#">krispykracker</a>
-            </p>
-            <p class="post-details">
-              <a href="#">72 comments</a>
-              <a href="#">share</a>
-              <a href="#">save</a>
-              <a href="#">hide</a>
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-      
-        <!-- Post #4 -->
-        <article class="post">
-          <section class="post-rank">4</section>
-          <section class="vote-controls">
-            <input type="radio" id="novote-4" name="vote-4" hidden checked>
-            <input type="radio" id="upvote-4" name="vote-4" hidden>
-            <input type="radio" id="downvote-4" name="vote-4" hidden>
-            <div class="vote-stack">
-              <div class="upvote-container">
-                <label for="upvote-4" class="arrow upvote-btn default">➨</label>
-                <label for="novote-4" class="arrow upvote-btn toggled">➨</label>
-              </div>
-              <span class="vote-count">215</span>
-              <div class="downvote-container">
-                <label for="downvote-4" class="arrow downvote-btn default">➨</label>
-                <label for="novote-4" class="arrow downvote-btn toggled">➨</label>
-              </div>
-            </div>
-          </section>
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <section class="post-content">
-            <p class="main-post-title">
-              <a href="#" class="post-link">
-                Thanks, Sally, That blowjob was... SFW
-              </a>
-              <span class="domain">(imgur.com)</span>
-            </p>
-            <p class="post-meta">
-              submitted 9 hours ago by <a href="#">Mako</a>
-            </p>
-            <p class="post-details">
-              <a href="#">200 comments</a>
-              <a href="#">share</a>
-              <a href="#">save</a>
-              <a href="#">hide</a>
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-      
-        <!-- Post #5 -->
-        <article class="post">
-          <section class="post-rank">5</section>
-          <section class="vote-controls">
-            <input type="radio" id="novote-5" name="vote-5" hidden checked>
-            <input type="radio" id="upvote-5" name="vote-5" hidden>
-            <input type="radio" id="downvote-5" name="vote-5" hidden>
-            <div class="vote-stack">
-              <div class="upvote-container">
-                <label for="upvote-5" class="arrow upvote-btn default">➨</label>
-                <label for="novote-5" class="arrow upvote-btn toggled">➨</label>
-              </div>
-              <span class="vote-count">215</span>
-              <div class="downvote-container">
-                <label for="downvote-5" class="arrow downvote-btn default">➨</label>
-                <label for="novote-5" class="arrow downvote-btn toggled">➨</label>
-              </div>
-            </div>
-          </section>
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <section class="post-content">
-            <p class="main-post-title">
-              <a href="#" class="post-link">
-                As a six-year-old, this was the best book ever
-              </a>
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-            <p class="post-meta">
-              submitted 10 hours ago by <a href="#">Mako</a>
-            </p>
-            <p class="post-details">
-              <a href="#">611 comments</a>
-              <a href="#">share</a>
-              <a href="#">save</a>
-              <a href="#">hide</a>
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-      
-        <!-- Post #6 -->
-        <article class="post">
-          <section class="post-rank">6</section>
-          <section class="vote-controls">
-            <input type="radio" id="novote-6" name="vote-6" hidden checked>
-            <input type="radio" id="upvote-6" name="vote-6" hidden>
-            <input type="radio" id="downvote-6" name="vote-6" hidden>
-            <div class="vote-stack">
-              <div class="upvote-container">
-                <label for="upvote-6" class="arrow upvote-btn default">➨</label>
-                <label for="novote-6" class="arrow upvote-btn toggled">➨</label>
-              </div>
-              <span class="vote-count">215</span>
-              <div class="downvote-container">
-                <label for="downvote-6" class="arrow downvote-btn default">➨</label>
-                <label for="novote-6" class="arrow downvote-btn toggled">➨</label>
-              </div>
-            </div>
-          </section>
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <section class="post-content">
-            <p class="main-post-title">
-              <a href="#" class="post-link">
-                Reddit, if you could go back to the beginning of high school
-                having the experience you do now, how differently would you
-                approach life up to this point in your adulthood?
-              </a>
-              <span class="domain">(reddit.com)</span>
-            </p>
-            <p class="post-meta">
-              submitted 12 hours ago by <a href="#">Mako</a>
-            </p>
-            <p class="post-details">
-              <a href="#">2,421 comments</a>
-              <a href="#">share</a>
-              <a href="#">save</a>
-              <a href="#">hide</a>
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-      
+          <!-- Tab 2: new -->
+          <li>
+            <input type="radio" id="nav-new" name="nav-tab" hidden>
+            <label for="nav-new" class="nav-tab">new</label>
+          </li>
 
-        <!-- Bottom Nav: "NEWER" / "OLDER" -->
-        <section class="post-navigation">
-          <a href="#" class="nav-button nav-newer">NEWER</a>
-          <a href="#" class="nav-button nav-older">OLDER</a>
+          <!-- Tab 3: controversial -->
+          <li>
+            <input type="radio" id="nav-controversial" name="nav-tab" hidden>
+            <label for="nav-controversial" class="nav-tab">controversial</label>
+          </li>
+
+          <!-- Tab 4: top -->
+          <li>
+            <input type="radio" id="nav-top" name="nav-tab" hidden>
+            <label for="nav-top" class="nav-tab">top</label>
+          </li>
+
+          <!-- Tab 5: saved -->
+          <li>
+            <input type="radio" id="nav-saved" name="nav-tab" hidden>
+            <label for="nav-saved" class="nav-tab">saved</label>
+          </li>
+          <!-- Middle: search form -->
+          <nav class="search-form search" role="search" aria-label="Site Search">
+            <label for="search-input" class="visually-hidden">Search</label>
+            <input id="search-input" type="search" />
+          </nav>
+        </ul>
+      </nav>
+      <!-- Post #1 -->
+      <article class="post">
+        <!-- Rank -->
+        <section class="post-rank">1</section>
+
+        <!-- Vote Controls -->
+        <section class="vote-controls">
+          <!-- Radio inputs (unique name/id per post) -->
+          <input type="radio" id="novote-1" name="vote-1" hidden checked>
+          <input type="radio" id="upvote-1" name="vote-1" hidden>
+          <input type="radio" id="downvote-1" name="vote-1" hidden>
+
+          <!-- Stack arrows + count vertically -->
+          <div class="vote-stack">
+            <!-- Upvote container -->
+            <div class="upvote-container">
+              <label for="upvote-1" class="arrow upvote-btn default">➨</label>
+              <label for="novote-1" class="arrow upvote-btn toggled">➨</label>
+            </div>
+
+            <!-- Vote Count -->
+            <span class="vote-count">215</span>
+
+            <!-- Downvote container -->
+            <div class="downvote-container">
+              <label for="downvote-1" class="arrow downvote-btn default">➨</label>
+              <label for="novote-1" class="arrow downvote-btn toggled">➨</label>
+            </div>
+          </div>
         </section>
-      </section>
 
-      <aside class="right-sidebar" aria-label="Post Details">
-                <!-- Right: notifications -->
-                <nav class="notifications">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <img src="src/email.png" alt="Envelope Icon" />
-                        <strong>1</strong> New Msg
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"><strong>53,211</strong> Link</a>
-                    </li>
-                    <li>
-                      <a href="#"><strong>4,887</strong> Comment</a>
-                    </li>
-                  </ul>
-                </nav>
-        <section class="bubble-shape">
+        <!-- Optional thumbnail image -->
+        <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+
+        <!-- Post Content -->
+        <section class="post-content">
+          <!-- Title + Domain -->
+          <p class="main-post-title">
+            <a href="#" class="post-link">
+              What do you call guys watching the Super Bowl at home?
+            </a>
+            <span class="domain">(cnn.com)</span>
+          </p>
+          <!-- Meta info -->
+          <p class="post-meta">
+            submitted 19 hours ago by <a href="#">krispykracker</a>
+          </p>
+          <!-- Comments + share, etc. -->
+          <p class="post-details">
+            <a href="#">823 comments</a>
+            <a href="#">share</a>
+            <a href="#">save</a>
+            <a href="#">hide</a>
+            <a href="#">report</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- Post #2 -->
+      <article class="post post-selected">
+        <section class="post-rank">2</section>
+        <section class="vote-controls">
+          <input type="radio" id="novote-2" name="vote-2" hidden checked>
+          <input type="radio" id="upvote-2" name="vote-2" hidden>
+          <input type="radio" id="downvote-2" name="vote-2" hidden>
+          <div class="vote-stack">
+            <div class="upvote-container">
+              <label for="upvote-2" class="arrow upvote-btn default">➨</label>
+              <label for="novote-2" class="arrow upvote-btn toggled">➨</label>
+            </div>
+            <span class="vote-count">215</span>
+            <div class="downvote-container">
+              <label for="downvote-2" class="arrow downvote-btn default">➨</label>
+              <label for="novote-2" class="arrow downvote-btn toggled">➨</label>
+            </div>
+          </div>
+        </section>
+        <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+        <section class="post-content">
+          <p class="main-post-title">
+            <a href="#" class="post-link">
+              IAM the guy who created this design AMA
+            </a>
+            <span class="domain">(i.imgur.com)</span>
+          </p>
+          <p class="post-meta">
+            submitted 19 hours ago by <a href="#">7hundredand77</a>
+          </p>
+          <p class="post-details">
+            <a href="#">200 comments</a>
+            <a href="#">share</a>
+            <a href="#">save</a>
+            <a href="#">hide</a>
+            <a href="#">report</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- Post #3 -->
+      <article class="post">
+        <section class="post-rank">3</section>
+        <section class="vote-controls">
+          <input type="radio" id="novote-3" name="vote-3" hidden checked>
+          <input type="radio" id="upvote-3" name="vote-3" hidden>
+          <input type="radio" id="downvote-3" name="vote-3" hidden>
+          <div class="vote-stack">
+            <div class="upvote-container">
+              <label for="upvote-3" class="arrow upvote-btn default">➨</label>
+              <label for="novote-3" class="arrow upvote-btn toggled">➨</label>
+            </div>
+            <span class="vote-count">215</span>
+            <div class="downvote-container">
+              <label for="downvote-3" class="arrow downvote-btn default">➨</label>
+              <label for="novote-3" class="arrow downvote-btn toggled">➨</label>
+            </div>
+          </div>
+        </section>
+        <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+        <section class="post-content">
+          <p class="main-post-title">
+            <a href="#" class="post-link">
+              Use this Chrome addon to block major third parties and search
+              engines from tracking the webpages you go to and searches...
+            </a>
+            <span class="domain">(i.imgur.com)</span>
+          </p>
+          <p class="post-meta">
+            submitted 19 hours ago by <a href="#">krispykracker</a>
+          </p>
+          <p class="post-details">
+            <a href="#">72 comments</a>
+            <a href="#">share</a>
+            <a href="#">save</a>
+            <a href="#">hide</a>
+            <a href="#">report</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- Post #4 -->
+      <article class="post">
+        <section class="post-rank">4</section>
+        <section class="vote-controls">
+          <input type="radio" id="novote-4" name="vote-4" hidden checked>
+          <input type="radio" id="upvote-4" name="vote-4" hidden>
+          <input type="radio" id="downvote-4" name="vote-4" hidden>
+          <div class="vote-stack">
+            <div class="upvote-container">
+              <label for="upvote-4" class="arrow upvote-btn default">➨</label>
+              <label for="novote-4" class="arrow upvote-btn toggled">➨</label>
+            </div>
+            <span class="vote-count">215</span>
+            <div class="downvote-container">
+              <label for="downvote-4" class="arrow downvote-btn default">➨</label>
+              <label for="novote-4" class="arrow downvote-btn toggled">➨</label>
+            </div>
+          </div>
+        </section>
+        <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+        <section class="post-content">
+          <p class="main-post-title">
+            <a href="#" class="post-link">
+              Thanks, Sally, That blowjob was... SFW
+            </a>
+            <span class="domain">(imgur.com)</span>
+          </p>
+          <p class="post-meta">
+            submitted 9 hours ago by <a href="#">Mako</a>
+          </p>
+          <p class="post-details">
+            <a href="#">200 comments</a>
+            <a href="#">share</a>
+            <a href="#">save</a>
+            <a href="#">hide</a>
+            <a href="#">report</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- Post #5 -->
+      <article class="post">
+        <section class="post-rank">5</section>
+        <section class="vote-controls">
+          <input type="radio" id="novote-5" name="vote-5" hidden checked>
+          <input type="radio" id="upvote-5" name="vote-5" hidden>
+          <input type="radio" id="downvote-5" name="vote-5" hidden>
+          <div class="vote-stack">
+            <div class="upvote-container">
+              <label for="upvote-5" class="arrow upvote-btn default">➨</label>
+              <label for="novote-5" class="arrow upvote-btn toggled">➨</label>
+            </div>
+            <span class="vote-count">215</span>
+            <div class="downvote-container">
+              <label for="downvote-5" class="arrow downvote-btn default">➨</label>
+              <label for="novote-5" class="arrow downvote-btn toggled">➨</label>
+            </div>
+          </div>
+        </section>
+        <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+        <section class="post-content">
+          <p class="main-post-title">
+            <a href="#" class="post-link">
+              As a six-year-old, this was the best book ever
+            </a>
+            <span class="domain">(i.imgur.com)</span>
+          </p>
+          <p class="post-meta">
+            submitted 10 hours ago by <a href="#">Mako</a>
+          </p>
+          <p class="post-details">
+            <a href="#">611 comments</a>
+            <a href="#">share</a>
+            <a href="#">save</a>
+            <a href="#">hide</a>
+            <a href="#">report</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- Post #6 -->
+      <article class="post">
+        <section class="post-rank">6</section>
+        <section class="vote-controls">
+          <input type="radio" id="novote-6" name="vote-6" hidden checked>
+          <input type="radio" id="upvote-6" name="vote-6" hidden>
+          <input type="radio" id="downvote-6" name="vote-6" hidden>
+          <div class="vote-stack">
+            <div class="upvote-container">
+              <label for="upvote-6" class="arrow upvote-btn default">➨</label>
+              <label for="novote-6" class="arrow upvote-btn toggled">➨</label>
+            </div>
+            <span class="vote-count">215</span>
+            <div class="downvote-container">
+              <label for="downvote-6" class="arrow downvote-btn default">➨</label>
+              <label for="novote-6" class="arrow downvote-btn toggled">➨</label>
+            </div>
+          </div>
+        </section>
+        <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
+        <section class="post-content">
+          <p class="main-post-title">
+            <a href="#" class="post-link">
+              Reddit, if you could go back to the beginning of high school
+              having the experience you do now, how differently would you
+              approach life up to this point in your adulthood?
+            </a>
+            <span class="domain">(reddit.com)</span>
+          </p>
+          <p class="post-meta">
+            submitted 12 hours ago by <a href="#">Mako</a>
+          </p>
+          <p class="post-details">
+            <a href="#">2,421 comments</a>
+            <a href="#">share</a>
+            <a href="#">save</a>
+            <a href="#">hide</a>
+            <a href="#">report</a>
+          </p>
+        </section>
+      </article>
+
+
+      <!-- Bottom Nav: "NEWER" / "OLDER" -->
+      <section class="post-navigation">
+        <a href="#" class="nav-button nav-newer">NEWER</a>
+        <a href="#" class="nav-button nav-older">OLDER</a>
+      </section>
+    </section>
+
+    <aside class="right-sidebar" aria-label="Post Details">
+      <!-- Right: notifications -->
+      <nav class="notifications">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="src/email.png" alt="Envelope Icon" />
+              <strong>1</strong> New Msg
+            </a>
+          </li>
+          <li>
+            <a href="#"><strong>53,211</strong> Link</a>
+          </li>
+          <li>
+            <a href="#"><strong>4,887</strong> Comment</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="bubble-shape">
         <section class="post-detail-meta">
           <!-- Title + Domain -->
           <h2 class="post-title">
@@ -541,373 +535,166 @@
           </section>
 
         </section>
-        </section>  
+      </section>
 
-          <!-- Single-line comment box + "save" button -->
-          <section class="comment-input-line">
-            <input type="text" class="comment-input" />
-            <button class="comment-save">save</button>
-          </section>
+      <!-- Single-line comment box + "save" button -->
+      <section class="comment-input-line">
+        <input type="text" class="comment-input" />
+        <button class="comment-save">save</button>
+      </section>
 
-          <span class="formatting-help">
-            <a href="#">formatting help</a>
-          </span>
+      <span class="formatting-help">
+        <a href="#">formatting help</a>
+      </span>
 
-          <div class="comments">
-            <!-- 1) UserNumber42 (TOP LEVEL) -->
-            <div class="comment">
+      <div class="comments">
+        <!-- 1) UserNumber42 (TOP LEVEL) -->
+        <div class="comment">
+          <div class="comment-row">
+            <div class="comment-vote-controls">
+              <!-- Radio inputs for comment vote states -->
+              <input type="radio" id="comment-novote-1" name="comment-vote-1" hidden checked>
+              <input type="radio" id="comment-upvote-1" name="comment-vote-1" hidden>
+              <input type="radio" id="comment-downvote-1" name="comment-vote-1" hidden>
+
+              <!-- Container that stacks the vote buttons vertically -->
+              <div class="comment-vote-stack">
+                <!-- Upvote container: two labels for upvote -->
+                <div class="comment-upvote-container">
+                  <!-- Shown when NOT upvoted -->
+                  <label for="comment-upvote-1" class="arrow comment-upvote-btn default">➨</label>
+                  <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                  <label for="comment-novote-1" class="arrow comment-upvote-btn toggled">➨</label>
+                </div>
+
+                <!-- Downvote container: two labels for downvote -->
+                <div class="comment-downvote-container">
+                  <!-- Shown when NOT downvoted -->
+                  <label for="comment-downvote-1" class="arrow comment-downvote-btn default">➨</label>
+                  <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                  <label for="comment-novote-1" class="arrow comment-downvote-btn toggled">➨</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-body">
+              <div class="comment-meta">
+                <a href="#" class="comment-author">UserNumber42</a>
+                <span>47 points 21 hours ago [+]</span>
+              </div>
+              <div class="comment-content">
+                Wow, the first Reddit redesign I've seen that doesn't suck, and
+                I've been on this site for 4 years now (different accounts).
+                Very functional. With wide screen monitors this could be very cool.
+                <br><br>
+                Only suggestion is to lower the width of the scores column for
+                each post and the subreddit side bar so there is more room
+                for the content.
+              </div>
+              <div class="comment-actions">
+                <a href="#">permalink</a>
+                <a href="#">parent</a>
+                <a href="#">report</a>
+                <a href="#">reply</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child comments of UserNumber42 go inside .comment-children -->
+          <div class="comment-children">
+            <!-- 1.1) 7hundredand77 (NESTED under UserNumber42) -->
+            <div class="comment comment-nested">
               <div class="comment-row">
                 <div class="comment-vote-controls">
                   <!-- Radio inputs for comment vote states -->
-                  <input type="radio" id="comment-novote-1" name="comment-vote-1" hidden checked>
-  <input type="radio" id="comment-upvote-1" name="comment-vote-1" hidden>
-  <input type="radio" id="comment-downvote-1" name="comment-vote-1" hidden>
-                
+                  <input type="radio" id="comment-novote-2" name="comment-vote-2" hidden checked>
+                  <input type="radio" id="comment-upvote-2" name="comment-vote-2" hidden>
+                  <input type="radio" id="comment-downvote-2" name="comment-vote-2" hidden>
+
                   <!-- Container that stacks the vote buttons vertically -->
                   <div class="comment-vote-stack">
                     <!-- Upvote container: two labels for upvote -->
                     <div class="comment-upvote-container">
                       <!-- Shown when NOT upvoted -->
-                      <label for="comment-upvote-1" class="arrow comment-upvote-btn default">➨</label>
+                      <label for="comment-upvote-2" class="arrow comment-upvote-btn default">➨</label>
                       <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                      <label for="comment-novote-1" class="arrow comment-upvote-btn toggled">➨</label>
+                      <label for="comment-novote-2" class="arrow comment-upvote-btn toggled">➨</label>
                     </div>
-                
+
                     <!-- Downvote container: two labels for downvote -->
                     <div class="comment-downvote-container">
                       <!-- Shown when NOT downvoted -->
-                      <label for="comment-downvote-1" class="arrow comment-downvote-btn default">➨</label>
+                      <label for="comment-downvote-2" class="arrow comment-downvote-btn default">➨</label>
                       <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                      <label for="comment-novote-1" class="arrow comment-downvote-btn toggled">➨</label>
+                      <label for="comment-novote-2" class="arrow comment-downvote-btn toggled">➨</label>
                     </div>
                   </div>
                 </div>
-                
                 <div class="comment-body">
                   <div class="comment-meta">
-                    <a href="#" class="comment-author">UserNumber42</a>
-                    <span>47 points 21 hours ago [+]</span>
+                    <a href="#" class="comment-author op">7hundredand77</a>
+                    <span>14 points 20 hours ago [+]</span>
                   </div>
                   <div class="comment-content">
-                    Wow, the first Reddit redesign I've seen that doesn't suck, and
-                    I've been on this site for 4 years now (different accounts).
-                    Very functional. With wide screen monitors this could be very cool.
-                    <br><br>
-                    Only suggestion is to lower the width of the scores column for
-                    each post and the subreddit side bar so there is more room
-                    for the content.
+                    Ha, yeah, since I know many people use widescreen monitors these
+                    days, this could make use of space a lot more effectively.
+                    A sweet spot with columns needs to be found where there is enough
+                    space to view everything perfectly. Since I just quickly put
+                    this one together, I didn't really spend much time finding
+                    that right balance.
                   </div>
                   <div class="comment-actions">
                     <a href="#">permalink</a>
                     <a href="#">parent</a>
-                    <a href="#">report</a>
+                    <a href="#">edit</a>
+                    <a href="#">delete</a>
                     <a href="#">reply</a>
                   </div>
                 </div>
               </div>
-          
-              <!-- Child comments of UserNumber42 go inside .comment-children -->
+
+              <!-- Child comments of 7hundredand77 -->
               <div class="comment-children">
-                <!-- 1.1) 7hundredand77 (NESTED under UserNumber42) -->
+                <!-- 1.1.1) aliasforspam (NESTED under 7hundredand77) -->
                 <div class="comment comment-nested">
                   <div class="comment-row">
                     <div class="comment-vote-controls">
                       <!-- Radio inputs for comment vote states -->
-                      <input type="radio" id="comment-novote-2" name="comment-vote-2" hidden checked>
-                      <input type="radio" id="comment-upvote-2" name="comment-vote-2" hidden>
-                      <input type="radio" id="comment-downvote-2" name="comment-vote-2" hidden>
-                    
+                      <input type="radio" id="comment-novote-6" name="comment-vote-6" hidden checked>
+                      <input type="radio" id="comment-upvote-6" name="comment-vote-6" hidden>
+                      <input type="radio" id="comment-downvote-6" name="comment-vote-6" hidden>
+
                       <!-- Container that stacks the vote buttons vertically -->
                       <div class="comment-vote-stack">
                         <!-- Upvote container: two labels for upvote -->
                         <div class="comment-upvote-container">
                           <!-- Shown when NOT upvoted -->
-                          <label for="comment-upvote-2" class="arrow comment-upvote-btn default">➨</label>
+                          <label for="comment-upvote-6" class="arrow comment-upvote-btn default">➨</label>
                           <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                          <label for="comment-novote-2" class="arrow comment-upvote-btn toggled">➨</label>
+                          <label for="comment-novote-6" class="arrow comment-upvote-btn toggled">➨</label>
                         </div>
-                    
+
                         <!-- Downvote container: two labels for downvote -->
                         <div class="comment-downvote-container">
                           <!-- Shown when NOT downvoted -->
-                          <label for="comment-downvote-2" class="arrow comment-downvote-btn default">➨</label>
+                          <label for="comment-downvote-6" class="arrow comment-downvote-btn default">➨</label>
                           <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                          <label for="comment-novote-2" class="arrow comment-downvote-btn toggled">➨</label>
+                          <label for="comment-novote-6" class="arrow comment-downvote-btn toggled">➨</label>
                         </div>
                       </div>
                     </div>
                     <div class="comment-body">
                       <div class="comment-meta">
-                        <a href="#" class="comment-author op">7hundredand77</a>
-                        <span>14 points 20 hours ago [+]</span>
+                        <a href="#" class="comment-author">aliasforspam</a>
+                        <span>7 points 15 hours ago [+]</span>
                       </div>
                       <div class="comment-content">
-                        Ha, yeah, since I know many people use widescreen monitors these
-                        days, this could make use of space a lot more effectively.
-                        A sweet spot with columns needs to be found where there is enough
-                        space to view everything perfectly. Since I just quickly put
-                        this one together, I didn't really spend much time finding
-                        that right balance.
-                      </div>
-                      <div class="comment-actions">
-                        <a href="#">permalink</a>
-                        <a href="#">parent</a>
-                        <a href="#">edit</a>
-                        <a href="#">delete</a>
-                        <a href="#">reply</a>
-                      </div>
-                    </div>
-                  </div>
-          
-                  <!-- Child comments of 7hundredand77 -->
-                  <div class="comment-children">
-                    <!-- 1.1.1) aliasforspam (NESTED under 7hundredand77) -->
-                    <div class="comment comment-nested">
-                      <div class="comment-row">
-                        <div class="comment-vote-controls">
-                          <!-- Radio inputs for comment vote states -->
-                          <input type="radio" id="comment-novote-6" name="comment-vote-6" hidden checked>
-                          <input type="radio" id="comment-upvote-6" name="comment-vote-6" hidden>
-                          <input type="radio" id="comment-downvote-6" name="comment-vote-6" hidden>
-                        
-                          <!-- Container that stacks the vote buttons vertically -->
-                          <div class="comment-vote-stack">
-                            <!-- Upvote container: two labels for upvote -->
-                            <div class="comment-upvote-container">
-                              <!-- Shown when NOT upvoted -->
-                              <label for="comment-upvote-6" class="arrow comment-upvote-btn default">➨</label>
-                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                              <label for="comment-novote-6" class="arrow comment-upvote-btn toggled">➨</label>
-                            </div>
-                        
-                            <!-- Downvote container: two labels for downvote -->
-                            <div class="comment-downvote-container">
-                              <!-- Shown when NOT downvoted -->
-                              <label for="comment-downvote-6" class="arrow comment-downvote-btn default">➨</label>
-                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                              <label for="comment-novote-6" class="arrow comment-downvote-btn toggled">➨</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="comment-body">
-                          <div class="comment-meta">
-                            <a href="#" class="comment-author">aliasforspam</a>
-                            <span>7 points 15 hours ago [+]</span>
-                          </div>
-                          <div class="comment-content">
-                            This looks like an email client. Brilliant!
-                            <br><br>
-                            …I never realized how much Reddit is like reading email
-                            until now. I guess we could view things in brackets much like
-                            forwards from the uncle you otherwise don’t communicate
-                            with. DAE blah blah = FWD: FWD: Fwd: You gotta read this!
-                          </div>
-                          <div class="comment-actions">
-                            <a href="#">permalink</a>
-                            <a href="#">parent</a>
-                            <a href="#">report</a>
-                            <a href="#">reply</a>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Child comments of aliasforspam -->
-                      <div class="comment-children">
-                        <!-- 1.1.1.1) Deterministic (NESTED under aliasforspam) -->
-                        <div class="comment comment-nested">
-                          <div class="comment-row">
-                            <div class="comment-vote-controls">
-                              <!-- Radio inputs for comment vote states -->
-                              <input type="radio" id="comment-novote-3" name="comment-vote-3" hidden checked>
-                              <input type="radio" id="comment-upvote-3" name="comment-vote-3" hidden>
-                              <input type="radio" id="comment-downvote-3" name="comment-vote-3" hidden>
-                            
-                              <!-- Container that stacks the vote buttons vertically -->
-                              <div class="comment-vote-stack">
-                                <!-- Upvote container: two labels for upvote -->
-                                <div class="comment-upvote-container">
-                                  <!-- Shown when NOT upvoted -->
-                                  <label for="comment-upvote-3" class="arrow comment-upvote-btn default">➨</label>
-                                  <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                                  <label for="comment-novote-3" class="arrow comment-upvote-btn toggled">➨</label>
-                                </div>
-                            
-                                <!-- Downvote container: two labels for downvote -->
-                                <div class="comment-downvote-container">
-                                  <!-- Shown when NOT downvoted -->
-                                  <label for="comment-downvote-3" class="arrow comment-downvote-btn default">➨</label>
-                                  <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                                  <label for="comment-novote-3" class="arrow comment-downvote-btn toggled">➨</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <div class="comment-meta">
-                                <a href="#" class="comment-author">Deterministic</a>
-                                <span>4 points 11 hours ago [+]</span>
-                              </div>
-                              <div class="comment-content">
-                                It's funny you mention email, because it looks
-                                ever-so-vaguely like Google Wave, except that instead of
-                                Menu|Inboxes|Emails, it's Subreddits|Topics|Comments.
-                                <br><br>
-                                Nevertheless, it’s an interesting concept for a
-                                redesign—a bit shinier, but still maintaining the
-                                minimalistic design.
-                              </div>
-                              <div class="comment-actions">
-                                <a href="#">permalink</a>
-                                <a href="#">parent</a>
-                                <a href="#">report</a>
-                                <a href="#">reply</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div> <!-- End Deterministic -->
-                      </div> <!-- End .comment-children of aliasforspam -->
-                    </div> <!-- End aliasforspam -->
-          
-                    <!-- 1.1.2) volve (NESTED under 7hundredand77) -->
-                    <div class="comment comment-nested">
-                      <div class="comment-row">
-                        <div class="comment-vote-controls">
-                          <!-- Radio inputs for comment vote states -->
-                          <input type="radio" id="comment-novote-4" name="comment-vote-4" hidden checked>
-                          <input type="radio" id="comment-upvote-4" name="comment-vote-4" hidden>
-                          <input type="radio" id="comment-downvote-4" name="comment-vote-4" hidden>
-                        
-                          <!-- Container that stacks the vote buttons vertically -->
-                          <div class="comment-vote-stack">
-                            <!-- Upvote container: two labels for upvote -->
-                            <div class="comment-upvote-container">
-                              <!-- Shown when NOT upvoted -->
-                              <label for="comment-upvote-4" class="arrow comment-upvote-btn default">➨</label>
-                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                              <label for="comment-novote-4" class="arrow comment-upvote-btn toggled">➨</label>
-                            </div>
-                        
-                            <!-- Downvote container: two labels for downvote -->
-                            <div class="comment-downvote-container">
-                              <!-- Shown when NOT downvoted -->
-                              <label for="comment-downvote-4" class="arrow comment-downvote-btn default">➨</label>
-                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                              <label for="comment-novote-4" class="arrow comment-downvote-btn toggled">➨</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="comment-body">
-                          <div class="comment-meta">
-                            <a href="#" class="comment-author">volve</a>
-                            <span>3 points 10 hours ago [+]</span>
-                          </div>
-                          <div class="comment-content">
-                            Except, let’s be honest; I only rarely maximize windows on
-                            my 24" monitors, almost never for something like passive
-                            entertainment such as Reddit. I generally hate a lot of
-                            these “wide‐screen optimized” designs, since the point is
-                            that they aren’t likely the sole activity on said
-                            widescreen…
-                            <br><br>
-                            (But it’s a very nice design!)
-                          </div>
-                          <div class="comment-actions">
-                            <a href="#">permalink</a>
-                            <a href="#">parent</a>
-                            <a href="#">report</a>
-                            <a href="#">reply</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div> <!-- End volve -->
-          
-                    <!-- 1.1.3) freshwire (NESTED under 7hundredand77) -->
-                    <div class="comment comment-nested">
-                      <div class="comment-row">
-                        <div class="comment-vote-controls">
-                          <!-- Radio inputs for comment vote states -->
-                          <input type="radio" id="comment-novote-5" name="comment-vote-5" hidden checked>
-                          <input type="radio" id="comment-upvote-5" name="comment-vote-5" hidden>
-                          <input type="radio" id="comment-downvote-5" name="comment-vote-5" hidden>
-                        
-                          <!-- Container that stacks the vote buttons vertically -->
-                          <div class="comment-vote-stack">
-                            <!-- Upvote container: two labels for upvote -->
-                            <div class="comment-upvote-container">
-                              <!-- Shown when NOT upvoted -->
-                              <label for="comment-upvote-5" class="arrow comment-upvote-btn default">➨</label>
-                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                              <label for="comment-novote-5" class="arrow comment-upvote-btn toggled">➨</label>
-                            </div>
-                        
-                            <!-- Downvote container: two labels for downvote -->
-                            <div class="comment-downvote-container">
-                              <!-- Shown when NOT downvoted -->
-                              <label for="comment-downvote-5" class="arrow comment-downvote-btn default">➨</label>
-                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                              <label for="comment-novote-5" class="arrow comment-downvote-btn toggled">➨</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="comment-body">
-                          <div class="comment-meta">
-                            <a href="#" class="comment-author">freshwire</a>
-                            <span>2 points 9 hours ago [+]</span>
-                          </div>
-                          <div class="comment-content">
-                            You could have it so the column width can be changed
-                            (by just dragging around).
-                          </div>
-                          <div class="comment-actions">
-                            <a href="#">permalink</a>
-                            <a href="#">parent</a>
-                            <a href="#">report</a>
-                            <a href="#">reply</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div> <!-- End freshwire -->
-                  </div> <!-- End .comment-children of 7hundredand77 -->
-                </div> <!-- End 7hundredand77 -->
-          
-                <!-- 1.2) gusthebus (NESTED under UserNumber42) -->
-                <div class="comment comment-nested">
-                  <div class="comment-row">
-                    <div class="comment-vote-controls">
-                      <!-- Radio inputs for comment vote states -->
-                      <input type="radio" id="comment-novote-7" name="comment-vote-7" hidden checked>
-                      <input type="radio" id="comment-upvote-7" name="comment-vote-7" hidden>
-                      <input type="radio" id="comment-downvote-7" name="comment-vote-7" hidden>
-                    
-                      <!-- Container that stacks the vote buttons vertically -->
-                      <div class="comment-vote-stack">
-                        <!-- Upvote container: two labels for upvote -->
-                        <div class="comment-upvote-container">
-                          <!-- Shown when NOT upvoted -->
-                          <label for="comment-upvote-7" class="arrow comment-upvote-btn default">➨</label>
-                          <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                          <label for="comment-novote-7" class="arrow comment-upvote-btn toggled">➨</label>
-                        </div>
-                    
-                        <!-- Downvote container: two labels for downvote -->
-                        <div class="comment-downvote-container">
-                          <!-- Shown when NOT downvoted -->
-                          <label for="comment-downvote-7" class="arrow comment-downvote-btn default">➨</label>
-                          <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                          <label for="comment-novote-7" class="arrow comment-downvote-btn toggled">➨</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="comment-body">
-                      <div class="comment-meta">
-                        <a href="#" class="comment-author">gusthebus</a>
-                        <span>1 point 5 hours ago [+]</span>
-                      </div>
-                      <div class="comment-content">
-                        I agree. Additionally, it wouldn't be difficult to provide
-                        a button to toggle from the current layout to the OP's design.
-                        That would be a simple JavaScript to change out the page CSS.
-                        The dev team could take it one step further and cache the user's
-                        UI choice.
+                        This looks like an email client. Brilliant!
+                        <br><br>
+                        …I never realized how much Reddit is like reading email
+                        until now. I guess we could view things in brackets much like
+                        forwards from the uncle you otherwise don’t communicate
+                        with. DAE blah blah = FWD: FWD: Fwd: You gotta read this!
                       </div>
                       <div class="comment-actions">
                         <a href="#">permalink</a>
@@ -917,52 +704,204 @@
                       </div>
                     </div>
                   </div>
-                </div> <!-- End gusthebus -->
-              </div> <!-- End .comment-children of UserNumber42 -->
-            </div> <!-- End UserNumber42 -->
-          
-            <!-- 2) 7hundredand77 (TOP LEVEL again) -->
-            <div class="comment">
+
+                  <!-- Child comments of aliasforspam -->
+                  <div class="comment-children">
+                    <!-- 1.1.1.1) Deterministic (NESTED under aliasforspam) -->
+                    <div class="comment comment-nested">
+                      <div class="comment-row">
+                        <div class="comment-vote-controls">
+                          <!-- Radio inputs for comment vote states -->
+                          <input type="radio" id="comment-novote-3" name="comment-vote-3" hidden checked>
+                          <input type="radio" id="comment-upvote-3" name="comment-vote-3" hidden>
+                          <input type="radio" id="comment-downvote-3" name="comment-vote-3" hidden>
+
+                          <!-- Container that stacks the vote buttons vertically -->
+                          <div class="comment-vote-stack">
+                            <!-- Upvote container: two labels for upvote -->
+                            <div class="comment-upvote-container">
+                              <!-- Shown when NOT upvoted -->
+                              <label for="comment-upvote-3" class="arrow comment-upvote-btn default">➨</label>
+                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-3" class="arrow comment-upvote-btn toggled">➨</label>
+                            </div>
+
+                            <!-- Downvote container: two labels for downvote -->
+                            <div class="comment-downvote-container">
+                              <!-- Shown when NOT downvoted -->
+                              <label for="comment-downvote-3" class="arrow comment-downvote-btn default">➨</label>
+                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-3" class="arrow comment-downvote-btn toggled">➨</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment-body">
+                          <div class="comment-meta">
+                            <a href="#" class="comment-author">Deterministic</a>
+                            <span>4 points 11 hours ago [+]</span>
+                          </div>
+                          <div class="comment-content">
+                            It's funny you mention email, because it looks
+                            ever-so-vaguely like Google Wave, except that instead of
+                            Menu|Inboxes|Emails, it's Subreddits|Topics|Comments.
+                            <br><br>
+                            Nevertheless, it’s an interesting concept for a
+                            redesign—a bit shinier, but still maintaining the
+                            minimalistic design.
+                          </div>
+                          <div class="comment-actions">
+                            <a href="#">permalink</a>
+                            <a href="#">parent</a>
+                            <a href="#">report</a>
+                            <a href="#">reply</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- End Deterministic -->
+                  </div> <!-- End .comment-children of aliasforspam -->
+                </div> <!-- End aliasforspam -->
+
+                <!-- 1.1.2) volve (NESTED under 7hundredand77) -->
+                <div class="comment comment-nested">
+                  <div class="comment-row">
+                    <div class="comment-vote-controls">
+                      <!-- Radio inputs for comment vote states -->
+                      <input type="radio" id="comment-novote-4" name="comment-vote-4" hidden checked>
+                      <input type="radio" id="comment-upvote-4" name="comment-vote-4" hidden>
+                      <input type="radio" id="comment-downvote-4" name="comment-vote-4" hidden>
+
+                      <!-- Container that stacks the vote buttons vertically -->
+                      <div class="comment-vote-stack">
+                        <!-- Upvote container: two labels for upvote -->
+                        <div class="comment-upvote-container">
+                          <!-- Shown when NOT upvoted -->
+                          <label for="comment-upvote-4" class="arrow comment-upvote-btn default">➨</label>
+                          <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-4" class="arrow comment-upvote-btn toggled">➨</label>
+                        </div>
+
+                        <!-- Downvote container: two labels for downvote -->
+                        <div class="comment-downvote-container">
+                          <!-- Shown when NOT downvoted -->
+                          <label for="comment-downvote-4" class="arrow comment-downvote-btn default">➨</label>
+                          <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-4" class="arrow comment-downvote-btn toggled">➨</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-body">
+                      <div class="comment-meta">
+                        <a href="#" class="comment-author">volve</a>
+                        <span>3 points 10 hours ago [+]</span>
+                      </div>
+                      <div class="comment-content">
+                        Except, let’s be honest; I only rarely maximize windows on
+                        my 24" monitors, almost never for something like passive
+                        entertainment such as Reddit. I generally hate a lot of
+                        these “wide‐screen optimized” designs, since the point is
+                        that they aren’t likely the sole activity on said
+                        widescreen…
+                        <br><br>
+                        (But it’s a very nice design!)
+                      </div>
+                      <div class="comment-actions">
+                        <a href="#">permalink</a>
+                        <a href="#">parent</a>
+                        <a href="#">report</a>
+                        <a href="#">reply</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- End volve -->
+
+                <!-- 1.1.3) freshwire (NESTED under 7hundredand77) -->
+                <div class="comment comment-nested">
+                  <div class="comment-row">
+                    <div class="comment-vote-controls">
+                      <!-- Radio inputs for comment vote states -->
+                      <input type="radio" id="comment-novote-5" name="comment-vote-5" hidden checked>
+                      <input type="radio" id="comment-upvote-5" name="comment-vote-5" hidden>
+                      <input type="radio" id="comment-downvote-5" name="comment-vote-5" hidden>
+
+                      <!-- Container that stacks the vote buttons vertically -->
+                      <div class="comment-vote-stack">
+                        <!-- Upvote container: two labels for upvote -->
+                        <div class="comment-upvote-container">
+                          <!-- Shown when NOT upvoted -->
+                          <label for="comment-upvote-5" class="arrow comment-upvote-btn default">➨</label>
+                          <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-5" class="arrow comment-upvote-btn toggled">➨</label>
+                        </div>
+
+                        <!-- Downvote container: two labels for downvote -->
+                        <div class="comment-downvote-container">
+                          <!-- Shown when NOT downvoted -->
+                          <label for="comment-downvote-5" class="arrow comment-downvote-btn default">➨</label>
+                          <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-5" class="arrow comment-downvote-btn toggled">➨</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-body">
+                      <div class="comment-meta">
+                        <a href="#" class="comment-author">freshwire</a>
+                        <span>2 points 9 hours ago [+]</span>
+                      </div>
+                      <div class="comment-content">
+                        You could have it so the column width can be changed
+                        (by just dragging around).
+                      </div>
+                      <div class="comment-actions">
+                        <a href="#">permalink</a>
+                        <a href="#">parent</a>
+                        <a href="#">report</a>
+                        <a href="#">reply</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- End freshwire -->
+              </div> <!-- End .comment-children of 7hundredand77 -->
+            </div> <!-- End 7hundredand77 -->
+
+            <!-- 1.2) gusthebus (NESTED under UserNumber42) -->
+            <div class="comment comment-nested">
               <div class="comment-row">
                 <div class="comment-vote-controls">
                   <!-- Radio inputs for comment vote states -->
-                  <input type="radio" id="comment-novote" name="comment-vote" hidden checked>
-                  <input type="radio" id="comment-upvote" name="comment-vote" hidden>
-                  <input type="radio" id="comment-downvote" name="comment-vote" hidden>
-                
+                  <input type="radio" id="comment-novote-7" name="comment-vote-7" hidden checked>
+                  <input type="radio" id="comment-upvote-7" name="comment-vote-7" hidden>
+                  <input type="radio" id="comment-downvote-7" name="comment-vote-7" hidden>
+
                   <!-- Container that stacks the vote buttons vertically -->
                   <div class="comment-vote-stack">
                     <!-- Upvote container: two labels for upvote -->
                     <div class="comment-upvote-container">
                       <!-- Shown when NOT upvoted -->
-                      <label for="comment-upvote" class="arrow comment-upvote-btn default">➨</label>
+                      <label for="comment-upvote-7" class="arrow comment-upvote-btn default">➨</label>
                       <!-- Shown when upvoted (clicking it reverts to no vote) -->
-                      <label for="comment-novote" class="arrow comment-upvote-btn toggled">➨</label>
+                      <label for="comment-novote-7" class="arrow comment-upvote-btn toggled">➨</label>
                     </div>
-                
+
                     <!-- Downvote container: two labels for downvote -->
                     <div class="comment-downvote-container">
                       <!-- Shown when NOT downvoted -->
-                      <label for="comment-downvote" class="arrow comment-downvote-btn default">➨</label>
+                      <label for="comment-downvote-7" class="arrow comment-downvote-btn default">➨</label>
                       <!-- Shown when downvoted (clicking it reverts to no vote) -->
-                      <label for="comment-novote" class="arrow comment-downvote-btn toggled">➨</label>
+                      <label for="comment-novote-7" class="arrow comment-downvote-btn toggled">➨</label>
                     </div>
                   </div>
                 </div>
                 <div class="comment-body">
                   <div class="comment-meta">
-                    <a href="#" class="comment-author op">7hundredand77</a>
-                    <span>9 points 14 hours ago [+]</span>
+                    <a href="#" class="comment-author">gusthebus</a>
+                    <span>1 point 5 hours ago [+]</span>
                   </div>
                   <div class="comment-content">
-                    I am going to update this design tonight. There have been
-                    a lot of responses and feedback on what needs to be done:
-                    <ul>
-                      <li>Orange icon for new messages</li>
-                      <li>A more Reddit‐styled colour theme rather than the white/grey</li>
-                      <li>Update column widths</li>
-                      <li>Improve link styling</li>
-                    </ul>
+                    I agree. Additionally, it wouldn't be difficult to provide
+                    a button to toggle from the current layout to the OP's design.
+                    That would be a simple JavaScript to change out the page CSS.
+                    The dev team could take it one step further and cache the user's
+                    UI choice.
                   </div>
                   <div class="comment-actions">
                     <a href="#">permalink</a>
@@ -972,15 +911,66 @@
                   </div>
                 </div>
               </div>
-              <!-- No .comment-children here, because 7hundredand77 has no children at this top level -->
-            </div> <!-- End second 7hundredand77 -->
-          </div><!-- / .comments -->
-          
-            
-          
-          
-        </section>
-      </aside>
-    </main>
-  </body>
+            </div> <!-- End gusthebus -->
+          </div> <!-- End .comment-children of UserNumber42 -->
+        </div> <!-- End UserNumber42 -->
+
+        <!-- 2) 7hundredand77 (TOP LEVEL again) -->
+        <div class="comment">
+          <div class="comment-row">
+            <div class="comment-vote-controls">
+              <!-- Radio inputs for comment vote states -->
+              <input type="radio" id="comment-novote" name="comment-vote" hidden checked>
+              <input type="radio" id="comment-upvote" name="comment-vote" hidden>
+              <input type="radio" id="comment-downvote" name="comment-vote" hidden>
+
+              <!-- Container that stacks the vote buttons vertically -->
+              <div class="comment-vote-stack">
+                <!-- Upvote container: two labels for upvote -->
+                <div class="comment-upvote-container">
+                  <!-- Shown when NOT upvoted -->
+                  <label for="comment-upvote" class="arrow comment-upvote-btn default">➨</label>
+                  <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                  <label for="comment-novote" class="arrow comment-upvote-btn toggled">➨</label>
+                </div>
+
+                <!-- Downvote container: two labels for downvote -->
+                <div class="comment-downvote-container">
+                  <!-- Shown when NOT downvoted -->
+                  <label for="comment-downvote" class="arrow comment-downvote-btn default">➨</label>
+                  <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                  <label for="comment-novote" class="arrow comment-downvote-btn toggled">➨</label>
+                </div>
+              </div>
+            </div>
+            <div class="comment-body">
+              <div class="comment-meta">
+                <a href="#" class="comment-author op">7hundredand77</a>
+                <span>9 points 14 hours ago [+]</span>
+              </div>
+              <div class="comment-content">
+                I am going to update this design tonight. There have been
+                a lot of responses and feedback on what needs to be done:
+                <ul>
+                  <li>Orange icon for new messages</li>
+                  <li>A more Reddit‐styled colour theme rather than the white/grey</li>
+                  <li>Update column widths</li>
+                  <li>Improve link styling</li>
+                </ul>
+              </div>
+              <div class="comment-actions">
+                <a href="#">permalink</a>
+                <a href="#">parent</a>
+                <a href="#">report</a>
+                <a href="#">reply</a>
+              </div>
+            </div>
+          </div>
+          <!-- No .comment-children here, because 7hundredand77 has no children at this top level -->
+        </div> <!-- End second 7hundredand77 -->
+      </div><!-- / .comments -->
+      </section>
+    </aside>
+  </main>
+</body>
 </html>
