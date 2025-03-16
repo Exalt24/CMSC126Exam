@@ -9,7 +9,7 @@
   <body>
     <!-- ======== TOP HEADER BAR ======== -->
     <header class="site-header">
-      <!-- FIRST BAR (Logo) -->
+      <!-- FIRST ROW: Logo + User Info -->
       <section class="header-bar">
         <nav class="site-logo">
           <a href="#" aria-label="Home">
@@ -21,38 +21,59 @@
           <a href="#">preferences</a> | <a href="#">logout?</a> : (
         </nav>
       </section>
-    </header>
-
-    <!-- ======== MAIN CONTENT WRAPPER ======== -->
-    <main class="content-wrapper">
+    
+      <!-- SECOND ROW: Subreddits Nav -->
       <section class="subreddits-nav">
         <!-- Left: user nav -->
         <nav class="user-nav">
           <ul>
-            <li><a href="#">what's hot</a></li>
-            <li><a href="#">new</a></li>
-            <li><a href="#">controversial</a></li>
-            <li><a href="#">top</a></li>
-            <li><a href="#">saved</a></li>
+            <!-- Tab 1: what's hot -->
+            <li>
+              <input type="radio" id="nav-hot" name="nav-tab" hidden checked>
+              <label for="nav-hot" class="nav-tab">what's hot</label>
+            </li>
+        
+            <!-- Tab 2: new -->
+            <li>
+              <input type="radio" id="nav-new" name="nav-tab" hidden>
+              <label for="nav-new" class="nav-tab">new</label>
+            </li>
+        
+            <!-- Tab 3: controversial -->
+            <li>
+              <input type="radio" id="nav-controversial" name="nav-tab" hidden>
+              <label for="nav-controversial" class="nav-tab">controversial</label>
+            </li>
+        
+            <!-- Tab 4: top -->
+            <li>
+              <input type="radio" id="nav-top" name="nav-tab" hidden>
+              <label for="nav-top" class="nav-tab">top</label>
+            </li>
+        
+            <!-- Tab 5: saved -->
+            <li>
+              <input type="radio" id="nav-saved" name="nav-tab" hidden>
+              <label for="nav-saved" class="nav-tab">saved</label>
+            </li>
           </ul>
         </nav>
-
+        
+    
         <!-- Middle: search form -->
         <nav class="search-form" role="search" aria-label="Site Search">
           <label for="search-input" class="visually-hidden">Search</label>
           <input id="search-input" type="search" />
         </nav>
-
+    
         <!-- Right: notifications -->
         <nav class="notifications">
           <ul>
             <li>
-              <a href="#"
-                ><img src="src/email.png" alt="Envelope Icon" /><strong
-                  >1</strong
-                >
-                New Msg</a
-              >
+              <a href="#">
+                <img src="src/email.png" alt="Envelope Icon" />
+                <strong>1</strong> New Msg
+              </a>
             </li>
             <li>
               <a href="#"><strong>53,211</strong> Link</a>
@@ -63,711 +84,420 @@
           </ul>
         </nav>
       </section>
-      <!-- LEFT SIDEBAR -->
+    </header>
+    
+
+    <!-- ======== MAIN CONTENT WRAPPER ======== -->
+   
+      
+      <input type="checkbox" id="sidebar-collapse" hidden>
+      <main class="content-wrapper">
       <aside class="left-sidebar" aria-label="Sidebar with subreddits">
+        <!-- Toggle Control for collapsing/expanding -->
+        
+        <label for="sidebar-collapse" class="collapse-toggle">
+          <span class="double-chevron">«</span>
+        </label>
+        <div class="sidebar-content">
         <ul>
           <li>
-            <a href="#" class="sidebar-link">
+            <input type="radio" id="sub-frontpage" name="sidebar-item" hidden>
+            <label for="sub-frontpage" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               FRONT PAGE
-              <span class="double-chevron">«</span>
-            </a>
+            </label>
           </li>
-
           <li>
-            <a href="#">
+            <input type="radio" id="sub-pics" name="sidebar-item" hidden>
+            <label for="sub-pics" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               PICS
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-science" name="sidebar-item" hidden>
+            <label for="sub-science" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               SCIENCE
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-wtf1" name="sidebar-item" hidden>
+            <label for="sub-wtf1" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               WTF
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-technology" name="sidebar-item" hidden>
+            <label for="sub-technology" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               TECHNOLOGY
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-askreddit" name="sidebar-item" hidden>
+            <label for="sub-askreddit" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               ASK REDDIT
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-funny" name="sidebar-item" hidden>
+            <label for="sub-funny" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               FUNNY
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-wtf2" name="sidebar-item" hidden>
+            <label for="sub-wtf2" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               WTF
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-iama" name="sidebar-item" hidden checked>
+            <label for="sub-iama" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               IAMA
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-world-news" name="sidebar-item" hidden>
+            <label for="sub-world-news" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               WORLD NEWS
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-todayilearned" name="sidebar-item" hidden>
+            <label for="sub-todayilearned" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               TODAYILEARNED
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-worldnews" name="sidebar-item" hidden>
+            <label for="sub-worldnews" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               WORLDNEWS
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-webdesign" name="sidebar-item" hidden>
+            <label for="sub-webdesign" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               WEBDESIGN
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-atheist" name="sidebar-item" hidden>
+            <label for="sub-atheist" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               ATHEIST
-            </a>
+            </label>
           </li>
           <li>
-            <a href="#">
+            <input type="radio" id="sub-fffuuuuuuuuuu" name="sidebar-item" hidden>
+            <label for="sub-fffuuuuuuuuuu" class="sidebar-link">
               <img src="src/reddit.svg" alt="" class="sidebar-icon" />
               FFFUUUUUUUUUU
-            </a>
+            </label>
           </li>
         </ul>
-
-        <!-- (MORE) link, using a <section> instead of <div> -->
+      
+        <!-- (MORE) link and actions remain unchanged -->
         <section class="sidebar-item">
           <a href="#" class="sidebar-action-link">(MORE)</a>
         </section>
-
+      
         <section class="sidebar-action">
           <a href="#" class="sidebar-action-link">Submit a link</a>
           <p class="sidebar-action-text">
             to anything interesting: news article, blog entry, video, picture...
           </p>
         </section>
-
+      
         <section class="sidebar-action">
           <a href="#" class="sidebar-action-link">Create Community</a>
           <p class="sidebar-action-text">
-            for your LARPing community... because nothing in life is sacred
-            (except reddits!) here on the side.
+            for your LARPing community... because nothing in life is sacred (except reddits!) here on the side.
           </p>
         </section>
-
+      
         <figure class="sidebar-ad">
           <img src="src/little.jpg" alt="Little Big Planet" />
           <figcaption>tiniest ad in the world</figcaption>
         </figure>
+      </div>
       </aside>
 
+      
+
       <section class="posts-column" aria-label="List of posts">
-        <!-- Example Post -->
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
 
+        <!-- Post #1 -->
+        <article class="post">
+          <!-- Rank -->
+          <section class="post-rank">1</section>
+      
           <!-- Vote Controls -->
           <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
+            <!-- Radio inputs (unique name/id per post) -->
+            <input type="radio" id="novote-1" name="vote-1" hidden checked>
+            <input type="radio" id="upvote-1" name="vote-1" hidden>
+            <input type="radio" id="downvote-1" name="vote-1" hidden>
+      
+            <!-- Stack arrows + count vertically -->
+            <div class="vote-stack">
+              <!-- Upvote container -->
+              <div class="upvote-container">
+                <label for="upvote-1" class="arrow upvote-btn default">➨</label>
+                <label for="novote-1" class="arrow upvote-btn toggled">➨</label>
+              </div>
+      
+              <!-- Vote Count -->
+              <span class="vote-count">215</span>
+      
+              <!-- Downvote container -->
+              <div class="downvote-container">
+                <label for="downvote-1" class="arrow downvote-btn default">➨</label>
+                <label for="novote-1" class="arrow downvote-btn toggled">➨</label>
+              </div>
+            </div>
           </section>
-
+      
+          <!-- Optional thumbnail image -->
           <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
+      
+          <!-- Post Content -->
           <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
+            <!-- Title + Domain -->
+            <p class="main-post-title">
+              <a href="#" class="post-link">
+                What do you call guys watching the Super Bowl at home?
+              </a>
+              <span class="domain">(cnn.com)</span>
             </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
+            <!-- Meta info -->
             <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
+              submitted 19 hours ago by <a href="#">krispykracker</a>
             </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
+            <!-- Comments + share, etc. -->
             <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">823 comments</a> 
+              <a href="#">share</a> 
+              <a href="#">save</a> 
+              <a href="#">hide</a> 
               <a href="#">report</a>
             </p>
           </section>
         </article>
-
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
+      
+        <!-- Post #2 -->
+        <article class="post post-selected">
+          <section class="post-rank">2</section>
           <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
+            <input type="radio" id="novote-2" name="vote-2" hidden checked>
+            <input type="radio" id="upvote-2" name="vote-2" hidden>
+            <input type="radio" id="downvote-2" name="vote-2" hidden>
+            <div class="vote-stack">
+              <div class="upvote-container">
+                <label for="upvote-2" class="arrow upvote-btn default">➨</label>
+                <label for="novote-2" class="arrow upvote-btn toggled">➨</label>
+              </div>
+              <span class="vote-count">215</span>
+              <div class="downvote-container">
+                <label for="downvote-2" class="arrow downvote-btn default">➨</label>
+                <label for="novote-2" class="arrow downvote-btn toggled">➨</label>
+              </div>
+            </div>
           </section>
-
           <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
           <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
+            <p class="main-post-title">
+              <a href="#" class="post-link">
+                IAM the guy who created this design AMA
+              </a>
               <span class="domain">(i.imgur.com)</span>
             </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
             <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
+              submitted 19 hours ago by <a href="#">7hundredand77</a>
             </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
             <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">200 comments</a>
+              <a href="#">share</a>
+              <a href="#">save</a>
+              <a href="#">hide</a>
               <a href="#">report</a>
             </p>
           </section>
         </article>
-
+      
+        <!-- Post #3 -->
         <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
+          <section class="post-rank">3</section>
           <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
+            <input type="radio" id="novote-3" name="vote-3" hidden checked>
+            <input type="radio" id="upvote-3" name="vote-3" hidden>
+            <input type="radio" id="downvote-3" name="vote-3" hidden>
+            <div class="vote-stack">
+              <div class="upvote-container">
+                <label for="upvote-3" class="arrow upvote-btn default">➨</label>
+                <label for="novote-3" class="arrow upvote-btn toggled">➨</label>
+              </div>
+              <span class="vote-count">215</span>
+              <div class="downvote-container">
+                <label for="downvote-3" class="arrow downvote-btn default">➨</label>
+                <label for="novote-3" class="arrow downvote-btn toggled">➨</label>
+              </div>
+            </div>
           </section>
-
           <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
           <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
+            <p class="main-post-title">
+              <a href="#" class="post-link">
+                Use this Chrome addon to block major third parties and search
+                engines from tracking the webpages you go to and searches...
+              </a>
               <span class="domain">(i.imgur.com)</span>
             </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
             <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
+              submitted 19 hours ago by <a href="#">krispykracker</a>
             </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
             <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">72 comments</a>
+              <a href="#">share</a>
+              <a href="#">save</a>
+              <a href="#">hide</a>
               <a href="#">report</a>
             </p>
           </section>
         </article>
+      
+        <!-- Post #4 -->
         <article class="post">
-          <!-- Post Rank -->
           <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
           <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
+            <input type="radio" id="novote-4" name="vote-4" hidden checked>
+            <input type="radio" id="upvote-4" name="vote-4" hidden>
+            <input type="radio" id="downvote-4" name="vote-4" hidden>
+            <div class="vote-stack">
+              <div class="upvote-container">
+                <label for="upvote-4" class="arrow upvote-btn default">➨</label>
+                <label for="novote-4" class="arrow upvote-btn toggled">➨</label>
+              </div>
+              <span class="vote-count">215</span>
+              <div class="downvote-container">
+                <label for="downvote-4" class="arrow downvote-btn default">➨</label>
+                <label for="novote-4" class="arrow downvote-btn toggled">➨</label>
+              </div>
+            </div>
           </section>
-
           <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
           <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
+            <p class="main-post-title">
+              <a href="#" class="post-link">
+                Thanks, Sally, That blowjob was... SFW
+              </a>
+              <span class="domain">(imgur.com)</span>
             </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
             <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
+              submitted 9 hours ago by <a href="#">Mako</a>
             </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
             <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">200 comments</a>
+              <a href="#">share</a>
+              <a href="#">save</a>
+              <a href="#">hide</a>
               <a href="#">report</a>
             </p>
           </section>
         </article>
+      
+        <!-- Post #5 -->
         <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
+          <section class="post-rank">5</section>
           <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
+            <input type="radio" id="novote-5" name="vote-5" hidden checked>
+            <input type="radio" id="upvote-5" name="vote-5" hidden>
+            <input type="radio" id="downvote-5" name="vote-5" hidden>
+            <div class="vote-stack">
+              <div class="upvote-container">
+                <label for="upvote-5" class="arrow upvote-btn default">➨</label>
+                <label for="novote-5" class="arrow upvote-btn toggled">➨</label>
+              </div>
+              <span class="vote-count">215</span>
+              <div class="downvote-container">
+                <label for="downvote-5" class="arrow downvote-btn default">➨</label>
+                <label for="novote-5" class="arrow downvote-btn toggled">➨</label>
+              </div>
+            </div>
           </section>
-
           <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
           <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
+            <p class="main-post-title">
+              <a href="#" class="post-link">
+                As a six-year-old, this was the best book ever
+              </a>
               <span class="domain">(i.imgur.com)</span>
             </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
             <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
+              submitted 10 hours ago by <a href="#">Mako</a>
             </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
             <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">611 comments</a>
+              <a href="#">share</a>
+              <a href="#">save</a>
+              <a href="#">hide</a>
               <a href="#">report</a>
             </p>
           </section>
         </article>
+      
+        <!-- Post #6 -->
         <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
+          <section class="post-rank">6</section>
           <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
+            <input type="radio" id="novote-6" name="vote-6" hidden checked>
+            <input type="radio" id="upvote-6" name="vote-6" hidden>
+            <input type="radio" id="downvote-6" name="vote-6" hidden>
+            <div class="vote-stack">
+              <div class="upvote-container">
+                <label for="upvote-6" class="arrow upvote-btn default">➨</label>
+                <label for="novote-6" class="arrow upvote-btn toggled">➨</label>
+              </div>
+              <span class="vote-count">215</span>
+              <div class="downvote-container">
+                <label for="downvote-6" class="arrow downvote-btn default">➨</label>
+                <label for="novote-6" class="arrow downvote-btn toggled">➨</label>
+              </div>
+            </div>
           </section>
-
           <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
           <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
+            <p class="main-post-title">
+              <a href="#" class="post-link">
+                Reddit, if you could go back to the beginning of high school
+                having the experience you do now, how differently would you
+                approach life up to this point in your adulthood?
+              </a>
+              <span class="domain">(reddit.com)</span>
             </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
             <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
+              submitted 12 hours ago by <a href="#">Mako</a>
             </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
             <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
+              <a href="#">2,421 comments</a>
+              <a href="#">share</a>
+              <a href="#">save</a>
+              <a href="#">hide</a>
               <a href="#">report</a>
             </p>
           </section>
         </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-        <article class="post">
-          <!-- Post Rank -->
-          <section class="post-rank">4</section>
-
-          <!-- Vote Controls -->
-          <section class="vote-controls">
-            <button aria-label="Upvote">▲</button>
-            <span class="vote-count">215</span>
-            <button aria-label="Downvote">▼</button>
-          </section>
-
-          <img src="src/preview.png" alt="Preview" class="post-thumbnail" />
-          <!-- Mini Image + Title + Domain + Meta + Details -->
-          <section class="post-content">
-            <!-- Title line: mini image + link + domain -->
-            <p class="post-title">
-              <a href="#" class="post-link"
-                >Thanks, Sally. That blowjob was... SFW.</a
-              >
-              <span class="domain">(i.imgur.com)</span>
-            </p>
-
-            <!-- Meta: "submitted X hours ago by u/Name to r/Sub" -->
-            <p class="post-meta">
-              submitted 2 hours ago by <a href="#">u/Maiko</a> to
-              <a href="#">r/gaming</a>
-            </p>
-
-            <!-- Details: "232 comments | share | save | hide | report" -->
-            <p class="post-details">
-              <a href="#">232 comments</a> | <a href="#">share</a> |
-              <a href="#">save</a> | <a href="#">hide</a> |
-              <a href="#">report</a>
-            </p>
-          </section>
-        </article>
-
-        <!-- Repeat more posts (1,2,3,5,6,14, etc.) similarly... -->
+      
 
         <!-- Bottom Nav: "NEWER" / "OLDER" -->
         <section class="post-navigation">
@@ -781,7 +511,7 @@
         <section class="post-detail-meta">
           <!-- Title + Domain -->
           <h2 class="post-title">
-            I AM the guy who created this design AMA
+            IAM the guy who created this design AMA
             <span class="domain">(i.imgur.com)</span>
           </h2>
 
@@ -799,7 +529,7 @@
 
               <!-- Column 2: up/down votes -->
               <div class="votes-col">
-                <span class="up-votes">398 up votes</span><br />
+                <span class="up-votes">390 up votes</span><br />
                 <span class="down-votes">158 down votes</span>
               </div>
 
@@ -831,24 +561,32 @@
             <!-- 1) UserNumber42 (TOP LEVEL) -->
             <div class="comment">
               <div class="comment-row">
-                <div class="comment-votes">
-                  <!-- Upvote -->
-                  <button class="comment-vote-button">
-                    <svg width="12" height="12" viewBox="0 0 24 24"
-                         fill="none" stroke="#999" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 19V5M5 12l7-7 7 7" />
-                    </svg>
-                  </button>
-                  <!-- Downvote -->
-                  <button class="comment-vote-button">
-                    <svg width="12" height="12" viewBox="0 0 24 24"
-                         fill="none" stroke="#999" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 5v14M5 12l7 7 7-7" />
-                    </svg>
-                  </button>
+                <div class="comment-vote-controls">
+                  <!-- Radio inputs for comment vote states -->
+                  <input type="radio" id="comment-novote-1" name="comment-vote-1" hidden checked>
+  <input type="radio" id="comment-upvote-1" name="comment-vote-1" hidden>
+  <input type="radio" id="comment-downvote-1" name="comment-vote-1" hidden>
+                
+                  <!-- Container that stacks the vote buttons vertically -->
+                  <div class="comment-vote-stack">
+                    <!-- Upvote container: two labels for upvote -->
+                    <div class="comment-upvote-container">
+                      <!-- Shown when NOT upvoted -->
+                      <label for="comment-upvote-1" class="arrow comment-upvote-btn default">➨</label>
+                      <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                      <label for="comment-novote-1" class="arrow comment-upvote-btn toggled">➨</label>
+                    </div>
+                
+                    <!-- Downvote container: two labels for downvote -->
+                    <div class="comment-downvote-container">
+                      <!-- Shown when NOT downvoted -->
+                      <label for="comment-downvote-1" class="arrow comment-downvote-btn default">➨</label>
+                      <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                      <label for="comment-novote-1" class="arrow comment-downvote-btn toggled">➨</label>
+                    </div>
+                  </div>
                 </div>
+                
                 <div class="comment-body">
                   <div class="comment-meta">
                     <a href="#" class="comment-author">UserNumber42</a>
@@ -877,21 +615,30 @@
                 <!-- 1.1) 7hundredand77 (NESTED under UserNumber42) -->
                 <div class="comment comment-nested">
                   <div class="comment-row">
-                    <div class="comment-votes">
-                      <button class="comment-vote-button">
-                        <svg width="12" height="12" viewBox="0 0 24 24"
-                             fill="none" stroke="#999" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M12 19V5M5 12l7-7 7 7" />
-                        </svg>
-                      </button>
-                      <button class="comment-vote-button">
-                        <svg width="12" height="12" viewBox="0 0 24 24"
-                             fill="none" stroke="#999" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M12 5v14M5 12l7 7 7-7" />
-                        </svg>
-                      </button>
+                    <div class="comment-vote-controls">
+                      <!-- Radio inputs for comment vote states -->
+                      <input type="radio" id="comment-novote-2" name="comment-vote-2" hidden checked>
+                      <input type="radio" id="comment-upvote-2" name="comment-vote-2" hidden>
+                      <input type="radio" id="comment-downvote-2" name="comment-vote-2" hidden>
+                    
+                      <!-- Container that stacks the vote buttons vertically -->
+                      <div class="comment-vote-stack">
+                        <!-- Upvote container: two labels for upvote -->
+                        <div class="comment-upvote-container">
+                          <!-- Shown when NOT upvoted -->
+                          <label for="comment-upvote-2" class="arrow comment-upvote-btn default">➨</label>
+                          <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-2" class="arrow comment-upvote-btn toggled">➨</label>
+                        </div>
+                    
+                        <!-- Downvote container: two labels for downvote -->
+                        <div class="comment-downvote-container">
+                          <!-- Shown when NOT downvoted -->
+                          <label for="comment-downvote-2" class="arrow comment-downvote-btn default">➨</label>
+                          <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-2" class="arrow comment-downvote-btn toggled">➨</label>
+                        </div>
+                      </div>
                     </div>
                     <div class="comment-body">
                       <div class="comment-meta">
@@ -921,21 +668,30 @@
                     <!-- 1.1.1) aliasforspam (NESTED under 7hundredand77) -->
                     <div class="comment comment-nested">
                       <div class="comment-row">
-                        <div class="comment-votes">
-                          <button class="comment-vote-button">
-                            <svg width="12" height="12" viewBox="0 0 24 24"
-                                 fill="none" stroke="#999" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M12 19V5M5 12l7-7 7 7" />
-                            </svg>
-                          </button>
-                          <button class="comment-vote-button">
-                            <svg width="12" height="12" viewBox="0 0 24 24"
-                                 fill="none" stroke="#999" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M12 5v14M5 12l7 7 7-7" />
-                            </svg>
-                          </button>
+                        <div class="comment-vote-controls">
+                          <!-- Radio inputs for comment vote states -->
+                          <input type="radio" id="comment-novote-6" name="comment-vote-6" hidden checked>
+                          <input type="radio" id="comment-upvote-6" name="comment-vote-6" hidden>
+                          <input type="radio" id="comment-downvote-6" name="comment-vote-6" hidden>
+                        
+                          <!-- Container that stacks the vote buttons vertically -->
+                          <div class="comment-vote-stack">
+                            <!-- Upvote container: two labels for upvote -->
+                            <div class="comment-upvote-container">
+                              <!-- Shown when NOT upvoted -->
+                              <label for="comment-upvote-6" class="arrow comment-upvote-btn default">➨</label>
+                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-6" class="arrow comment-upvote-btn toggled">➨</label>
+                            </div>
+                        
+                            <!-- Downvote container: two labels for downvote -->
+                            <div class="comment-downvote-container">
+                              <!-- Shown when NOT downvoted -->
+                              <label for="comment-downvote-6" class="arrow comment-downvote-btn default">➨</label>
+                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-6" class="arrow comment-downvote-btn toggled">➨</label>
+                            </div>
+                          </div>
                         </div>
                         <div class="comment-body">
                           <div class="comment-meta">
@@ -964,21 +720,30 @@
                         <!-- 1.1.1.1) Deterministic (NESTED under aliasforspam) -->
                         <div class="comment comment-nested">
                           <div class="comment-row">
-                            <div class="comment-votes">
-                              <button class="comment-vote-button">
-                                <svg width="12" height="12" viewBox="0 0 24 24"
-                                     fill="none" stroke="#999" stroke-width="2"
-                                     stroke-linecap="round" stroke-linejoin="round">
-                                  <path d="M12 19V5M5 12l7-7 7 7" />
-                                </svg>
-                              </button>
-                              <button class="comment-vote-button">
-                                <svg width="12" height="12" viewBox="0 0 24 24"
-                                     fill="none" stroke="#999" stroke-width="2"
-                                     stroke-linecap="round" stroke-linejoin="round">
-                                  <path d="M12 5v14M5 12l7 7 7-7" />
-                                </svg>
-                              </button>
+                            <div class="comment-vote-controls">
+                              <!-- Radio inputs for comment vote states -->
+                              <input type="radio" id="comment-novote-3" name="comment-vote-3" hidden checked>
+                              <input type="radio" id="comment-upvote-3" name="comment-vote-3" hidden>
+                              <input type="radio" id="comment-downvote-3" name="comment-vote-3" hidden>
+                            
+                              <!-- Container that stacks the vote buttons vertically -->
+                              <div class="comment-vote-stack">
+                                <!-- Upvote container: two labels for upvote -->
+                                <div class="comment-upvote-container">
+                                  <!-- Shown when NOT upvoted -->
+                                  <label for="comment-upvote-3" class="arrow comment-upvote-btn default">➨</label>
+                                  <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                                  <label for="comment-novote-3" class="arrow comment-upvote-btn toggled">➨</label>
+                                </div>
+                            
+                                <!-- Downvote container: two labels for downvote -->
+                                <div class="comment-downvote-container">
+                                  <!-- Shown when NOT downvoted -->
+                                  <label for="comment-downvote-3" class="arrow comment-downvote-btn default">➨</label>
+                                  <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                                  <label for="comment-novote-3" class="arrow comment-downvote-btn toggled">➨</label>
+                                </div>
+                              </div>
                             </div>
                             <div class="comment-body">
                               <div class="comment-meta">
@@ -1009,21 +774,30 @@
                     <!-- 1.1.2) volve (NESTED under 7hundredand77) -->
                     <div class="comment comment-nested">
                       <div class="comment-row">
-                        <div class="comment-votes">
-                          <button class="comment-vote-button">
-                            <svg width="12" height="12" viewBox="0 0 24 24"
-                                 fill="none" stroke="#999" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M12 19V5M5 12l7-7 7 7" />
-                            </svg>
-                          </button>
-                          <button class="comment-vote-button">
-                            <svg width="12" height="12" viewBox="0 0 24 24"
-                                 fill="none" stroke="#999" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M12 5v14M5 12l7 7 7-7" />
-                            </svg>
-                          </button>
+                        <div class="comment-vote-controls">
+                          <!-- Radio inputs for comment vote states -->
+                          <input type="radio" id="comment-novote-4" name="comment-vote-4" hidden checked>
+                          <input type="radio" id="comment-upvote-4" name="comment-vote-4" hidden>
+                          <input type="radio" id="comment-downvote-4" name="comment-vote-4" hidden>
+                        
+                          <!-- Container that stacks the vote buttons vertically -->
+                          <div class="comment-vote-stack">
+                            <!-- Upvote container: two labels for upvote -->
+                            <div class="comment-upvote-container">
+                              <!-- Shown when NOT upvoted -->
+                              <label for="comment-upvote-4" class="arrow comment-upvote-btn default">➨</label>
+                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-4" class="arrow comment-upvote-btn toggled">➨</label>
+                            </div>
+                        
+                            <!-- Downvote container: two labels for downvote -->
+                            <div class="comment-downvote-container">
+                              <!-- Shown when NOT downvoted -->
+                              <label for="comment-downvote-4" class="arrow comment-downvote-btn default">➨</label>
+                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-4" class="arrow comment-downvote-btn toggled">➨</label>
+                            </div>
+                          </div>
                         </div>
                         <div class="comment-body">
                           <div class="comment-meta">
@@ -1053,21 +827,30 @@
                     <!-- 1.1.3) freshwire (NESTED under 7hundredand77) -->
                     <div class="comment comment-nested">
                       <div class="comment-row">
-                        <div class="comment-votes">
-                          <button class="comment-vote-button">
-                            <svg width="12" height="12" viewBox="0 0 24 24"
-                                 fill="none" stroke="#999" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M12 19V5M5 12l7-7 7 7" />
-                            </svg>
-                          </button>
-                          <button class="comment-vote-button">
-                            <svg width="12" height="12" viewBox="0 0 24 24"
-                                 fill="none" stroke="#999" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M12 5v14M5 12l7 7 7-7" />
-                            </svg>
-                          </button>
+                        <div class="comment-vote-controls">
+                          <!-- Radio inputs for comment vote states -->
+                          <input type="radio" id="comment-novote-5" name="comment-vote-5" hidden checked>
+                          <input type="radio" id="comment-upvote-5" name="comment-vote-5" hidden>
+                          <input type="radio" id="comment-downvote-5" name="comment-vote-5" hidden>
+                        
+                          <!-- Container that stacks the vote buttons vertically -->
+                          <div class="comment-vote-stack">
+                            <!-- Upvote container: two labels for upvote -->
+                            <div class="comment-upvote-container">
+                              <!-- Shown when NOT upvoted -->
+                              <label for="comment-upvote-5" class="arrow comment-upvote-btn default">➨</label>
+                              <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-5" class="arrow comment-upvote-btn toggled">➨</label>
+                            </div>
+                        
+                            <!-- Downvote container: two labels for downvote -->
+                            <div class="comment-downvote-container">
+                              <!-- Shown when NOT downvoted -->
+                              <label for="comment-downvote-5" class="arrow comment-downvote-btn default">➨</label>
+                              <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                              <label for="comment-novote-5" class="arrow comment-downvote-btn toggled">➨</label>
+                            </div>
+                          </div>
                         </div>
                         <div class="comment-body">
                           <div class="comment-meta">
@@ -1093,21 +876,30 @@
                 <!-- 1.2) gusthebus (NESTED under UserNumber42) -->
                 <div class="comment comment-nested">
                   <div class="comment-row">
-                    <div class="comment-votes">
-                      <button class="comment-vote-button">
-                        <svg width="12" height="12" viewBox="0 0 24 24"
-                             fill="none" stroke="#999" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M12 19V5M5 12l7-7 7 7" />
-                        </svg>
-                      </button>
-                      <button class="comment-vote-button">
-                        <svg width="12" height="12" viewBox="0 0 24 24"
-                             fill="none" stroke="#999" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M12 5v14M5 12l7 7 7-7" />
-                        </svg>
-                      </button>
+                    <div class="comment-vote-controls">
+                      <!-- Radio inputs for comment vote states -->
+                      <input type="radio" id="comment-novote-7" name="comment-vote-7" hidden checked>
+                      <input type="radio" id="comment-upvote-7" name="comment-vote-7" hidden>
+                      <input type="radio" id="comment-downvote-7" name="comment-vote-7" hidden>
+                    
+                      <!-- Container that stacks the vote buttons vertically -->
+                      <div class="comment-vote-stack">
+                        <!-- Upvote container: two labels for upvote -->
+                        <div class="comment-upvote-container">
+                          <!-- Shown when NOT upvoted -->
+                          <label for="comment-upvote-7" class="arrow comment-upvote-btn default">➨</label>
+                          <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-7" class="arrow comment-upvote-btn toggled">➨</label>
+                        </div>
+                    
+                        <!-- Downvote container: two labels for downvote -->
+                        <div class="comment-downvote-container">
+                          <!-- Shown when NOT downvoted -->
+                          <label for="comment-downvote-7" class="arrow comment-downvote-btn default">➨</label>
+                          <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                          <label for="comment-novote-7" class="arrow comment-downvote-btn toggled">➨</label>
+                        </div>
+                      </div>
                     </div>
                     <div class="comment-body">
                       <div class="comment-meta">
@@ -1136,21 +928,30 @@
             <!-- 2) 7hundredand77 (TOP LEVEL again) -->
             <div class="comment">
               <div class="comment-row">
-                <div class="comment-votes">
-                  <button class="comment-vote-button">
-                    <svg width="12" height="12" viewBox="0 0 24 24"
-                         fill="none" stroke="#999" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 19V5M5 12l7-7 7 7" />
-                    </svg>
-                  </button>
-                  <button class="comment-vote-button">
-                    <svg width="12" height="12" viewBox="0 0 24 24"
-                         fill="none" stroke="#999" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 5v14M5 12l7 7 7-7" />
-                    </svg>
-                  </button>
+                <div class="comment-vote-controls">
+                  <!-- Radio inputs for comment vote states -->
+                  <input type="radio" id="comment-novote" name="comment-vote" hidden checked>
+                  <input type="radio" id="comment-upvote" name="comment-vote" hidden>
+                  <input type="radio" id="comment-downvote" name="comment-vote" hidden>
+                
+                  <!-- Container that stacks the vote buttons vertically -->
+                  <div class="comment-vote-stack">
+                    <!-- Upvote container: two labels for upvote -->
+                    <div class="comment-upvote-container">
+                      <!-- Shown when NOT upvoted -->
+                      <label for="comment-upvote" class="arrow comment-upvote-btn default">➨</label>
+                      <!-- Shown when upvoted (clicking it reverts to no vote) -->
+                      <label for="comment-novote" class="arrow comment-upvote-btn toggled">➨</label>
+                    </div>
+                
+                    <!-- Downvote container: two labels for downvote -->
+                    <div class="comment-downvote-container">
+                      <!-- Shown when NOT downvoted -->
+                      <label for="comment-downvote" class="arrow comment-downvote-btn default">➨</label>
+                      <!-- Shown when downvoted (clicking it reverts to no vote) -->
+                      <label for="comment-novote" class="arrow comment-downvote-btn toggled">➨</label>
+                    </div>
+                  </div>
                 </div>
                 <div class="comment-body">
                   <div class="comment-meta">
