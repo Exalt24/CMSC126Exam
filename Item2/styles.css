@@ -1,6 +1,3 @@
-/* ==============================
-   BASIC RESET / UTILITIES
-   ============================== */
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +10,6 @@ body {
   color: #333;
   line-height: 1.4;
 }
-
-/* ==============================
-     TOP HEADER BAR
-     ============================== */
 
 .header-bar {
   display: flex;
@@ -61,57 +54,51 @@ body {
   text-decoration: underline;
 }
 
-/* User Navigation */
 .user-nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centering the navigation */
+  justify-content: center;
   width: 100%;
   padding: 0.5rem 1rem;
-  background: #f8f9fa; /* Light background for clarity */
+  background: #f8f9fa;
   border-bottom: 1px solid black;
 }
 
-/* Navigation Tabs (Flexed) */
 .user-nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start; /* Evenly distribute */
+  justify-content: flex-start;
   width: 100%;
   padding: 0.25rem 0rem;
   gap: 0.5rem;
-  white-space: nowrap; /* ensure the labels stay in one line */
+  white-space: nowrap;
   position: relative;
   top: 0.4rem;
 }
 
-/* Hide the radio inputs */
 .user-nav input[type="radio"] {
   display: none;
 }
 
-/* Styling for the tabs */
 .nav-tab {
-  flex: 1; /* Make tabs evenly spread */
+  flex: 1;
   text-align: center;
   color: #336699;
   font-size: 0.8rem;
   text-decoration: none;
   padding: 0.5rem 0.8rem;
-  background: #eee;
+  background: #f9f8f8;
   border: 1px solid black;
   border-radius: 5px 5px 0 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover effect */
 .nav-tab:hover {
   text-decoration: underline;
   background: #ddd;
 }
 
-/* Active tab when selected */
 .user-nav input[type="radio"]:checked + .nav-tab {
   color: orangered;
   background: #fff;
@@ -120,8 +107,6 @@ body {
   box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Keep the flex layout */
 .content-wrapper {
   display: grid;
   grid-template-columns: 200px 1fr 650px;
@@ -130,15 +115,14 @@ body {
 }
 
 .left-sidebar {
-  /* your existing grid-row, grid-column, negative margin, etc. */
   position: relative;
   z-index: 1;
   margin-top: 0.6rem;
   width: 100%;
-  background-color: #daecff;
+  background-color: #e9f1f9;
   border: 1px solid black;
-  flex-direction: column; /* so label + content stack vertically if needed */
-  overflow: hidden; /* hide the content when collapsed */
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .sidebar-content {
@@ -151,28 +135,25 @@ body {
 }
 
 .left-sidebar li {
-  position: relative; /* so we can position the highlight if needed */
+  position: relative;
 }
 
-/* The hidden checkbox */
 .left-sidebar input[type="radio"] {
-  display: none; /* fully hidden */
+  display: none;
 }
 
-/* The clickable label that looks like a link */
 .sidebar-link {
-  display: flex; /* icon + text in a row */
-  align-items: center; /* vertical alignment */
+  display: flex;
+  align-items: center;
   padding: 0.5rem 0.5rem;
   text-decoration: none;
   color: #336699;
   font-size: 0.9rem;
   background: none;
   border-radius: 2px;
-  cursor: pointer; /* show a pointer on hover */
+  cursor: pointer;
 }
 
-/* Icon styling */
 .sidebar-icon {
   width: 16px;
   height: 16px;
@@ -181,65 +162,59 @@ body {
   margin-left: 1rem;
 }
 
-/* Hover effect for the label */
 .sidebar-link:hover {
   background-color: #e6e6e6;
 }
 
-/* Selected state: when a radio input is checked, style its sibling label */
 .left-sidebar input[type="radio"]:checked + .sidebar-link {
-  background-color: #fff; /* white background */
-  color: orangered; /* orangered text color */
-  border-top: 1px solid black; /* top border */
-  border-bottom: 1px solid black; /* bottom border */
-  padding-left: 0.5rem; /* adjust padding for border */
+  background-color: #fff;
+  color: orangered;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-left: 0.5rem;
 }
 
-/* Prevent hover from overriding the selected state */
 .left-sidebar input[type="radio"]:checked + .sidebar-link:hover {
   background-color: #fff;
 }
 
 .double-chevron {
   position: absolute;
-  top: 0.3rem; /* adjust for exact top alignment */
-  right: 0.3rem; /* push it near the right edge */
-  color: black; /* match your screenshot’s gray color */
-  font-size: 0.85rem; /* tweak size as needed */
-  z-index: 1; /* ensure it’s above the sidebar content */
+  top: 0.3rem;
+  right: 0.3rem;
+  color: black;
+  font-size: 0.85rem;
+  z-index: 1;
 }
 
-/* Icon next to each link */
 .sidebar-icon {
-  width: 16px; /* match your reference icon size */
+  width: 16px;
   height: 16px;
   margin-right: 0.3rem;
-  vertical-align: middle; /* keep the icon aligned with text */
+  vertical-align: middle;
 }
 
 .left-sidebar a {
-  display: flex; /* so icon + text line up horizontally */
+  display: flex;
   align-items: center;
   padding: 0.3rem 0rem;
-  color: #777; /* typical old Reddit link color */
+  color: #777;
   text-decoration: none;
   font-size: 0.9rem;
-  background: none; /* no background by default */
-  border-radius: 2px; /* slight rounding if hovered */
-  position: relative; /* for the hover effect */
+  background: none;
+  border-radius: 2px;
+  position: relative;
 }
 
 .left-sidebar a:hover {
-  background-color: #daecff; /* subtle hover highlight */
+  background-color: #daecff;
 }
 
-/* (MORE) link block */
 .sidebar-item a {
   padding: 0.5rem 1.5rem;
   color: #336699;
 }
 
-/* "Submit a link" and "Create Community" sections */
 .sidebar-action {
   margin-top: 1rem;
   font-size: 0.8rem;
@@ -247,14 +222,13 @@ body {
   padding: 0.5rem 1.5rem;
   border-radius: 3px;
   border: 1px solid #ccc;
-  margin-right: 1rem; /* space between this and the next link */
+  margin-right: 1rem;
 }
 
 .sidebar-action a {
   color: #336699;
 }
 
-/* Bold link for "Submit a link" or "Create Community" */
 .sidebar-action-link {
   font-weight: bold;
   text-decoration: none;
@@ -264,33 +238,32 @@ body {
   text-decoration: underline;
 }
 
-/* The text under each action link */
 .sidebar-action-text {
   margin-top: 0.3rem;
   line-height: 1.2;
 }
 
 .sidebar-ad {
-  margin-top: 1rem; /* spacing above the ad */
-  margin-right: 1rem; /* space between this and the next link */
-  text-align: right; /* center the image + caption */
+  margin-top: 1rem;
+  margin-right: 1rem;
+  text-align: right;
 }
 
 .sidebar-ad img {
   display: block;
-  max-width: 100%; /* ensure it doesn’t overflow the sidebar */
+  max-width: 100%;
 }
 
 .sidebar-ad figcaption {
-  font-size: 0.8rem; /* small text for the caption */
-  color: #777; /* subtle gray color */
-  margin-top: 0.3rem; /* a bit of space above the caption */
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.3rem;
 }
 
 .collapse-toggle {
   position: absolute;
-  top: -2px; /* near top of the sidebar */
-  right: -1px; /* shift it outside the sidebar’s boundary */
+  top: -2px;
+  right: -1px;
   z-index: 9999;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -298,15 +271,13 @@ body {
 
 #sidebar-collapse:checked ~ .content-wrapper {
   grid-template-columns: 20px 1fr 650px;
-  max-height: 5%; /* or 0 if you want it fully collapsed */
+  max-height: 5%;
 }
 
-/* Inside that left column, hide the main content so only the chevron remains */
 #sidebar-collapse:checked ~ .content-wrapper .left-sidebar .sidebar-content {
-  display: none; /* or visibility: hidden; transform: scale(0); etc. */
+  display: none;
 }
 
-/* If you want to rotate the chevron on collapse, do: */
 .double-chevron {
   transition: transform 0.3s;
 }
@@ -314,10 +285,6 @@ body {
   transform: rotate(180deg);
 }
 
-/****************************************
- * POSTS COLUMN & INDIVIDUAL POSTS
- ****************************************/
-/* Container for all posts */
 .posts-column {
   grid-column: 2;
   background-color: #fff;
@@ -325,35 +292,30 @@ body {
   position: relative;
   max-width: 100%;
 }
-/* Each post is a horizontal row:
-   rank -> vote controls -> thumbnail -> text content */
+
 .post {
   display: flex;
-  align-items: center; /* top-align items instead of center */
+  align-items: center;
   border-bottom: 1px solid #ccc;
   padding: 0.4rem 0rem;
   font-size: 0.9rem;
   background-color: white;
 }
 
-/* Highlighted background for a selected post */
 .post.post-selected {
-  background-color: #f6dda8; /* a pale orange, pick any color you like */
+  background-color: #f7f0e9;
 }
 
 .post:hover:not(.post-selected) {
   background-color: #f6f6f6;
 }
 
-/* Post rank (#) on the far left */
 .post-rank {
-  width: 2rem; /* enough space for 2-digit ranks */
-  text-align: right; /* right-align the number */
+  width: 2rem;
+  text-align: right;
   color: #777;
   font-weight: bold;
   font-size: 1rem;
-  /* We rely on the .post gap for spacing, 
-     so no extra margin-right is strictly needed here */
 }
 
 .vote-controls {
@@ -369,24 +331,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 4rem; /* adjust as needed */
-  /* margin, etc. if needed */
+  width: 4rem;
 }
 
-/* Common arrow styling */
 .arrow {
   font-size: 1rem;
   cursor: pointer;
   color: #888;
-  display: inline-block; /* allow transforms */
+  display: inline-block;
 }
 
-/* Hide toggled labels by default */
 .arrow.toggled {
   display: none;
 }
 
-/* Rotate up/down arrows */
 .upvote-btn {
   transform: rotate(270deg) scaleY(2) translateY(-1px);
   transform-origin: center;
@@ -396,22 +354,17 @@ body {
   transform-origin: center;
 }
 
-/* Hover states for default arrows */
 .upvote-container .default:hover {
   color: #ff4500;
 }
 .downvote-container .default:hover {
   color: #4d84ff;
 }
-/* (Optional) toggled arrow hover */
+
 .arrow.toggled:hover {
   opacity: 0.8;
 }
 
-/* ----------------- Toggle Logic with Attribute Selectors ----------------- */
-
-/* If an input whose ID starts with "upvote-" is checked,
-   hide the default up arrow and show the toggled up arrow in orange */
 .vote-controls
   input[id^="upvote-"]:checked
   ~ .vote-stack
@@ -428,8 +381,6 @@ body {
   color: #ff4500;
 }
 
-/* If an input whose ID starts with "downvote-" is checked,
-   hide the default down arrow and show the toggled arrow in blue */
 .vote-controls
   input[id^="downvote-"]:checked
   ~ .vote-stack
@@ -446,18 +397,14 @@ body {
   color: #4d84ff;
 }
 
-/* --------------- Pseudo-element for vote count --------------- */
 .vote-count {
   position: relative;
   font-weight: bold;
   font-size: 0.9rem;
-  margin-left: 2rem; /* space between arrow and count */
-  color: transparent; /* Hide real text so pseudo-element can show dynamic content */
+  margin-left: 2rem;
+  color: transparent;
 }
 
-/* If "novote" is checked => 232, upvote => 233, downvote => 231,
-   using the same approach with attribute selectors. 
-   This is a single "hard-coded" set of numbers for all posts. */
 .vote-controls input[id^="novote-"]:checked ~ .vote-stack .vote-count::before {
   content: "232";
   color: #333;
@@ -474,22 +421,18 @@ body {
   color: #4d84ff;
 }
 
-/* Optional: if you have a thumbnail */
 .post-thumbnail {
-  width: 50px; /* or whatever fits your layout */
-  height: auto; /* maintain aspect ratio */
+  width: 50px;
+  height: auto;
   object-fit: cover;
-  margin-right: 0.5rem; /* small gap if you want extra space */
+  margin-right: 0.5rem;
 }
 
-/* The main text content of the post (title, domain, meta, details).
-   Let it flex to fill remaining space. */
 .post-content {
   flex: 1;
-  margin-right: 2rem; /* space between thumbnail and text */
+  margin-right: 2rem;
 }
 
-/* Title link */
 .post-link {
   color: #336699;
   text-decoration: none;
@@ -500,13 +443,11 @@ body {
   text-decoration: underline;
 }
 
-/* Domain in parentheses, e.g. (i.imgur.com) */
 .domain {
   color: #888;
   font-size: 0.85rem;
 }
 
-/* Meta line: "submitted X hours ago by u/Name to r/Sub" */
 .post-meta {
   font-size: 0.8rem;
   color: #777;
@@ -518,7 +459,6 @@ body {
   text-decoration: none;
 }
 
-/* Post details: "232 comments | share | save | hide | report" */
 .post-details {
   font-size: 0.8rem;
 }
@@ -533,16 +473,14 @@ body {
   text-decoration: underline;
 }
 
-/* Container alignment */
 .post-navigation {
-  text-align: right; /* as in your snippet */
+  text-align: right;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-/* Base button styling */
 .nav-button {
-  display: inline-block; /* make them behave like inline buttons */
+  display: inline-block;
   padding: 0.3rem 0.6rem;
   margin: 0 0.5rem;
   font-size: 0.9rem;
@@ -551,31 +489,26 @@ body {
   text-align: center;
   color: #333;
 
-  /* Subtle gradient background for a “classic” button feel */
   background: linear-gradient(#f5f5f5, #ddd);
   border: 1px solid #ccc;
   border-radius: 3px;
 
-  /* Optional box-shadow for a 3D effect */
   box-shadow: 0 1px #fff inset, 0 1px 2px rgba(0, 0, 0, 0.2);
 
-  /* If you want a slight text-shadow on the text: */
   text-shadow: 0 1px #fff;
 }
 
-/* Hover effect */
 .nav-button:hover {
   background: linear-gradient(#e9e9e9, #ccc);
   border-color: #bbb;
-  text-decoration: none; /* override underline on hover */
+  text-decoration: none;
 }
 
-/* Active (pressed) state, if you want it */
 .nav-button:active {
   background: linear-gradient(#ccc, #eee);
   box-shadow: 0 1px #ccc inset;
   position: relative;
-  top: 1px; /* slight “pressed” look */
+  top: 1px;
 }
 
 .nav-newer:before {
@@ -599,25 +532,23 @@ body {
 .right-sidebar {
   grid-column: 3;
   background-color: #fff;
-  border-right: 1px solid black; /* separate from the right edge */
+  border-right: 1px solid black;
   font-size: 0.9rem;
   position: relative;
   max-width: 100%;
 }
 
-/* Flex container for search + notifications */
 .top-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 6px 18px 6px 4px;
   background-color: #f6f7f8;
   border-bottom: 1px solid black;
 }
 
-/* Search Bar */
 .search-form {
   flex-grow: 1;
   display: flex;
@@ -633,10 +564,10 @@ body {
   width: 100%;
 }
 
-/* Notifications */
 .notifications {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .notifications ul {
@@ -679,12 +610,9 @@ body {
 
 .notifications::before {
   content: "";
-  position: absolute;
-
   left: 14rem;
   width: 1px;
   height: 32px;
-
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.75),
@@ -696,13 +624,9 @@ body {
 .notifications::after {
   content: "";
   position: absolute;
-
-
-  right: 3rem;
-
+  right: 2rem;
   width: 1px;
   height: 32px;
-
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.75),
@@ -711,7 +635,6 @@ body {
   );
 }
 
-/* Title & domain link */
 .post-title {
   font-size: 1rem;
   margin-bottom: 0.25rem;
@@ -724,7 +647,6 @@ body {
   margin-left: 0.3rem;
 }
 
-/* The link to the image */
 .post-image-link {
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
@@ -732,44 +654,32 @@ body {
   padding: 0rem 0rem 0rem 1rem;
 }
 
-/* Bubble Container (around .post-detail-meta) */
 .bubble-shape {
-  /* Fill the width of its container or adapt as you need. */
   width: 100%;
-  /* Basic styling for the bubble itself */
+
   background: #fff;
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 
   position: relative;
-
 }
 
-/* Bottom Arrow */
 .bubble-shape::after {
   content: "";
   position: absolute;
-  /* Place the arrow so it “sticks out” from the bottom edge */
   bottom: -10px;
-
-  /* Adjust left/right to move arrow horizontally.
-     e.g., 'left: 20px;' if you want it near the left, or center it with calc(), etc. */
   right: 20px;
 
-  /* The “triangle” is 0x0, with only one colored border side */
   width: 0;
   height: 0;
 
-  /* We’re using border-top to create an upside-down triangle. 
-     The color matches the bubble’s border (#ccc). */
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #ccc;
 }
 
 .post-detail-meta {
-  /* overall font, color, etc. */
   font-size: 0.75rem;
   color: #777;
   line-height: 1.4;
@@ -779,54 +689,48 @@ body {
 
 .four-col-row {
   display: grid;
-  /* 4 columns: 1) points, 2) up/down, 3) empty, 4) submitted + comments */
+
   grid-template-columns: auto auto auto auto;
-  gap: 0.3rem; /* spacing between columns */
-  align-items: center; /* or center if your screenshot is center aligned */
+  gap: 0.3rem;
+  align-items: center;
 }
 
-/* Column 1: "232 points (71% like it)" */
 .points-col strong {
   font-size: 1rem;
   font-weight: bold;
 }
 
-/* Column 2: up/down votes in color */
 .votes-col {
-  margin-right: 1rem; /* space between this and the next column */
+  margin-right: 1rem;
 }
 
 .up-votes {
-  color: #e24a02; /* orange for up votes */
+  color: #e24a02;
   font-weight: bold;
 }
 .down-votes {
-  color: #4d84ff; /* blue for down votes */
+  color: #4d84ff;
   font-weight: bold;
 }
 
-/* Column 3: empty space */
 .empty-col {
-  /* nothing here, just takes up space */
 }
 
-/* Column 4: date, then "200 comments sort by" on separate line */
 .comments-sort-col {
-  text-align: right; /* flush to the right edge */
-  color: #666; /* or #777 if you want the same color */
+  text-align: right;
+  color: #666;
   font-size: 0.85rem;
 }
 
 .sort-sep {
-  margin: 0 0.3rem; /* small horizontal gap */
+  margin: 0 0.3rem;
 }
 
 .formatting-help {
-  /* Make this a block container so text-align works */
   display: block;
   width: 100%;
   text-align: right;
-  margin-top: 0.3rem; /* small spacing above if needed */
+  margin-top: 0.3rem;
 }
 
 .formatting-help a {
@@ -839,7 +743,6 @@ body {
   text-decoration: underline;
 }
 
-/* Single-line comment box + "save" button */
 .comment-input-line {
   display: flex;
   align-items: center;
@@ -868,7 +771,6 @@ body {
   background: #e6e6e6;
 }
 
-/* Utility: visually hidden label for screen readers */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -877,38 +779,31 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Container for all comments */
 .comments {
   margin: 0rem 2rem 0.5rem 2rem;
   font-family: sans-serif;
 }
-
-/* Each comment container */
 
 .comment-row {
   display: flex;
   align-items: flex-start;
 }
 
-/* Container for the vote controls */
 .comment-vote-controls {
   display: inline-block;
 }
 
-/* Stack the vote buttons vertically */
 .comment-vote-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px; /* adjust spacing as needed */
+  gap: 2px;
 }
 
-/* Hide all radio inputs */
 .comment-vote-controls input[type="radio"] {
   display: none;
 }
 
-/* Rotate the upvote arrow (270°) and the downvote arrow (90°) */
 .comment-upvote-btn {
   transform: rotate(270deg) scaleY(2) translateY(-3px);
   transform-origin: center;
@@ -918,9 +813,6 @@ body {
   transform-origin: center;
 }
 
-/* ----------------- UPVOTE LOGIC ----------------- */
-/* When an input whose id begins with "comment-upvote" is checked,
-   hide the default upvote arrow and show the toggled one */
 .comment-vote-controls
   input[id^="comment-upvote"]:checked
   ~ .comment-vote-stack
@@ -934,12 +826,9 @@ body {
   .comment-upvote-container
   .toggled {
   display: inline-block;
-  color: #ff4500; /* active upvote color */
+  color: #ff4500;
 }
 
-/* ----------------- DOWNVOTE LOGIC ----------------- */
-/* When an input whose id begins with "comment-downvote" is checked,
-   hide the default downvote arrow and show the toggled one */
 .comment-vote-controls
   input[id^="comment-downvote"]:checked
   ~ .comment-vote-stack
@@ -953,10 +842,9 @@ body {
   .comment-downvote-container
   .toggled {
   display: inline-block;
-  color: #4d84ff; /* active downvote color */
+  color: #4d84ff;
 }
 
-/* ----------------- HOVER EFFECTS ----------------- */
 .comment-upvote-container .default:hover {
   color: #ff4500;
 }
@@ -964,7 +852,6 @@ body {
   color: #4d84ff;
 }
 
-/* The main body of the comment: author, text, etc. */
 .comment-body {
   flex: 1;
 }
@@ -973,20 +860,19 @@ body {
   border-left: 1px solid black;
 }
 
-/* e.g., smaller text, grey color, etc. */
 .comment-meta {
   font-size: 12px;
   color: #666;
 }
 
 .comment-author {
-  color: #0079d3; /* or reddit-blue, etc. */
+  color: #0079d3;
   margin-right: 4px;
   text-decoration: none;
 }
 
 .comment-author.op {
-  color: rgb(21, 0, 255); /* "reddit upvote" style for the OP */
+  color: rgb(21, 0, 255);
   text-decoration: none;
 }
 
@@ -996,7 +882,7 @@ body {
 }
 
 .comment-content ul {
-  margin-left: 20px; /* indent nested lists */
+  margin-left: 20px;
 }
 
 .comment-actions {
@@ -1009,51 +895,38 @@ body {
   text-decoration: none;
 }
 
-/* 
-   Each parent's children are grouped in .comment-children.
-   This draws a continuous vertical line (the "spine") 
-   from top to bottom for all child comments. 
-*/
 .comment-children {
-  margin-left: 10px; /* overall indentation for the child block */
+  margin-left: 10px;
   border-left: 1px solid #ccc;
   position: relative;
 }
 
-/* 
-   Each child comment is still considered "nested." 
-   We add a small horizontal line to connect it to the parent's spine.
-*/
 .comment-nested {
   position: relative;
-  margin-left: 20px; /* push the box to the right, away from the spine */
-  padding-top: 8px; /* space between siblings so lines don't overlap */
+  margin-left: 20px;
+  padding-top: 8px;
 }
 
-/* 
-   This pseudo-element draws the "branch" from the vertical spine 
-   to the child's comment box. 
-*/
 .comment-nested::before {
   content: "";
   position: absolute;
-  width: 20px; /* same as .comment-nested margin-left */
-  left: -20px; /* align with the vertical spine */
-  top: 16px; /* vertical offset so it hits near the author's row */
+  width: 20px;
+  left: -20px;
+  top: 16px;
 }
 
 @media (max-width: 600px) {
   .right-sidebar {
-    grid-column: 1 / -1; /* Ensures it spans the entire width of the grid */
-    width: 200vw; /* Takes up the full viewport width */
+    grid-column: 1 / -1;
+    width: 200vw;
     padding-top: 15px;
   }
 
   .posts-column {
-    grid-column: 1 / -1; /* Ensures it spans the entire width of the grid */
-    width: 200vw; /* Takes up the full viewport width */
+    grid-column: 1 / -1;
+    width: 200vw;
     padding: 10px;
-    padding-top: 80px;
+    padding-top: 10px;
     border-top: 2px solid #ccc;
   }
 
@@ -1064,8 +937,8 @@ body {
 
   .search-form {
     display: flex;
-    justify-content: center; /* center the search bar horizontally */
-    margin-top: 2rem;
+    justify-content: center;
+    margin-top: 0rem;
   }
 
   .search-form input[type="search"] {
@@ -1089,18 +962,17 @@ body {
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .right-sidebar {
-    grid-column: 1 / -1; /* Ensures it spans the entire width of the grid */
-    width: 100vw; /* Takes up the full viewport width */
+    grid-column: 1 / -1;
+    width: 100vw;
     padding-top: 15px;
   }
   .posts-column {
-    grid-column: span 2; /* Ensures it spans the entire width of the grid */
-    border-top: 2px solid #ccc;
+    grid-column: span 2;
   }
 
   .search-form {
     display: flex;
-    justify-content: flex-end; /* center the search bar horizontally */
+    justify-content: flex-end;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 2rem;
