@@ -44,7 +44,7 @@ body {
   border-left: 1px solid black;
   border-right: 1px solid black;
   padding: 0.3rem 0.6rem;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: #333;
   background-color: #f6f7f8;
   margin: 0 2rem;
@@ -61,32 +61,28 @@ body {
   text-decoration: underline;
 }
 
-.subreddits-nav {
-  padding: 0rem 3rem;
-  background-color: #f6f7f8;
-  width: auto;
-  margin: 1rem;
-}
-
+/* User Navigation */
 .user-nav {
-  bottom: 29px; /* align with the border */
-  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering the navigation */
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa; /* Light background for clarity */
+  border-bottom: 1px solid black;
 }
 
-.user-nav .search {
-  position: relative; /* for the ::before and ::after lines */
-  bottom: 10px; /* align with the border */
-  margin-left: 7rem;
-}
-
+/* Navigation Tabs (Flexed) */
 .user-nav ul {
   list-style: none;
   display: flex;
+  justify-content: flex-start; /* Evenly distribute */
+  width: 100%;
+  padding: 0.25rem 0rem;
   gap: 0.5rem;
-  padding: 0;
-  flex-wrap: nowrap; /* disallow wrapping */
   white-space: nowrap; /* ensure the labels stay in one line */
-  border-radius: 3px; /* round the corners */
+  position: relative;
+  top: 0.4rem;
 }
 
 /* Hide the radio inputs */
@@ -94,137 +90,41 @@ body {
   display: none;
 }
 
-/* Common styles for each tab label */
+/* Styling for the tabs */
 .nav-tab {
+  flex: 1; /* Make tabs evenly spread */
+  text-align: center;
   color: #336699;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
-  padding: 0.6rem 0.4rem;
+  padding: 0.5rem 0.8rem;
   background: #eee;
   border: 1px solid black;
-  border-radius: 3px 3px 0 0;
+  border-radius: 5px 5px 0 0;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Hover effect */
 .nav-tab:hover {
   text-decoration: underline;
+  background: #ddd;
 }
 
-/* "Active" tab: when the radio is checked, style its label as selected */
+/* Active tab when selected */
 .user-nav input[type="radio"]:checked + .nav-tab {
-  color: orangered; /* or #ff4500 for “reddit orange” */
-  background: #fff; /* highlight color */
-  border-bottom-color: #fff; /* so it looks "raised" */
-  font-weight: bold;
-}
-
-/* SEARCH FORM (center column) */
-.search-form {
-  display: flex;
-  justify-content: center; /* center the search bar horizontally */
-}
-
-.search-form input[type="search"] {
-  padding: 0.3rem 0.5rem;
-  border: 1px solid black;
-  border-radius: 4px;
-  background: url("src/magnify.png") no-repeat right 8px center;
-  background-size: 16px 16px;
-  padding-right: 2rem;
-}
-
-/* NOTIFICATIONS (right column) */
-.notifications {
-  position: relative; /* for the ::before line */
-  padding: 0 0.75rem;
-  bottom: 40px;
-}
-
-.notifications ul {
-  list-style: none;
-  display: flex;
-  gap: 0.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.notifications li {
-  border: 1px solid black;
+  color: orangered;
   background: #fff;
-  border-radius: 3px;
-  padding: 0.25rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-bottom-color: #fff;
+  font-weight: bold;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.notifications a {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.75rem;
-}
-
-.notifications a:hover {
-  text-decoration: underline;
-}
-
-.notifications img {
-  width: 16px;
-  height: 16px;
-  display: block;
-}
-
-/* Left vertical line */
-/* Short vertical black line at the bottom-left corner */
-.notifications::before {
-  content: "";
-  position: absolute;
-
-  /* Place the line on the left edge, anchored to the bottom of .notifications */
-  left: 0;
-  bottom: -12px; /* adjust as needed */
-
-  /* Make it 1px wide and some fixed height */
-  width: 1px;
-  height: 32px; /* adjust as needed */
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75) 50%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-}
-
-/* Right vertical line */
-.notifications::after {
-  content: "";
-  position: absolute;
-
-  /* Place the line on the left edge, anchored to the bottom of .notifications */
-  right: 0;
-  bottom: -12px; /* adjust as needed */
-
-  /* Make it 1px wide and some fixed height */
-  width: 1px;
-  height: 32px; /* adjust as needed */
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75) 50%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-}
 
 /* Keep the flex layout */
 .content-wrapper {
   display: grid;
-  grid-template-columns: 200px 1fr 550px;
+  grid-template-columns: 200px 1fr 650px;
   min-height: 100vh;
   position: relative;
 }
@@ -233,7 +133,7 @@ body {
   /* your existing grid-row, grid-column, negative margin, etc. */
   position: relative;
   z-index: 1;
-  margin-top: -2.4rem;
+  margin-top: 0.6rem;
   width: 100%;
   background-color: #daecff;
   border: 1px solid black;
@@ -392,13 +292,12 @@ body {
   top: -2px; /* near top of the sidebar */
   right: -1px; /* shift it outside the sidebar’s boundary */
   z-index: 9999;
-  background: #fff; /* so it’s visible above background */
   border: 1px solid #ccc;
   cursor: pointer;
 }
 
 #sidebar-collapse:checked ~ .content-wrapper {
-  grid-template-columns: 20px 1fr 1fr;
+  grid-template-columns: 20px 1fr 650px;
   max-height: 5%; /* or 0 if you want it fully collapsed */
 }
 
@@ -422,14 +321,10 @@ body {
 .posts-column {
   grid-column: 2;
   background-color: #fff;
-  border-top: 1px solid black; /* separate from the post above */
-  border-left: 1px solid black; /* separate from the left sidebar */
-  border-right: 1px solid black; /* separate from the right edge */
   font-size: 0.9rem;
   position: relative;
   max-width: 100%;
 }
-
 /* Each post is a horizontal row:
    rank -> vote controls -> thumbnail -> text content */
 .post {
@@ -704,12 +599,116 @@ body {
 .right-sidebar {
   grid-column: 3;
   background-color: #fff;
-  border-top: 1px solid black; /* separate from the post above */
-  border-left: 1px solid black; /* separate from the left sidebar */
   border-right: 1px solid black; /* separate from the right edge */
   font-size: 0.9rem;
   position: relative;
   max-width: 100%;
+}
+
+/* Flex container for search + notifications */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #f6f7f8;
+  border-bottom: 1px solid black;
+}
+
+/* Search Bar */
+.search-form {
+  flex-grow: 1;
+  display: flex;
+}
+
+.search-form input[type="search"] {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: url("src/magnify.png") no-repeat right 0.5rem center;
+  background-size: 16px 16px;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+/* Notifications */
+.notifications {
+  display: flex;
+  align-items: center;
+}
+
+.notifications ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0rem 3rem 0rem 1rem;
+  margin: 0;
+}
+
+.notifications li {
+  border: 1px solid black;
+  background: #fff;
+  border-radius: 3px;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.notifications a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.75rem;
+}
+
+.notifications a:hover {
+  text-decoration: underline;
+}
+
+.notifications img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.notifications::before {
+  content: "";
+  position: absolute;
+
+  left: 14rem;
+  width: 1px;
+  height: 32px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+.notifications::after {
+  content: "";
+  position: absolute;
+
+
+  right: 3rem;
+
+  width: 1px;
+  height: 32px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 /* Title & domain link */
@@ -737,16 +736,14 @@ body {
 .bubble-shape {
   /* Fill the width of its container or adapt as you need. */
   width: 100%;
-
   /* Basic styling for the bubble itself */
   background: #fff;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 
-  /* Position relative so the arrow can be placed absolutely */
   position: relative;
 
-  /* Optional margin to separate it from other content */
 }
 
 /* Bottom Arrow */
@@ -887,9 +884,6 @@ body {
 }
 
 /* Each comment container */
-.comment {
-  margin-bottom: 16px;
-}
 
 .comment-row {
   display: flex;
@@ -973,6 +967,10 @@ body {
 /* The main body of the comment: author, text, etc. */
 .comment-body {
   flex: 1;
+}
+
+.comment-list {
+  border-left: 1px solid black;
 }
 
 /* e.g., smaller text, grey color, etc. */
@@ -1070,13 +1068,6 @@ body {
     margin-top: 2rem;
   }
 
-  .user-nav .search {
-    position: relative; /* for the ::before and ::after lines */
-    bottom: 35px; /* align with the border */
-    margin-left: 7rem;
-    width: 100%;
-  }
-
   .search-form input[type="search"] {
     width: 90%;
   }
@@ -1113,12 +1104,6 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 2rem;
-  }
-  .user-nav .search {
-    position: relative; /* for the ::before and ::after lines */
-    bottom: 25px; /* align with the border */
-    margin-left: 7rem;
-    width: 100%;
   }
 
   .search-form input[type="search"] {

@@ -21,8 +21,6 @@
         <a href="#">preferences</a> | <a href="#">logout?</a> :(
       </nav>
     </section>
-    <section class="subreddits-nav">
-    </section>
   </header>
 
   <input type="checkbox" id="sidebar-collapse" hidden>
@@ -197,11 +195,7 @@
             <input type="radio" id="nav-saved" name="nav-tab" hidden>
             <label for="nav-saved" class="nav-tab">saved</label>
           </li>
-          <!-- Middle: search form -->
-          <nav class="search-form search" role="search" aria-label="Site Search">
-            <label for="search-input" class="visually-hidden">Search</label>
-            <input id="search-input" type="search" />
-          </nav>
+
         </ul>
       </nav>
       <!-- Post #1 -->
@@ -464,29 +458,37 @@
           </p>
         </section>
       </article>
+   
       <section class="post-navigation">
         <a href="#" class="nav-button nav-newer">NEWER</a>
         <a href="#" class="nav-button nav-older">OLDER</a>
       </section>
-    </section>
+  </section>
 
     <aside class="right-sidebar" aria-label="Post Details">
-      <nav class="notifications">
-        <ul>
-          <li>
-            <a href="#">
-              <img src="src/email.png" alt="Envelope Icon" />
-              <strong>1</strong> New Msg
-            </a>
-          </li>
-          <li>
-            <a href="#"><strong>53,211</strong> Link</a>
-          </li>
-          <li>
-            <a href="#"><strong>4,887</strong> Comment</a>
-          </li>
-        </ul>
+      <nav class="top-section">
+        <nav class="search-form search" role="search" aria-label="Site Search">
+          <label for="search-input" class="visually-hidden">Search</label>
+          <input id="search-input" type="search" />
+        </nav>
+        <nav class="notifications">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="src/email.png" alt="Envelope Icon" />
+                <strong>1</strong> New Msg
+              </a>
+            </li>
+            <li>
+              <a href="#"><strong>53,211</strong> Link</a>
+            </li>
+            <li>
+              <a href="#"><strong>4,887</strong> Comment</a>
+            </li>
+          </ul>
+        </nav>
       </nav>
+      <section class="comment-list">
       <section class="bubble-shape">
         <section class="post-detail-meta">
           <h2 class="post-title">
@@ -887,6 +889,7 @@
           </div>
         </div>
       </div>
+    </section>
       </section>
     </aside>
   </main>
