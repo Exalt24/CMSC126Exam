@@ -24,65 +24,7 @@
     
       <!-- SECOND ROW: Subreddits Nav -->
       <section class="subreddits-nav">
-        <!-- Left: user nav -->
-        <nav class="user-nav">
-          <ul>
-            <!-- Tab 1: what's hot -->
-            <li>
-              <input type="radio" id="nav-hot" name="nav-tab" hidden checked>
-              <label for="nav-hot" class="nav-tab">what's hot</label>
-            </li>
-        
-            <!-- Tab 2: new -->
-            <li>
-              <input type="radio" id="nav-new" name="nav-tab" hidden>
-              <label for="nav-new" class="nav-tab">new</label>
-            </li>
-        
-            <!-- Tab 3: controversial -->
-            <li>
-              <input type="radio" id="nav-controversial" name="nav-tab" hidden>
-              <label for="nav-controversial" class="nav-tab">controversial</label>
-            </li>
-        
-            <!-- Tab 4: top -->
-            <li>
-              <input type="radio" id="nav-top" name="nav-tab" hidden>
-              <label for="nav-top" class="nav-tab">top</label>
-            </li>
-        
-            <!-- Tab 5: saved -->
-            <li>
-              <input type="radio" id="nav-saved" name="nav-tab" hidden>
-              <label for="nav-saved" class="nav-tab">saved</label>
-            </li>
-          </ul>
-        </nav>
-        
-    
-        <!-- Middle: search form -->
-        <nav class="search-form" role="search" aria-label="Site Search">
-          <label for="search-input" class="visually-hidden">Search</label>
-          <input id="search-input" type="search" />
-        </nav>
-    
-        <!-- Right: notifications -->
-        <nav class="notifications">
-          <ul>
-            <li>
-              <a href="#">
-                <img src="src/email.png" alt="Envelope Icon" />
-                <strong>1</strong> New Msg
-              </a>
-            </li>
-            <li>
-              <a href="#"><strong>53,211</strong> Link</a>
-            </li>
-            <li>
-              <a href="#"><strong>4,887</strong> Comment</a>
-            </li>
-          </ul>
-        </nav>
+
       </section>
     </header>
     
@@ -236,7 +178,44 @@
       
 
       <section class="posts-column" aria-label="List of posts">
-
+        <nav class="user-nav">
+          <ul>
+            <!-- Tab 1: what's hot -->
+            <li>
+              <input type="radio" id="nav-hot" name="nav-tab" hidden checked>
+              <label for="nav-hot" class="nav-tab">what's hot</label>
+            </li>
+        
+            <!-- Tab 2: new -->
+            <li>
+              <input type="radio" id="nav-new" name="nav-tab" hidden>
+              <label for="nav-new" class="nav-tab">new</label>
+            </li>
+        
+            <!-- Tab 3: controversial -->
+            <li>
+              <input type="radio" id="nav-controversial" name="nav-tab" hidden>
+              <label for="nav-controversial" class="nav-tab">controversial</label>
+            </li>
+        
+            <!-- Tab 4: top -->
+            <li>
+              <input type="radio" id="nav-top" name="nav-tab" hidden>
+              <label for="nav-top" class="nav-tab">top</label>
+            </li>
+        
+            <!-- Tab 5: saved -->
+            <li>
+              <input type="radio" id="nav-saved" name="nav-tab" hidden>
+              <label for="nav-saved" class="nav-tab">saved</label>
+            </li>
+            <!-- Middle: search form -->
+            <nav class="search-form search" role="search" aria-label="Site Search">
+              <label for="search-input" class="visually-hidden">Search</label>
+              <input id="search-input" type="search" />
+            </nav>
+          </ul>
+        </nav>
         <!-- Post #1 -->
         <article class="post">
           <!-- Rank -->
@@ -507,6 +486,23 @@
       </section>
 
       <aside class="right-sidebar" aria-label="Post Details">
+                <!-- Right: notifications -->
+                <nav class="notifications">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img src="src/email.png" alt="Envelope Icon" />
+                        <strong>1</strong> New Msg
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"><strong>53,211</strong> Link</a>
+                    </li>
+                    <li>
+                      <a href="#"><strong>4,887</strong> Comment</a>
+                    </li>
+                  </ul>
+                </nav>
         <section class="bubble-shape">
         <section class="post-detail-meta">
           <!-- Title + Domain -->

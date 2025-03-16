@@ -17,11 +17,6 @@ body {
 /* ==============================
      TOP HEADER BAR
      ============================== */
-.site-header {
-  display: grid;
-  grid-template-rows: auto auto; /* 2 rows, one for each bar */
-  background-color: #cee3f8; /* old reddit light blue */
-}
 
 .header-bar {
   display: flex;
@@ -30,6 +25,7 @@ body {
   background-color: #cee3f8;
   border-bottom: 1px solid black;
   padding: 0 1rem;
+  width: 100%;
 }
 
 .site-logo img {
@@ -66,23 +62,21 @@ body {
 }
 
 .subreddits-nav {
-  display: grid;
-  min-width: 1200px;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1rem;
   padding: 0.7rem 3rem;
   background-color: #eef3f8;
-  border-top: 1px solid black;  /* separate from the first row */
+  width: auto;
+  margin: 1rem;
 }
 
 .user-nav {
-  grid-column: 1;        /* keep it in the first column */
-  align-self: flex-end;       /* push it to the bottom of the .subreddits-nav row */
-  margin-left: 10rem;
   position: relative; /* for the ::before and ::after lines */
-  bottom: -4px;       /* align with the border */
-  z-index: 1;         /* keep it above the border */
+  bottom: 29px; /* align with the border */
+}
+
+.user-nav .search {
+  position: relative; /* for the ::before and ::after lines */
+  bottom: 10px; /* align with the border */
+  margin-left: 7rem;
 }
 
 .user-nav ul {
@@ -90,9 +84,9 @@ body {
   display: flex;
   gap: 0.5rem;
   padding: 0;
-  flex-wrap: nowrap;      /* disallow wrapping */
-  white-space: nowrap;    /* ensure the labels stay in one line */
-  border-radius: 3px;     /* round the corners */
+  flex-wrap: nowrap; /* disallow wrapping */
+  white-space: nowrap; /* ensure the labels stay in one line */
+  border-radius: 3px; /* round the corners */
 }
 
 /* Hide the radio inputs */
@@ -119,19 +113,16 @@ body {
 
 /* "Active" tab: when the radio is checked, style its label as selected */
 .user-nav input[type="radio"]:checked + .nav-tab {
-  color: orangered;       /* or #ff4500 for “reddit orange” */
-  background: #fff;       /* highlight color */
+  color: orangered; /* or #ff4500 for “reddit orange” */
+  background: #fff; /* highlight color */
   border-bottom-color: #fff; /* so it looks "raised" */
   font-weight: bold;
 }
 
 /* SEARCH FORM (center column) */
 .search-form {
-  grid-column: 2;       /* place in the second (middle) column */
   display: flex;
-  align-items: center;
   justify-content: center; /* center the search bar horizontally */
-  margin-left: 12rem;
 }
 
 .search-form input[type="search"] {
@@ -145,9 +136,9 @@ body {
 
 /* NOTIFICATIONS (right column) */
 .notifications {
-  grid-column: 3;       /* place in the third (right) column */
-  position: relative;   /* for the ::before line */
+  position: relative; /* for the ::before line */
   padding: 0 0.75rem;
+  bottom: 40px;
 }
 
 .notifications ul {
@@ -199,13 +190,13 @@ body {
 
   /* Make it 1px wide and some fixed height */
   width: 1px;
-  height: 32px;  /* adjust as needed */
+  height: 32px; /* adjust as needed */
 
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.75) 50%,
-    rgba(0,0,0,0.5) 50%,
-    rgba(0,0,0,0.25) 100%
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 100%
   );
 }
 
@@ -220,13 +211,13 @@ body {
 
   /* Make it 1px wide and some fixed height */
   width: 1px;
-  height: 32px;  /* adjust as needed */
+  height: 32px; /* adjust as needed */
 
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.75) 50%,
-    rgba(0,0,0,0.5) 50%,
-    rgba(0,0,0,0.25) 100%
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 100%
   );
 }
 
@@ -235,7 +226,7 @@ body {
   display: grid;
   grid-template-columns: 200px 1fr 550px;
   min-height: 100vh;
-  position: relative; 
+  position: relative;
 }
 
 .left-sidebar {
@@ -270,15 +261,15 @@ body {
 
 /* The clickable label that looks like a link */
 .sidebar-link {
-  display: flex;          /* icon + text in a row */
-  align-items: center;    /* vertical alignment */
+  display: flex; /* icon + text in a row */
+  align-items: center; /* vertical alignment */
   padding: 0.5rem 0.5rem;
   text-decoration: none;
   color: #336699;
   font-size: 0.9rem;
   background: none;
   border-radius: 2px;
-  cursor: pointer;        /* show a pointer on hover */
+  cursor: pointer; /* show a pointer on hover */
 }
 
 /* Icon styling */
@@ -297,18 +288,17 @@ body {
 
 /* Selected state: when a radio input is checked, style its sibling label */
 .left-sidebar input[type="radio"]:checked + .sidebar-link {
-  background-color: #fff;       /* white background */
-  color: orangered;             /* orangered text color */
-  border-top: 1px solid black;  /* top border */
+  background-color: #fff; /* white background */
+  color: orangered; /* orangered text color */
+  border-top: 1px solid black; /* top border */
   border-bottom: 1px solid black; /* bottom border */
-  padding-left: 0.5rem;         /* adjust padding for border */
+  padding-left: 0.5rem; /* adjust padding for border */
 }
 
 /* Prevent hover from overriding the selected state */
 .left-sidebar input[type="radio"]:checked + .sidebar-link:hover {
   background-color: #fff;
 }
-
 
 .double-chevron {
   position: absolute;
@@ -389,7 +379,6 @@ body {
 .sidebar-ad img {
   display: block;
   max-width: 100%; /* ensure it doesn’t overflow the sidebar */
-
 }
 
 .sidebar-ad figcaption {
@@ -400,7 +389,7 @@ body {
 
 .collapse-toggle {
   position: absolute;
-  top: -2px;  /* near top of the sidebar */
+  top: -2px; /* near top of the sidebar */
   right: -1px; /* shift it outside the sidebar’s boundary */
   z-index: 9999;
   background: #fff; /* so it’s visible above background */
@@ -426,16 +415,19 @@ body {
   transform: rotate(180deg);
 }
 
-
 /****************************************
  * POSTS COLUMN & INDIVIDUAL POSTS
  ****************************************/
 /* Container for all posts */
 .posts-column {
   grid-column: 2;
-  background-color: white;
-  border-top: 1px solid black; /* separate from the post above 
-  /* if using a grid layout for the overall page */
+  background-color: #fff;
+  border-top: 1px solid black; /* separate from the post above */
+  border-left: 1px solid black; /* separate from the left sidebar */
+  border-right: 1px solid black; /* separate from the right edge */
+  font-size: 0.9rem;
+  position: relative;
+  max-width: 100%;
 }
 
 /* Each post is a horizontal row:
@@ -447,6 +439,7 @@ body {
   padding: 0.4rem 0rem;
   font-size: 0.9rem;
   background-color: white;
+  margin: ;
 }
 
 /* Highlighted background for a selected post */
@@ -460,7 +453,7 @@ body {
 
 /* Post rank (#) on the far left */
 .post-rank {
-  width: 2rem;       /* enough space for 2-digit ranks */
+  width: 2rem; /* enough space for 2-digit ranks */
   text-align: right; /* right-align the number */
   color: #777;
   font-weight: bold;
@@ -525,13 +518,15 @@ body {
 
 /* If an input whose ID starts with "upvote-" is checked,
    hide the default up arrow and show the toggled up arrow in orange */
-.vote-controls input[id^="upvote-"]:checked
+.vote-controls
+  input[id^="upvote-"]:checked
   ~ .vote-stack
   .upvote-container
   .default {
   display: none;
 }
-.vote-controls input[id^="upvote-"]:checked
+.vote-controls
+  input[id^="upvote-"]:checked
   ~ .vote-stack
   .upvote-container
   .toggled {
@@ -541,13 +536,15 @@ body {
 
 /* If an input whose ID starts with "downvote-" is checked,
    hide the default down arrow and show the toggled arrow in blue */
-.vote-controls input[id^="downvote-"]:checked
+.vote-controls
+  input[id^="downvote-"]:checked
   ~ .vote-stack
   .downvote-container
   .default {
   display: none;
 }
-.vote-controls input[id^="downvote-"]:checked
+.vote-controls
+  input[id^="downvote-"]:checked
   ~ .vote-stack
   .downvote-container
   .toggled {
@@ -567,19 +564,16 @@ body {
 /* If "novote" is checked => 232, upvote => 233, downvote => 231,
    using the same approach with attribute selectors. 
    This is a single "hard-coded" set of numbers for all posts. */
-.vote-controls input[id^="novote-"]:checked
-  ~ .vote-stack
-  .vote-count::before {
+.vote-controls input[id^="novote-"]:checked ~ .vote-stack .vote-count::before {
   content: "232";
   color: #333;
 }
-.vote-controls input[id^="upvote-"]:checked
-  ~ .vote-stack
-  .vote-count::before {
+.vote-controls input[id^="upvote-"]:checked ~ .vote-stack .vote-count::before {
   content: "233";
   color: #ff4500;
 }
-.vote-controls input[id^="downvote-"]:checked
+.vote-controls
+  input[id^="downvote-"]:checked
   ~ .vote-stack
   .vote-count::before {
   content: "231";
@@ -588,8 +582,8 @@ body {
 
 /* Optional: if you have a thumbnail */
 .post-thumbnail {
-  width: 50px;   /* or whatever fits your layout */
-  height: auto;  /* maintain aspect ratio */
+  width: 50px; /* or whatever fits your layout */
+  height: auto; /* maintain aspect ratio */
   object-fit: cover;
   margin-right: 0.5rem; /* small gap if you want extra space */
 }
@@ -599,9 +593,7 @@ body {
 .post-content {
   flex: 1;
   margin-right: 2rem; /* space between thumbnail and text */
-
 }
-
 
 /* Title link */
 .post-link {
@@ -717,6 +709,8 @@ body {
   border-left: 1px solid black; /* separate from the left sidebar */
   border-right: 1px solid black; /* separate from the right edge */
   font-size: 0.9rem;
+  position: relative;
+  max-width: 100%;
 }
 
 /* Title & domain link */
@@ -934,14 +928,18 @@ body {
 /* ----------------- UPVOTE LOGIC ----------------- */
 /* When an input whose id begins with "comment-upvote" is checked,
    hide the default upvote arrow and show the toggled one */
-.comment-vote-controls input[id^="comment-upvote"]:checked 
-  ~ .comment-vote-stack 
-  .comment-upvote-container .default {
+.comment-vote-controls
+  input[id^="comment-upvote"]:checked
+  ~ .comment-vote-stack
+  .comment-upvote-container
+  .default {
   display: none;
 }
-.comment-vote-controls input[id^="comment-upvote"]:checked 
-  ~ .comment-vote-stack 
-  .comment-upvote-container .toggled {
+.comment-vote-controls
+  input[id^="comment-upvote"]:checked
+  ~ .comment-vote-stack
+  .comment-upvote-container
+  .toggled {
   display: inline-block;
   color: #ff4500; /* active upvote color */
 }
@@ -949,14 +947,18 @@ body {
 /* ----------------- DOWNVOTE LOGIC ----------------- */
 /* When an input whose id begins with "comment-downvote" is checked,
    hide the default downvote arrow and show the toggled one */
-.comment-vote-controls input[id^="comment-downvote"]:checked 
-  ~ .comment-vote-stack 
-  .comment-downvote-container .default {
+.comment-vote-controls
+  input[id^="comment-downvote"]:checked
+  ~ .comment-vote-stack
+  .comment-downvote-container
+  .default {
   display: none;
 }
-.comment-vote-controls input[id^="comment-downvote"]:checked 
-  ~ .comment-vote-stack 
-  .comment-downvote-container .toggled {
+.comment-vote-controls
+  input[id^="comment-downvote"]:checked
+  ~ .comment-vote-stack
+  .comment-downvote-container
+  .toggled {
   display: inline-block;
   color: #4d84ff; /* active downvote color */
 }
@@ -968,7 +970,6 @@ body {
 .comment-downvote-container .default:hover {
   color: #4d84ff;
 }
-
 
 /* The main body of the comment: author, text, etc. */
 .comment-body {
@@ -1042,4 +1043,100 @@ body {
   width: 20px; /* same as .comment-nested margin-left */
   left: -20px; /* align with the vertical spine */
   top: 16px; /* vertical offset so it hits near the author's row */
+}
+
+@media (max-width: 600px) {
+  .right-sidebar {
+    grid-column: 1 / -1; /* Ensures it spans the entire width of the grid */
+    width: 200vw; /* Takes up the full viewport width */
+    padding-top: 15px;
+  }
+
+  .posts-column {
+    grid-column: 1 / -1; /* Ensures it spans the entire width of the grid */
+    width: 200vw; /* Takes up the full viewport width */
+    padding: 10px;
+    padding-top: 80px;
+    border-top: 2px solid #ccc;
+  }
+
+  .left-sidebar {
+    margin-top: 0.5rem;
+    width: 200vw;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: center; /* center the search bar horizontally */
+    margin-top: 2rem;
+  }
+
+  .user-nav .search {
+    position: relative; /* for the ::before and ::after lines */
+    bottom: 35px; /* align with the border */
+    margin-left: 7rem;
+    width: 100%;
+  }
+
+  .search-form input[type="search"] {
+    width: 90%;
+  }
+
+  .site-header {
+    width: 200vw;
+  }
+
+  .notifications {
+    bottom: 5px;
+    justify-items: center;
+  }
+
+  .subreddits-nav {
+    padding: 0;
+    background-color: #eef3f8;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .right-sidebar {
+    grid-column: 1 / -1; /* Ensures it spans the entire width of the grid */
+    width: 100vw; /* Takes up the full viewport width */
+    padding-top: 15px;
+  }
+  .posts-column {
+    grid-column: span 2; /* Ensures it spans the entire width of the grid */
+    border-top: 2px solid #ccc;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: flex-end; /* center the search bar horizontally */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+  .user-nav .search {
+    position: relative; /* for the ::before and ::after lines */
+    bottom: 25px; /* align with the border */
+    margin-left: 7rem;
+    width: 100%;
+  }
+
+  .search-form input[type="search"] {
+    width: 100%;
+  }
+
+  .site-header {
+    width: 100vw;
+  }
+
+  .notifications {
+    bottom: 5px;
+    justify-items: center;
+  }
+
+  .subreddits-nav {
+    padding: 0;
+    margin-bottom: 3.5rem;
+  }
 }
